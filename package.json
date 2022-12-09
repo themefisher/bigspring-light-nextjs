@@ -6,7 +6,7 @@
   "license": "UNLICENSED",
   "scripts": {
     "dev": "next dev",
-    "build": "node lib/jsonGenerator.js && next build",
+    "build": "next build",
     "export": "next build && next export",
     "lint": "next lint",
     "start": "next start"
