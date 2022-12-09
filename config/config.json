@@ -1,0 +1,30 @@
+{
+  "site": {
+    "title": "Bigspring-light-nextjs",
+    "base_url": "/",
+    "favicon": "/images/favicon.png",
+    "logo": "/images/logo.png",
+    "logo_width": "200",
+    "logo_height": "48",
+    "logo_text": "Next Boilerplate"
+  },
+
+  "settings": {
+    "theme_switcher": true,
+    "default_theme": "system",
+    "pagination": 4,
+    "summary_length": 200,
+    "blog_folder": "blogs"
+  },
+
+  "params": {
+    "tag_manager_id": "",
+    "copyright": "Design By Themefisher Develop By [Gethugothemes](https://gethugothemes.com/)"
+  },
+
+  "metadata": {
+    "meta_author": "Themefisher",
+    "meta_image": "/images/og-image.png",
+    "meta_description": "Next Boilerplate"
+  }
+}
