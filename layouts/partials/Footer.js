@@ -2,13 +2,12 @@ import Social from "@components/Social";
 import config from "@config/config.json";
 import menu from "@config/menu.json";
 import social from "@config/social.json";
-import Button from "@layouts/components/Button";
 import { markdownify } from "@lib/utils/textConverter";
 import Image from "next/image";
 import Link from "next/link";
 
 const Footer = () => {
-  const { copyright } = config.params;
+  const { copyright, footer_content } = config.params;
   const { footer } = menu;
   return (
     <footer className="section bg-theme-light pb-0">
@@ -22,9 +21,9 @@ const Footer = () => {
                 <ul className="mt-6">
                   {col?.menu.map((item) => (
                     <li className="mb-1" key={item.text}>
-                      <Button href={item.url} rel="">
+                      <Link href={item.url} rel="">
                         {item.text}
-                      </Button>
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -41,10 +40,7 @@ const Footer = () => {
                 alt=""
               />
             </Link>
-            <p className="mt-3 mb-6">
-              Lorem ipsum dolor sit amet, consectetur elit. Consjat tristique
-              eget amet, tempus eu at cttur.
-            </p>
+            {markdownify(footer_content, "p", "mt-3 mb-6")}
             <Social source={social} className="social-icons mb-8" />
           </div>
         </div>

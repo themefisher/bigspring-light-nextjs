@@ -19,6 +19,7 @@
 
   "params": {
     "tag_manager_id": "",
+    "footer_content": "Lorem ipsum dolor sit amet, consectetur elit. Consjat tristique eget amet, tempus eu at cttur.",
     "copyright": "Designed and Developed By [Themefisher](https://themefisher.com/)"
   },
 

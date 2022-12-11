@@ -1,7 +1,6 @@
 import Logo from "@components/Logo";
 import config from "@config/config.json";
 import menu from "@config/menu.json";
-import Button from "@layouts/components/Button";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useState } from "react";
@@ -111,20 +110,24 @@ const Header = () => {
                 </select>
               </li> */}
               <li className="md:hidden">
-                <Button
+                <Link
                   className="btn btn-primary z-0 py-[14px]"
-                  href="#"
+                  href="contact"
                   rel=""
                 >
                   Get Started
-                </Button>
+                </Link>
               </li>
             </ul>
           </div>
           <div className="order-1 ml-auto hidden items-center md:ml-0 md:flex md:order-2">
-            <Button className="btn btn-primary z-0 py-[14px]" href="#" rel="">
+            <Link
+              className="btn btn-primary z-0 py-[14px]"
+              href="/contact"
+              rel=""
+            >
               Get Started
-            </Button>
+            </Link>
           </div>
         </nav>
       </header>

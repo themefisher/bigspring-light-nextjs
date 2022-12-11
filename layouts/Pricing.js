@@ -1,9 +1,9 @@
-import Button from "./components/Button";
-import Cta from "./sections/Cta";
+import Link from "next/link";
+import Cta from "./components/Cta";
 
 function Pricing({ data }) {
   const {
-    frontmatter: { title, plans, cta },
+    frontmatter: { title, plans, call_to_action: cta },
   } = data;
   return (
     <>
@@ -34,17 +34,15 @@ function Pricing({ data }) {
                       </li>
                     ))}
                   </ul>
-                  <Button
+                  <Link
                     className={`btn mt-5 ${
-                      plan.button.btn_type === "solid"
-                        ? "btn-primary"
-                        : "btn-outline-primary"
+                      plan.recommended ? "btn-primary" : "btn-outline-primary"
                     }`}
                     href={plan.button.href}
                     rel={plan.button.rel}
                   >
                     {plan.button.label}
-                  </Button>
+                  </Link>
                 </div>
               </div>
             ))}

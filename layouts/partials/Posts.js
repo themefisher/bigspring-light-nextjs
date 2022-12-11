@@ -1,5 +1,4 @@
 import config from "@config/config.json";
-import Button from "@layouts/components/Button";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -22,7 +21,7 @@ const Posts = ({ posts }) => {
             )}
           </div>
           <div className="col-12 md:col-6">
-            <h2 className="h3 mb-2">
+            <h2 className="h3 mb-2 mt-4">
               <Link
                 href={`/${blog_folder}/${posts[0].slug}`}
                 className="block hover:text-primary"
@@ -31,13 +30,13 @@ const Posts = ({ posts }) => {
               </Link>
             </h2>
             <p className="text-text">{posts[0].frontmatter.desc}</p>
-            <Button
+            <Link
               className="btn btn-primary mt-4"
               href={`/${blog_folder}/${posts[0].slug}`}
               rel=""
             >
               Read More
-            </Button>
+            </Link>
           </div>
         </div>
       </div>
@@ -52,7 +51,7 @@ const Posts = ({ posts }) => {
               height={i === 0 ? "475" : "230"}
             />
           )}
-          <h2 className="h3 mb-2">
+          <h2 className="h3 mb-2 mt-4">
             <Link
               href={`/${blog_folder}/${post.slug}`}
               className="block hover:text-primary"
@@ -61,13 +60,13 @@ const Posts = ({ posts }) => {
             </Link>
           </h2>
           <p className="text-text">{post.frontmatter.desc}</p>
-          <Button
+          <Link
             className="btn btn-primary mt-4"
             href={`/${blog_folder}/${post.slug}`}
             rel=""
           >
             Read More
-          </Button>
+          </Link>
         </div>
       ))}
     </div>

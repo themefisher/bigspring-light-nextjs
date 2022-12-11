@@ -6,4 +6,4 @@ const shortcodes = {
   YoutubePlayer,
 };
 
-export { Button, shortcodes, YoutubePlayer };
+export default shortcodes;

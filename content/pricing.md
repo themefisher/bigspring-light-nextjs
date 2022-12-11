@@ -13,9 +13,8 @@ plans:
       - Time-Critical Services
     button:
       label: Get started for free
-      href: "#"
+      href: "/contact"
       rel: ""
-      btn_type: outline
 
   - title: Professional Plan
     subtitle: Best For Professionals
@@ -30,9 +29,8 @@ plans:
       - Best Dashboard
     button:
       label: Get started
-      href: "#"
+      href: "/contact"
       rel: ""
-      btn_type: solid
 
   - title: Business Plan
     subtitle: Best For Large Individuals
@@ -44,14 +42,13 @@ plans:
       - Time-Critical Services
     button:
       label: Get started
-      href: "#"
+      href: "/contact"
       rel: ""
-      btn_type: outline
 
-cta:
+call_to_action:
   title: Need a larger plan?
   desc: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat tristique eget amet, tempus eu at consecttur.
-  image: '/svgs/cta.svg'
+  image: '/images/cta.svg'
   button_solid:
     label: "Contact Us"
     href: "/contact"

@@ -82,14 +82,15 @@
 
 //card
 .card {
-  @apply border mt-10 md:mt-0 border-[rgba(0,0,0,.125)] shadow px-5 py-12 bg-white py-12 px-5;
+  @apply border mt-10 md:mt-0 border-[rgba(0,0,0,.125)] shadow px-5 py-12 bg-white py-12 px-5 rounded-[4px];
 
 }
+
 .col--recommended {
   @apply md:-mx-8 md:-my-6 relative z-10;
 
   .card {
-    @apply border-0 shadow-[0_1rem_3rem_rgba(0,0,0,.175)] rounded-md;
+    @apply border-0 shadow-[0_1rem_3rem_rgba(0,0,0,.175)];
   }
 }
 
