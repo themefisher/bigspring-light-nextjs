@@ -1,11 +1,7 @@
 import Pagination from "@components/Pagination";
 import config from "@config/config.json";
 import Base from "@layouts/Baseof";
-import {
-  getListPage,
-  getSinglePages,
-  getSinglePagesSlug,
-} from "@lib/contentParser";
+import { getListPage, getSinglePage } from "@lib/contentParser";
 import { parseMDX } from "@lib/utils/mdxParser";
 import { markdownify } from "@lib/utils/textConverter";
 import Posts from "@partials/Posts";
@@ -41,7 +37,8 @@ export default BlogPagination;
 
 // get blog pagination slug
 export const getStaticPaths = () => {
-  const allSlug = getSinglePagesSlug(`content/${blog_folder}`);
+  const getAllSlug = getSinglePage(`content/${blog_folder}`);
+  const allSlug = getAllSlug.map((item) => item.slug);
   const { pagination } = config.settings;
   const totalPages = Math.ceil(allSlug.length / pagination);
   let paths = [];
@@ -64,11 +61,11 @@ export const getStaticPaths = () => {
 export const getStaticProps = async ({ params }) => {
   const currentPage = parseInt((params && params.slug) || 1);
   const { pagination } = config.settings;
-  const posts = getSinglePages(`content/${blog_folder}`).sort(
+  const posts = getSinglePage(`content/${blog_folder}`).sort(
     (post1, post2) =>
       new Date(post2.frontmatter.date) - new Date(post1.frontmatter.date)
   );
-  const postIndex = await getListPage(`content/${blog_folder}`);
+  const postIndex = await getListPage(`content/${blog_folder}/_index.md`);
   const mdxContent = await parseMDX(postIndex.content);
 
   return {

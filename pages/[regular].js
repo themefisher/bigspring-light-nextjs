@@ -4,7 +4,7 @@ import Contact from "@layouts/Contact";
 import Default from "@layouts/Default";
 import Faq from "@layouts/Faq";
 import Pricing from "@layouts/Pricing";
-import { getRegularPage, getSinglePagesSlug } from "@lib/contentParser";
+import { getRegularPage, getSinglePage } from "@lib/contentParser";
 
 // for all regular pages
 const RegularPages = ({ data }) => {
@@ -39,7 +39,8 @@ export default RegularPages;
 
 // for regular page routes
 export const getStaticPaths = async () => {
-  const slugs = getSinglePagesSlug("content");
+  const allslugs = getSinglePage("content");
+  const slugs = allslugs.map((item) => item.slug);
   const paths = slugs.map((slug) => ({
     params: {
       regular: slug,
@@ -55,7 +56,7 @@ export const getStaticPaths = async () => {
 // for regular page data
 export const getStaticProps = async ({ params }) => {
   const { regular } = params;
-  const regularPage = await getRegularPage("content", regular);
+  const regularPage = await getRegularPage(regular);
 
   return {
     props: {
