@@ -1,6 +1,6 @@
 {
   "site": {
-    "title": "Bigspring-light-nextjs",
+    "title": "Bigspring Light Nextjs",
     "base_url": "/",
     "favicon": "/images/favicon.png",
     "logo": "/images/logo.png",
@@ -19,12 +19,12 @@
 
   "params": {
     "tag_manager_id": "",
-    "copyright": "Design By Themefisher Develop By [Gethugothemes](https://gethugothemes.com/)"
+    "copyright": "Designed and Developed By [Themefisher](https://themefisher.com/)"
   },
 
   "metadata": {
     "meta_author": "Themefisher",
-    "meta_image": "/images/og-image.png",
-    "meta_description": "Next Boilerplate"
+    "meta_image": "",
+    "meta_description": "A SAAS template for nextjs"
   }
 }

@@ -12,13 +12,7 @@ import Posts from "@partials/Posts";
 const { blog_folder } = config.settings;
 
 // blog pagination
-const BlogPagination = ({
-  postIndex,
-  posts,
-  authors,
-  currentPage,
-  pagination,
-}) => {
+const BlogPagination = ({ postIndex, posts, currentPage, pagination }) => {
   const indexOfLastPost = currentPage * pagination;
   const indexOfFirstPost = indexOfLastPost - pagination;
   const totalPages = Math.ceil(posts.length / pagination);

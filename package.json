@@ -1,9 +1,9 @@
 {
-  "name": "next-tailwind-boilerplate",
-  "description": "a nextjs and tailwindcss boilerplate by themefisher.com",
+  "name": "bigspring-light-nextjs",
+  "description": "a nextjs and tailwindcss SAAS starter template",
   "version": "1.0.0",
   "private": true,
-  "license": "UNLICENSED",
+  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
