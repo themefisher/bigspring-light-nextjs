@@ -56,9 +56,7 @@ const Header = () => {
               navOpen ? "max-h-[1000px]" : "max-h-0"
             }`}
           >
-            <ul
-              className={`navbar-nav  block w-full md:flex md:w-auto lg:space-x-2`}
-            >
+            <ul className="navbar-nav  block w-full md:flex md:w-auto lg:space-x-2">
               {main.map((menu, i) => (
                 <React.Fragment key={`menu-${i}`}>
                   {menu.hasChildren ? (
@@ -103,12 +101,6 @@ const Header = () => {
                   )}
                 </React.Fragment>
               ))}
-              {/* <li className="nav-item inline-flex items-center">
-                <select className="m-2 border-none p-0 pr-8 font-primary font-bold text-text">
-                  <option defaultValue="en">En</option>
-                  <option value="de">De</option>
-                </select>
-              </li> */}
               <li className="md:hidden">
                 <Link
                   className="btn btn-primary z-0 py-[14px]"
@@ -120,7 +112,7 @@ const Header = () => {
               </li>
             </ul>
           </div>
-          <div className="order-1 ml-auto hidden items-center md:ml-0 md:flex md:order-2">
+          <div className="d-flex order-1 ml-auto hidden min-w-[200px] items-center justify-end md:ml-0 md:flex md:order-2">
             <Link
               className="btn btn-primary z-0 py-[14px]"
               href="/contact"

@@ -36,6 +36,7 @@ const Home = ({ frontmatter }) => {
                 width={750}
                 height={390}
                 alt="Banner"
+                priority
               />
             </div>
           </div>

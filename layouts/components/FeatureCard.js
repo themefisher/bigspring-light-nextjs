@@ -1,3 +1,4 @@
+import { markdownify } from "@lib/utils/textConverter";
 import Image from "next/image";
 import React from "react";
 
@@ -9,7 +10,7 @@ function FeatureCard({ data }) {
         <Image className="mx-auto" src={icon} width={30} height={30} alt="" />
       )}
       <div className="mt-4">
-        <h5>{title}</h5>
+        {markdownify(title, "h3", "h5")}
         <p className="mt-3">{desc}</p>
       </div>
     </div>

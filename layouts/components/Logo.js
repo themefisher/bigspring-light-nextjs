@@ -10,7 +10,7 @@ const Logo = ({ src }) => {
   return (
     <Link
       href={base_url}
-      className="navbar-brand block"
+      className="navbar-brand block py-1"
       style={{
         height: logo_height.replace("px", "") + "px",
         width: logo_width.replace("px", "") + "px",

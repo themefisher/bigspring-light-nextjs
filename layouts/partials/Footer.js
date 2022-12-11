@@ -17,7 +17,7 @@ const Footer = () => {
           {footer.map((col) => {
             return (
               <div className="mb-12 sm:col-6 lg:col-3" key={col.name}>
-                <h4>{col.name}</h4>
+                {markdownify(col.name, "h2", "h4")}
                 <ul className="mt-6">
                   {col?.menu.map((item) => (
                     <li className="mb-1" key={item.text}>
@@ -32,7 +32,7 @@ const Footer = () => {
           })}
           {/* social icons */}
           <div className="md-12 sm:col-6 lg:col-3">
-            <Link href="/">
+            <Link href="/" aria-label="Bigspring">
               <Image
                 src={config.site.logo}
                 width={config.site.logo_width}
