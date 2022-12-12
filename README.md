@@ -6,16 +6,16 @@
 
 
 <p align=center>
-  <a href="https://github.com/gohugoio/hugo/releases/tag/v0.58.0" alt="Contributors">
+  <a href="https://github.com/vercel/next.js/releases/tag/v13.0.6" alt="Contributors">
     <img src="https://img.shields.io/static/v1?label=NEXTJS&message=13.0&color=000&logo=nextjs" />
   </a>
 
-  <a href="https://github.com/themefisher/liva-hugo/blob/master/LICENSE">
+  <a href="https://github.com/themefisher/bigspring-light-nextjs/blob/main/LICENSE">
     <img src="https://img.shields.io/github/license/themefisher/bigspring-light-nextjs" alt="license"></a>
 
   <img src="https://img.shields.io/github/languages/code-size/themefisher/bigspring-light-nextjs" alt="code size">
 
-  <a href="https://github.com/gethugothemes/liva-hugo/graphs/contributors">
+  <a href="https://github.com/themefisher/bigspring-light-nextjs/graphs/contributors">
     <img src="https://img.shields.io/github/contributors/themefisher/bigspring-light-nextjs" alt="contributors"></a>
 </p>
 
