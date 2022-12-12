@@ -28,14 +28,12 @@
 Download this template from [Github](https://github.com/themefisher/bigspring-light-nextjs/archive/main.zip)
 
 ## Key Features
-- Multi-Author support
+- Google analytics support
 - Google Page Speed score 100! (Desktop)
+- Multilingual Mode
+- Caching enabled
 - Supports Contact Form
-- Search Functionality
-- Semantic HTML Document Structure
-- Custom Logo Support
-- Includes All SCSS Files
-- Image Optimized With Next/image
+- Dark Mode
 
 <!-- installation -->
 ## Installation
