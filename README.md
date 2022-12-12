@@ -28,13 +28,13 @@
 Download this template from [Github](https://github.com/themefisher/bigspring-light-nextjs/archive/main.zip)
 
 ## Key Features
-- Google analytics support
+- Simple and Minimal
+- Fully Responsive
 - Google Page Speed score 100! (Desktop)
-- Multilingual Mode
+- Google analytics support
 - Caching enabled
 - Supports Contact Form
-- Dark Mode
-
+- SEO Friendly
 <!-- installation -->
 ## Installation
 
