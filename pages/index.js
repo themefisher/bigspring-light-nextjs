@@ -1,14 +1,13 @@
 import config from "@config/config.json";
 import Base from "@layouts/Baseof";
-import { getListPage } from "../lib/contentParser";
 import Cta from "@layouts/components/Cta";
-import Link from "next/link";
-import Image from "next/image";
 import { markdownify } from "@lib/utils/textConverter";
-import FeatureCard from "@layouts/components/FeatureCard";
-import { Swiper, SwiperSlide } from "swiper/react";
+import Image from "next/image";
+import Link from "next/link";
 import { Autoplay, Pagination } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.min.css";
+import { getListPage } from "../lib/contentParser";
 
 const Home = ({ frontmatter }) => {
   const { banner, feature, services, workflow, call_to_action } = frontmatter;
@@ -50,8 +49,25 @@ const Home = ({ frontmatter }) => {
             <h2>{markdownify(feature.title)}</h2>
           </div>
           <div className="mt-8 grid gap-x-8 gap-y-6 sm:grid-cols-2 lg:grid-cols-3">
-            {feature.features.map((item, index) => (
-              <FeatureCard key={index} data={item} />
+            {feature.features.map((item, i) => (
+              <div
+                className="feature-card rounded-xl bg-white p-5 pb-8 text-center"
+                key={`feature-${i}`}
+              >
+                {item.icon && (
+                  <Image
+                    className="mx-auto"
+                    src={item.icon}
+                    width={30}
+                    height={30}
+                    alt=""
+                  />
+                )}
+                <div className="mt-4">
+                  {markdownify(item.name, "h3", "h5")}
+                  <p className="mt-3">{item.content}</p>
+                </div>
+              </div>
             ))}
           </div>
         </div>

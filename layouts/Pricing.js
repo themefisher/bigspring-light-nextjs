@@ -3,7 +3,7 @@ import Cta from "./components/Cta";
 
 function Pricing({ data }) {
   const {
-    frontmatter: { title, plans, call_to_action: cta },
+    frontmatter: { title, plans, call_to_action },
   } = data;
   return (
     <>
@@ -21,10 +21,10 @@ function Pricing({ data }) {
                 <div className="card text-center">
                   <h4>{plan.title}</h4>
                   <div className="mt-5">
-                    <span className="text-5xl text-text">${plan.price}</span>
+                    <span className="text-5xl text-dark">${plan.price}</span>
                     <span>/ {plan.type}</span>
                   </div>
-                  <h5 className="mt-2 font-normal text-dark">
+                  <h5 className="mt-2 font-normal text-text">
                     {plan.subtitle}
                   </h5>
                   <ul className="mt-5">
@@ -49,7 +49,7 @@ function Pricing({ data }) {
           </div>
         </div>
       </section>
-      <Cta cta={cta} />
+      <Cta cta={call_to_action} />
     </>
   );
 }
