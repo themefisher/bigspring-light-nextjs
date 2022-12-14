@@ -22,19 +22,21 @@ const Home = ({ frontmatter }) => {
             <div className="mx-auto lg:col-10">
               <h1 className="font-primary font-bold">{banner.title}</h1>
               <p className="mt-4">{markdownify(banner.content)}</p>
-              <Link
-                className="btn btn-primary mt-4"
-                href={banner.button_solid.href}
-                rel={banner.button_solid.rel}
-              >
-                {banner.button_solid.label}
-              </Link>
+              {banner.button.enable && (
+                <Link
+                  className="btn btn-primary mt-4"
+                  href={banner.button.link}
+                  rel={banner.button.rel}
+                >
+                  {banner.button.label}
+                </Link>
+              )}
               <Image
                 className="mx-auto mt-12"
                 src={banner.image}
                 width={750}
                 height={390}
-                alt="Banner"
+                alt="banner image"
                 priority
               />
             </div>
@@ -78,15 +80,13 @@ const Home = ({ frontmatter }) => {
         const isOdd = index % 2 > 0;
         return (
           <section
-            key={index}
-            className={`section ${isOdd ? " bg-theme-light" : ""}`}
+            key={`service-${index}`}
+            className={`section ${isOdd && "bg-theme-light"}`}
           >
             <div className="container">
               <div className="items-center gap-8 md:grid md:grid-cols-2">
                 {/* Carousel */}
-                <div
-                  className={`service-carousel ${!isOdd ? "md:order-2" : ""}`}
-                >
+                <div className={`service-carousel ${!isOdd && "md:order-2"}`}>
                   <Swiper
                     modules={[Autoplay, Pagination]}
                     pagination={
@@ -110,24 +110,26 @@ const Home = ({ frontmatter }) => {
                 {/* Content */}
                 <div
                   className={`service-content mt-5 md:mt-0 ${
-                    !isOdd ? "md:order-1" : ""
+                    !isOdd && "md:order-1"
                   }`}
                 >
                   <h2 className="font-bold leading-[40px]">{service?.title}</h2>
                   <p className="mt-4 mb-2">{service?.content}</p>
-                  <Link
-                    href={service?.call_to_action.href}
-                    className="cta-link inline-flex items-center text-primary"
-                  >
-                    {service?.call_to_action.label}
-                    <Image
-                      className="ml-1"
-                      src="/images/arrow-right.svg"
-                      width={18}
-                      height={14}
-                      alt="arrow"
-                    />
-                  </Link>
+                  {service.button.enable && (
+                    <Link
+                      href={service?.button.link}
+                      className="cta-link inline-flex items-center text-primary"
+                    >
+                      {service?.button.label}
+                      <Image
+                        className="ml-1"
+                        src="/images/arrow-right.svg"
+                        width={18}
+                        height={14}
+                        alt="arrow"
+                      />
+                    </Link>
+                  )}
                 </div>
               </div>
             </div>
@@ -145,7 +147,12 @@ const Home = ({ frontmatter }) => {
           )}
           {markdownify(workflow.description, "p", "mt-3")}
         </div>
-        <Image src={workflow.image} alt="" width={1920} height={296} />
+        <Image
+          src={workflow.image}
+          alt="workflow image"
+          width={1920}
+          height={296}
+        />
       </section>
 
       {/* Cta */}

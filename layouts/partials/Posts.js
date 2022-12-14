@@ -1,9 +1,10 @@
 import config from "@config/config.json";
+import { plainify } from "@lib/utils/textConverter";
 import Image from "next/image";
 import Link from "next/link";
 
 const Posts = ({ posts }) => {
-  const { blog_folder } = config.settings;
+  const { blog_folder, summary_length } = config.settings;
   return (
     <div className="section row pb-0">
       <div className="col-12 pb-12 lg:pb-24">
@@ -29,7 +30,12 @@ const Posts = ({ posts }) => {
                 {posts[0].frontmatter.title}
               </Link>
             </h2>
-            <p className="text-text">{posts[0].frontmatter.desc}</p>
+            <p className="text-text">
+              {plainify(
+                posts[0].content?.slice(0, Number(summary_length)),
+                "div"
+              )}
+            </p>
             <Link
               className="btn btn-primary mt-4"
               href={`/${blog_folder}/${posts[0].slug}`}

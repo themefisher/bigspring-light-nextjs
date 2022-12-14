@@ -14,7 +14,7 @@ function Pricing({ data }) {
             {plans.map((plan, index) => (
               <div
                 className={`col-12 md:col-4 ${
-                  !plan.recommended ? "lg:px-0" : "col--recommended"
+                  !plan.recommended ? "lg:px-0" : "col-recommended"
                 }`}
                 key={plan.title + index}
               >
@@ -38,7 +38,7 @@ function Pricing({ data }) {
                     className={`btn mt-5 ${
                       plan.recommended ? "btn-primary" : "btn-outline-primary"
                     }`}
-                    href={plan.button.href}
+                    href={plan.button.link}
                     rel={plan.button.rel}
                   >
                     {plan.button.label}

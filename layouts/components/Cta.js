@@ -1,7 +1,6 @@
 import { markdownify } from "@lib/utils/textConverter";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 
 function Cta({ cta }) {
   return (
@@ -12,21 +11,23 @@ function Cta({ cta }) {
             <Image
               className="w-full"
               src={cta?.image}
-              alt=""
+              alt="call to action image"
               width={325}
               height={206}
             />
           </div>
           <div className="mt-5 text-center md:mt-0 md:text-left md:col-6 lg:col-5">
             <h2>{cta?.title}</h2>
-            <p className="mt-6">{markdownify(cta?.desc)}</p>
-            <Link
-              className="btn btn-primary mt-4"
-              href={cta.button_solid.href}
-              rel={cta.button_solid.rel}
-            >
-              {cta.button_solid.label}
-            </Link>
+            <p className="mt-6">{markdownify(cta?.content)}</p>
+            {cta.button.enable && (
+              <Link
+                className="btn btn-primary mt-4"
+                href={cta.button.link}
+                rel={cta.button.rel}
+              >
+                {cta.button.label}
+              </Link>
+            )}
           </div>
         </div>
       </div>
