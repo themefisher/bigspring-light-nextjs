@@ -1,7 +1,7 @@
 ---
 banner:
-  title: Let us solve your critical website development challenges
-  content: Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nihil enim maxime corporis cumque <br/> totam aliquid nam sint inventore optio modi neque laborum officiis necessitatibus
+  title: Bringing clarity to your Docker Swarms with powerful metrics.
+  content: Unleash the full potential of your Docker Swarms with advanced metrics and analytics
   image: /images/banner-art.svg
   button:
     label: "Contact Us"
@@ -9,26 +9,26 @@ banner:
 
 # feature
 feature: 
-  title: Something You Need To Know
+  title: Container Health Made Easy
   features:
-  - name: "Clean Code"
+  - name: "Dynamically Generated Metrics Display"
     icon: "/images/code.svg"
-    content: "Lorem ipsum dolor sit amet consectetur adipisicing elit quam nihil"
-  - name: "Object Oriented"
+    content: "Render any dynamic or static metrics you need for your application with a simple click of a button."
+  - name: "Lightweight Overhead"
     icon: "/images/oop.svg"
-    content: "Lorem ipsum dolor sit amet consectetur adipisicing elit quam nihil"
-  - name: "24h Service"
+    content: "Manage and maintain your docker swarms in a lightweight environment that provides efficient, relevant, real time data."
+  - name: "Scalable Features"
     icon: "/images/user-clock.svg"
-    content: "Lorem ipsum dolor sit amet consectetur adipisicing elit quam nihil"
-  - name: "Value for Money"
+    content: "Efficiently manage & maintain additional users and metrics without causing congestion."
+  - name: "Manage Organization User"
     icon: "/images/love.svg"
-    content: "Lorem ipsum dolor sit amet consectetur adipisicing elit quam nihil"
-  - name: "Faster Response"
-    icon: "/images/speedometer.svg"
-    content: "Lorem ipsum dolor sit amet consectetur adipisicing elit quam nihil"
-  - name: "Cloud Support"
-    icon: "/images/cloud.svg"
-    content: "Lorem ipsum dolor sit amet consectetur adipisicing elit quam nihil"
+    content: "Easily manage who you want in your organization and designate user roles."
+  # - name: "Faster Response"
+  #   icon: "/images/speedometer.svg"
+  #   content: "Lorem ipsum dolor sit amet consectetur adipisicing elit quam nihil"
+  # - name: "Cloud Support"
+  #   icon: "/images/cloud.svg"
+  #   content: "Lorem ipsum dolor sit amet consectetur adipisicing elit quam nihil"
 
 # services
 services:

@@ -1,14 +1,14 @@
 {
-  "facebook": "https://facebook.com/",
-  "twitter": "https://twitter.com/",
+  "facebook": "",
+  "twitter":"",
   "instagram": "",
   "youtube": "",
-  "linkedin": "https://linkedin.com/",
-  "github": "",
+  "linkedin": "https://www.linkedin.com/company/docker-storm/",
+  "github": "https://github.com/oslabs-beta/Docker-Storm",
   "gitlab": "",
   "discord": "",
   "slack": "",
-  "medium": "",
+  "medium": "https://medium.com/@shaysheller/docker-storm-bringing-clarity-to-your-docker-swarms-with-powerful-metrics-653ca6911eb1",
   "codepen": "",
   "bitbucket": "",
   "dribbble": "",
@@ -27,6 +27,6 @@
   "email": "",
   "phone": "",
   "address": "",
-  "skype": "https://skype.com/",
+  "skype": "",
   "website": ""
 }

@@ -3,7 +3,7 @@
     "title": "Bigspring Light Nextjs",
     "base_url": "/",
     "favicon": "/images/favicon.png",
-    "logo": "/images/logo.png",
+    "logo": "/images/logoDS.png",
     "logo_width": "200",
     "logo_height": "48",
     "logo_text": "Bigspring Light"
@@ -17,8 +17,8 @@
 
   "nav_button": {
     "enable": true,
-    "label": "Get Started",
-    "link": "/contact"
+    "label": "Github",
+    "link": "https://github.com/oslabs-beta/Docker-Storm"
   },
 
   "params": {
