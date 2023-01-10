@@ -19,18 +19,26 @@ const Contact = ({ data }) => {
               <div className="individual">
                 <Link href="https://www.linkedin.com/in/shay-sheller/"><h5>Shay Sheller</h5></Link>
                 <Image alt="Shay" src='/images/linkedinshay.jpeg' width="200" height="200"/>
+                <Link href="mailto:shaysheller@outlook.com" target="_blank"><h5>Email</h5></Link> 
+                <Link href="https://github.com/shaysheller" target="_blank"><h5>Github</h5></Link> 
               </div>
               <div className="individual">
               <Link href="https://www.linkedin.com/in/jeffreycplee/"><h5>Jeffrey Lee</h5></Link>
                 <Image alt="Jeffrey" src='/images/linkedinjeff.jpeg' width="200" height="200"/>
+                <Link href="mailto:jeffreyclee@gmail.com" target="_blank"><h5>Email</h5></Link>
+                <Link href="https://www.linkedin.com/in/jclee8888/" target="_blank"><h5>Github</h5></Link> 
               </div>
               <div className="individual">
               <Link href="https://www.linkedin.com/in/kelvinvan/"><h5>Kelvin Van</h5></Link>
                 <Image alt="Kelvin" src='/images/linkedinkelvin.jpeg' width="200" height="200"/>
+                <Link href="mailto:kelvinvan.cs@gmail.com" target="_blank"><h5>Email</h5></Link>
+                <Link href="https://github.com/KelvinVan1" target="_blank"><h5>Github</h5></Link> 
               </div>
               <div className="individual">
               <Link href="https://www.linkedin.com/in/kevinjtseng/"><h5>Kevin Tseng</h5></Link>
                 <Image alt="Kevin" src='/images/linkedinkevin.jpeg' width="200" height="200"/>
+                <Link href="mailto:kevin.jerry.tseng@gmail.com" target="_blank"><h5>Email</h5></Link>
+                <Link href="https://github.com/Kevin-J-Tseng" target="_blank"><h5>Github</h5></Link> 
               </div>
             </div>
           </div>
