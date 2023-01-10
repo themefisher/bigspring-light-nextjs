@@ -24,8 +24,8 @@
   "params": {
     "contact_form_action": "",
     "tag_manager_id": "",
-    "footer_content": "Lorem ipsum dolor sit amet, consectetur elit. Consjat tristique eget amet, tempus eu at cttur.",
-    "copyright": "Designed and Developed By [Themefisher](https://themefisher.com/)"
+    "footer_content": "Open-source developer tool that measures and visualizes real-time health of your Docker nodes.", 
+    "copyright": "© 2023 by Docker Storm | Proudly partnered with [Open Source Labs](https://opensourcelabs.io/)"
   },
 
   "metadata": {

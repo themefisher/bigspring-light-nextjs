@@ -9,7 +9,8 @@
       },
       "text_color": {
         "default": "#777",
-        "dark": "#222"
+        "dark": "#222",
+        "white": "#ffffff"
       }
     }
   },

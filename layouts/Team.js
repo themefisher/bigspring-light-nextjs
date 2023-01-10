@@ -1,5 +1,7 @@
 import config from "@config/config.json";
 import { markdownify } from "@lib/utils/textConverter";
+import Link from "next/link";
+import Image from "next/image";
 
 const Contact = ({ data }) => {
   const { frontmatter } = data;
@@ -11,6 +13,27 @@ const Contact = ({ data }) => {
       <div className="container">
         {markdownify(title, "h1", "text-center font-normal")}
         <div className="section row pb-0">
+          <div className="featured developers">
+            <h3>Developers</h3>
+            <div className="bios">
+              <div className="individual">
+                <Link href="https://www.linkedin.com/in/shay-sheller/"><h5>Shay Sheller</h5></Link>
+                <Image alt="Shay" src='/images/linkedinshay.jpeg' width="200" height="200"/>
+              </div>
+              <div className="individual">
+              <Link href="https://www.linkedin.com/in/jeffreycplee/"><h5>Jeffrey Lee</h5></Link>
+                <Image alt="Jeffrey" src='/images/linkedinjeff.jpeg' width="200" height="200"/>
+              </div>
+              <div className="individual">
+              <Link href="https://www.linkedin.com/in/kelvinvan/"><h5>Kelvin Van</h5></Link>
+                <Image alt="Kelvin" src='/images/linkedinkelvin.jpeg' width="200" height="200"/>
+              </div>
+              <div className="individual">
+              <Link href="https://www.linkedin.com/in/kevinjtseng/"><h5>Kevin Tseng</h5></Link>
+                <Image alt="Kevin" src='/images/linkedinkevin.jpeg' width="200" height="200"/>
+              </div>
+            </div>
+          </div>
           <div className="col-12 md:col-6 lg:col-7">
             <form
               className="contact-form"
@@ -74,3 +97,4 @@ const Contact = ({ data }) => {
 };
 
 export default Contact;
+// export default Team

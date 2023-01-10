@@ -8,23 +8,18 @@
       "name": "FAQ",
       "url": "/faq"
     },
-    {
-      "name": "About Us",
-      "url": "/about"
+    { 
+      "name": "Meet the Team",
+      "url": "/contact"
     }
   ],
   "footer": [
-  
     {
-      "name": "Product",
-      "menu": [
+    "name": "Product",
+    "menu": [
         {
-          "text": "Features",
-          "url": "#"
-        },
-        {
-          "text": "Platform",
-          "url": "#"
+          "text": "Get Started",
+          "url": "https://github.com/oslabs-beta/Docker-Storm"
         }
       ]
     },
@@ -32,16 +27,12 @@
       "name": "Support",
       "menu": [
         {
-          "text": "About Us",
-          "url": "/about"
+          "text": "Meet the Team",
+          "url": "/contact"
         },
         {
           "text": "FAQ",
           "url": "/faq"
-        },
-        {
-          "text": "Terms & Conditions",
-          "url": "#"
         }
       ]
     }

@@ -4,8 +4,8 @@ banner:
   content: Unleash the full potential of your Docker Swarms with advanced metrics and analytics
   image: /images/banner-art.svg
   button:
-    label: "Contact Us"
-    link: "/contact"
+    label: "Meet the Team"
+    link: "/team"
 
 # feature
 feature: 
