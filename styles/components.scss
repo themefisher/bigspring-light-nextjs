@@ -113,6 +113,16 @@
   }
 }
 
+.featuredDevelopers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bios {
+  display: inline-flex;
+  padding: 20px;
+}
 .individual {
   justify-content: center;
   text-align: center;

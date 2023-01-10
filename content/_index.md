@@ -2,7 +2,7 @@
 banner:
   title: Bringing clarity to your Docker Swarms with powerful metrics.
   content: Unleash the full potential of your Docker Swarms with advanced metrics and analytics
-  image: /images/banner-art.svg
+  image: /images/homepagemac.png
   button:
     label: "Meet the Team"
     link: "/team"

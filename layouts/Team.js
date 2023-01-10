@@ -13,8 +13,8 @@ const Contact = ({ data }) => {
       <div className="container">
         {markdownify(title, "h1", "text-center font-normal")}
         <div className="section row pb-0">
-          <div className="featured developers">
             <h3>Developers</h3>
+          <div className="featuredDevelopers">
             <div className="bios">
               <div className="individual">
                 <Link href="https://www.linkedin.com/in/shay-sheller/"><h5>Shay Sheller</h5></Link>

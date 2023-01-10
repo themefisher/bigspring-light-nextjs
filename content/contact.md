@@ -3,7 +3,7 @@ title: "Meet the Team"
 layout: "contact"
 draft: false
 info: 
-  title: Why you should contact us!
+  title: Contact us!
   description: Please feel free to reach out here, or our contact links below, with any recommendations or questions about our product. We'd love to hear from you! 
   contacts: 
     - "[LinkedIn](https://www.linkedin.com/company/docker-storm/)"
