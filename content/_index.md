@@ -32,30 +32,30 @@ feature:
 
 # services
 services:
-  - title: "It is the most advanced digital marketing and it company."
-    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat tristique eget amet, tempus eu at consecttur. Leo facilisi nunc viverra tellus. Ac laoreet sit vel consquat. consectetur adipiscing elit. Consequat tristique eget amet, tempus eu at consecttur. Leo facilisi nunc viverra tellus. Ac laoreet sit vel consquat."
+  - title: "Manage all of your Docker Swarm nodes"
+    content: "Easily configure Docker Storm to track target servers and virtual machines upon your first login. Real time Docker Swarm node tracking in a few clicks."
     images:
-      - "/images/service-slide-1.png"
-      - "/images/service-slide-2.png"
-      - "/images/service-slide-3.png"
+      - "/images/ds_gif2login.gif"
+      - "/images/ds_gif3.gif"
+      - "/images/ds_gif4.gif"
     button:
       enable: true
-      label: Check it out
-      link: /contact
+      label: Get started
+      link: "https://github.com/oslabs-beta/Docker-Storm"
 
-  - title: "It is a privately owned Information and cyber security company"
-    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat tristique eget amet, tempus eu at consecttur. Leo facilisi nunc viverra tellus. Ac laoreet sit vel consquat. consectetur adipiscing elit. Consequat tristique eget amet, tempus eu at consecttur. Leo facilisi nunc viverra tellus. Ac laoreet sit vel consquat."
+  - title: "Dynamically render relevant and customizable node metrics without headaches."
+    content: "Leverage the power of both Prometheus and Grafana in a single application with minimal configurations. Easily display static and dynamic node metrics that fit your needs."
     images: 
-      - "/images/service-slide-1.png"
+      - "/images/homepagemac.png"
     button:
       enable: true
       label: Check it out
-      link: /contact
+      link: "https://github.com/oslabs-beta/Docker-Storm"
   
   
 # workflow
 workflow: 
-  title: "Experience the best workflow with us"
+  title: "Track my node health now"
   image: "/images/banner.svg"
   description: ""
   button:

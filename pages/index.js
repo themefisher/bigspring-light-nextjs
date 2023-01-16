@@ -146,6 +146,10 @@ const Home = ({ frontmatter }) => {
             "mx-auto max-w-[400px] font-bold leading-[44px]"
           )}
           {markdownify(workflow.description, "p", "mt-3")}
+          <div className="d-flex order-1 ml-auto hidden min-w-[200px] items-center justify-center md:ml-0 md:flex md:order-2">
+            <Link className="btn btn-primary z-0 py-[14px]" href="https://github.com/oslabs-beta/Docker-Storm" target="_blank" rel="">Github
+            </Link>
+          </div>
         </div>
         <Image
           src={workflow.image}
