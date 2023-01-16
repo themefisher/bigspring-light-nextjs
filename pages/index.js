@@ -118,7 +118,7 @@ const Home = ({ frontmatter }) => {
                   {service.button.enable && (
                     <Link
                       href={service?.button.link}
-                      className="cta-link inline-flex items-center text-primary"
+                      className={`cta-link inline-flex items-center text-primary section ${isOdd && "white"}`}
                     >
                       {service?.button.label}
                       <Image
