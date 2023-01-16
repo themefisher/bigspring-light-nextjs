@@ -1,9 +1,10 @@
 {
   "site": {
-    "title": "Bigspring Light Nextjs",
+    "title": "Docker Storm | Docker Swarm Health Visualization Solution",
     "base_url": "/",
-    "favicon": "/images/favicon.png",
+    "favicon": "/images/fav.png",
     "logo": "/images/logoDS.png",
+    "logo_white": "/images/logo_white.png",
     "logo_width": "200",
     "logo_height": "48",
     "logo_text": "Bigspring Light"
@@ -25,7 +26,7 @@
     "contact_form_action": "",
     "tag_manager_id": "",
     "footer_content": "Open-source developer tool that measures and visualizes real-time health of your Docker nodes.", 
-    "copyright": "© 2023 by Docker Storm | Proudly partnered with [Open Source Labs](https://opensourcelabs.io/)"
+    "copyright": "© 2023 Docker Storm | Proudly partnered with [Open Source Labs](https://opensourcelabs.io/)"
   },
 
   "metadata": {

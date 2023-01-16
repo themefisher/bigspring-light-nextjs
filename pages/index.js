@@ -48,7 +48,7 @@ const Home = ({ frontmatter }) => {
       <section className="section bg-theme-light">
         <div className="container">
           <div className="text-center">
-            <h2 className="white-text">{markdownify(feature.title)}</h2>
+            <h2 className="white-text white">{markdownify(feature.title)}</h2>
           </div>
           <div className="mt-8 grid gap-x-8 gap-y-6 sm:grid-cols-2 lg:grid-cols-3">
             {feature.features.map((item, i) => (
@@ -113,7 +113,7 @@ const Home = ({ frontmatter }) => {
                     !isOdd && "md:order-1"
                   }`}
                 >
-                  <h2 className="font-bold leading-[40px]">{service?.title}</h2>
+                  <h2 className={`font-bold leading-[40px] section ${isOdd && "white"}`}>{service?.title}</h2>
                   <p className={`mt-4 mb-2 section ${isOdd && "white"}`}>{service?.content}</p>
                   {service.button.enable && (
                     <Link
@@ -156,7 +156,7 @@ const Home = ({ frontmatter }) => {
       </section>
 
       {/* Cta */}
-      <Cta cta={call_to_action} />
+      {/* <Cta cta={call_to_action} /> */}
     </Base>
   );
 };

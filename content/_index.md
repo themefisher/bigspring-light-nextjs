@@ -2,7 +2,7 @@
 banner:
   title: Bringing clarity to your Docker Swarms with powerful metrics.
   content: Unleash the full potential of your Docker Swarms with advanced metrics and analytics
-  image: /images/homepagemac.png
+  image: /images/DS_gif1.gif
   button:
     label: "Meet the Team"
     link: "/team"
@@ -20,9 +20,9 @@ feature:
   - name: "Scalable Features"
     icon: "/images/user-clock.svg"
     content: "Efficiently manage & maintain additional users and metrics without causing congestion."
-  - name: "Manage Organization User"
-    icon: "/images/love.svg"
-    content: "Easily manage who you want in your organization and designate user roles."
+  # - name: "Manage Organization User"
+  #   icon: "/images/love.svg"
+  #   content: "Easily manage who you want in your organization and designate user roles."
   # - name: "Faster Response"
   #   icon: "/images/speedometer.svg"
   #   content: "Lorem ipsum dolor sit amet consectetur adipisicing elit quam nihil"

@@ -10,13 +10,13 @@ const Footer = () => {
   const { copyright, footer_content } = config.params;
   const { footer } = menu;
   return (
-    <footer className="section bg-theme-light pb-0">
+    <footer className="section bg-theme-light pb-0 white">
       <div className="container">
         {/* footer menu */}
         <div className="row">
           {footer.map((col) => {
             return (
-              <div className="mb-12 sm:col-6 lg:col-3" key={col.name}>
+              <div className="mb-12 sm:col-6 lg:col-3 white" key={col.name}>
                 {markdownify(col.name, "h2", "h4")}
                 <ul className="mt-6">
                   {col?.menu.map((item) => (
@@ -34,7 +34,7 @@ const Footer = () => {
           <div className="md-12 sm:col-6 lg:col-3">
             <Link href="/" aria-label="Bigspring">
               <Image
-                src={config.site.logo}
+                src={config.site.logo_white}
                 width={config.site.logo_width}
                 height={config.site.logo_height}
                 alt=""
