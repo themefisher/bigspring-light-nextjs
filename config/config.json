@@ -17,8 +17,9 @@
 
   "nav_button": {
     "enable": true,
-    "label": "Get Started",
-    "link": "/contact"
+    "label": "Request Sample",
+    "scroll_id": "contact",
+    "link": "/"
   },
 
   "params": {

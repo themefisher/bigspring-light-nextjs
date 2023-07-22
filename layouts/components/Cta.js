@@ -4,7 +4,7 @@ import Link from "next/link";
 
 function Cta({ cta }) {
   return (
-    <section className="section px-4">
+    <section className="section px-4" id="about_us">
       <div className="section container rounded-xl shadow">
         <div className="row  mx-auto items-center justify-center">
           <div className="md:col-5 lg:col-4">

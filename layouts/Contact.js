@@ -2,12 +2,12 @@ import config from "@config/config.json";
 import { markdownify } from "@lib/utils/textConverter";
 
 const Contact = ({ data }) => {
-  const { frontmatter } = data;
-  const { title, info } = frontmatter;
+  // const { frontmatter } = data;
+  const { title, info } = data;
   const { contact_form_action } = config.params;
 
   return (
-    <section className="section">
+    <section className="section" id="contact">
       <div className="container">
         {markdownify(title, "h1", "text-center font-normal")}
         <div className="section row pb-0">

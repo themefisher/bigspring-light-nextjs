@@ -7,6 +7,14 @@
   @apply relative flex flex-wrap items-center justify-between;
 }
 
+.show {
+  @apply fixed top-0 bg-white border-b border-gray-200 shadow-md w-full z-50 duration-300;
+}
+
+.hide {
+  @apply fixed -top-20 bg-white border-b border-gray-200 shadow-md w-full duration-300 z-50;
+}
+
 .navbar-brand {
   @apply text-xl font-semibold text-dark;
 
@@ -35,6 +43,10 @@
   @apply py-3 px-2 font-primary text-base font-bold text-dark transition hover:text-primary md:py-4 lg:px-3;
 
   &-active {
+    @apply text-primary;
+  }
+
+  &:hover {
     @apply text-primary;
   }
 }
