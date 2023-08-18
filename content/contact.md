@@ -3,10 +3,10 @@ title: "Contact Us"
 layout: "contact"
 draft: false
 info: 
-  title: Why you should contact us!
-  description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit recusandae voluptates doloremque veniam temporibus porro culpa ipsa, nisi soluta minima saepe laboriosam debitis nesciunt.
+  title: Join Our Waitlist Today!
+  description: Your journey begins here. Allow us to walk beside you as you create lasting memories and forge connections that will carry you through a lifetime of joyous motherhood.
   contacts: 
-    - "phone: +88 125 256 452"
-    - "Mail: [info@bigspring.com](mailto:info@bigspring.com)"
-    - "Address: 360 Main rd, Rio, Brazil"
+    - "Phone: [+1 (718) 873 7881](tel:+17188737881)"
+    - "Mail: [contact@yuzicare.com](mailto:contact@yuzicare.com)"
+    - "Address: Seattle, WA"
 ---

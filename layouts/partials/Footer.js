@@ -10,7 +10,7 @@ const Footer = () => {
   const { copyright, footer_content } = config.params;
   const { footer } = menu;
   return (
-    <footer className="section bg-theme-light pb-0">
+    <footer className="pb-0 section bg-theme-light">
       <div className="container">
         {/* footer menu */}
         <div className="row">
@@ -41,11 +41,11 @@ const Footer = () => {
               />
             </Link>
             {markdownify(footer_content, "p", "mt-3 mb-6")}
-            <Social source={social} className="social-icons mb-8" />
+            <Social source={social} className="mb-8 social-icons" />
           </div>
         </div>
         {/* copyright */}
-        <div className="border-t border-border py-6">
+        <div className="py-6 border-t border-border">
           {markdownify(copyright, "p", "text-sm text-center")}
         </div>
       </div>

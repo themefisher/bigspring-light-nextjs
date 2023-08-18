@@ -1,10 +1,10 @@
 ---
 banner:
-  title: Let us solve your critical website development challenges
-  content: Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nihil enim maxime corporis cumque <br/> totam aliquid nam sint inventore optio modi neque laborum officiis necessitatibus
+  title: The First Postpartum Retreat in the Pacific Northwest
+  content: Coming Spring 2024 to Seattle, WA
   image: /images/banner-art.svg
   button:
-    label: "Contact Us"
+    label: "Join the Waitlist"
     link: "/contact"
 
 # feature
