@@ -9,26 +9,26 @@ banner:
 
 # feature
 feature: 
-  title: Something You Need To Know
+  title: What We Offer
   features:
-  - name: "Clean Code"
+  - name: "24/7 Baby Monitoring"
     icon: "/images/code.svg"
-    content: "Lorem ipsum dolor sit amet consectetur adipisicing elit quam nihil"
-  - name: "Object Oriented"
+    content: "Your baby is always under the watchful eye of our trained staff so that you can relax."
+  - name: "Postnatal Yoga"
     icon: "/images/oop.svg"
-    content: "Lorem ipsum dolor sit amet consectetur adipisicing elit quam nihil"
-  - name: "24h Service"
+    content: "Rejuvenate and restore with our postnatal yoga for new mothers"
+  - name: "Lactation Consultation"
     icon: "/images/user-clock.svg"
-    content: "Lorem ipsum dolor sit amet consectetur adipisicing elit quam nihil"
-  - name: "Value for Money"
+    content: "Expert lactation support for confident mother-baby bonding."
+  - name: "Pelvic Floor PT"
     icon: "/images/love.svg"
-    content: "Lorem ipsum dolor sit amet consectetur adipisicing elit quam nihil"
-  - name: "Faster Response"
+    content: "Revitalize your core with our PT experts."
+  - name: "Custom Meal Planning"
     icon: "/images/speedometer.svg"
-    content: "Lorem ipsum dolor sit amet consectetur adipisicing elit quam nihil"
-  - name: "Cloud Support"
+    content: "Nutrient-rich meal plans nurturing lactation and speeding postpartum recovery."
+  - name: "Supportive Community"
     icon: "/images/cloud.svg"
-    content: "Lorem ipsum dolor sit amet consectetur adipisicing elit quam nihil"
+    content: "Join a nurturing community empowering mothers every step of the way."
 
 # services
 services:
