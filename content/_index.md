@@ -12,22 +12,22 @@ feature:
   title: What We Offer
   features:
   - name: "24/7 Baby Monitoring"
-    icon: "/images/code.svg"
+    icon: "/images/24_7.svg"
     content: "Your baby is always under the watchful eye of our trained staff so that you can relax."
   - name: "Postnatal Yoga"
-    icon: "/images/oop.svg"
+    icon: "/images/yoga.svg"
     content: "Rejuvenate and restore with our postnatal yoga for new mothers"
   - name: "Lactation Consultation"
-    icon: "/images/user-clock.svg"
+    icon: "/images/lactation.svg"
     content: "Expert lactation support for confident mother-baby bonding."
   - name: "Pelvic Floor PT"
-    icon: "/images/love.svg"
+    icon: "/images/physical-therapy.svg"
     content: "Revitalize your core with our PT experts."
   - name: "Custom Meal Planning"
-    icon: "/images/speedometer.svg"
+    icon: "/images/meal-planning.svg"
     content: "Nutrient-rich meal plans nurturing lactation and speeding postpartum recovery."
   - name: "Supportive Community"
-    icon: "/images/cloud.svg"
+    icon: "/images/community.svg"
     content: "Join a nurturing community empowering mothers every step of the way."
 
 # services
