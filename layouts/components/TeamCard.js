@@ -1,4 +1,3 @@
-import { markdownify } from "@lib/utils/textConverter";
 import Image from "next/image"
 
 function TeamCard({ person }) {
@@ -8,13 +7,13 @@ function TeamCard({ person }) {
       <Image className="w-full h-auto" src={image} alt={name} />
       <div className="flex-1 p-4 md:p-5">
         <h4 className="text-gray-800 text-md dark:text-white">
-          {markdownify(title)}
+          { title }
         </h4>
         <h3 className="text-lg font-bold text-gray-800">
-          {markdownify(name)}
+          { name }
         </h3>
         <p className="mt-1 text-gray-800 dark:text-gray-400">
-          {markdownify(bio)}
+          { bio }
         </p>
       </div>
     </div>

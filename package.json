@@ -17,6 +17,7 @@
     "marked": "^4.2.4",
     "next": "13.0.6",
     "next-mdx-remote": "^4.2.0",
+    "preline": "^1.9.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-gtm-module": "^2.0.11",

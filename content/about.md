@@ -1,6 +1,6 @@
 ---
-title: "Our Story"
-layout: "about"
+title: Our Story
+layout: about
 draft: false
 ---
 

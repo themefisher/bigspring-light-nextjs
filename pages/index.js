@@ -21,7 +21,7 @@ const Home = ({ frontmatter }) => {
           <div className="text-center row">
             <div className="mx-auto lg:col-10">
               <h1 className="text-2xl font-bold font-primary md:text-4xl">{banner.title}</h1>
-              <p className="mt-4 text-md md:text-2xl">{markdownify(banner.content)}</p>
+              <p className="mt-4 text-md md:text-2xl">{banner.content}</p>
               {banner.button.enable && (
                 <Link
                   className="mt-4 btn btn-primary"
@@ -48,7 +48,7 @@ const Home = ({ frontmatter }) => {
       <section className="section bg-theme-light">
         <div className="container">
           <div className="text-center">
-            <h2>{markdownify(feature.title)}</h2>
+            <h2>{feature.title}</h2>
           </div>
           <div className="grid mt-8 gap-x-8 gap-y-6 sm:grid-cols-2 lg:grid-cols-3">
             {feature.features.map((item, i) => (
