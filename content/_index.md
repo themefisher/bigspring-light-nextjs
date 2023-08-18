@@ -2,7 +2,7 @@
 banner:
   title: The First Postpartum Retreat in the Pacific Northwest
   content: Coming Spring 2024 to Seattle, WA
-  image: /images/banner-art.svg
+  image: /images/mom_baby_home_cartoon_hero.png
   button:
     label: "Join the Waitlist"
     link: "/contact"
@@ -76,14 +76,14 @@ services:
 
 # workflow
 workflow: 
-  title: "Experience the best workflow with us"
+  title: "Join us at Yuzi!"
   image: "/images/banner.svg"
-  description: ""
+  description: "Your sanctuary for healing, bonding, and empowerment awaits."
 
 # call_to_action
 call_to_action:
   title: Ready to get started?
-  content: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat tristique eget amet, tempus eu at consecttur.
+  content: Whether you seek moments of peaceful solitude or wish to connect with other like-minded mothers, our community is here to support you every step of the way..
   image: '/images/cta.svg'
   button:
     enable: true

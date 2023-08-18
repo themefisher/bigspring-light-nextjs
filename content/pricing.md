@@ -4,47 +4,49 @@ layout: pricing
 draft: false
 plans:
 - title: Basic Plan
-  subtitle: Best For Small Individuals
-  price: 49
-  type: month
+  subtitle: Our Budget Conscious Plan
+  price: 899
+  type: night
   features:
-    - Express Service
-    - Customs Clearance
-    - Time-Critical Services
+    - 7 nights
+    - 24/7 Baby Monitoring
+    - Postnatal Yoga
+    - 1x Lactation Consultation
   button:
-    label: Get started for free
+    label: Get Started
     link: "/contact"
 
-- title: Professional Plan
-  subtitle: Best For Professionals
-  price: 69
-  type: month
+- title: Standard Plan
+  subtitle: Our Most Popular Plan
+  price: 999
+  type: night
   recommended: true
   features:
-    - Express Service
-    - Customs Clearance
-    - Time-Critical Services
-    - Cloud Service
-    - Best Dashboard
+    - 14 nights
+    - 24/7 Baby Monitoring
+    - Postnatal Yoga
+    - 2x Lactation Consultations
+    - Pelvic Floor Physical Therapy
   button:
     label: Get started
     link: "/contact"
 
-- title: Business Plan
-  subtitle: Best For Large Individuals
-  price: 99
-  type: month
+- title: Premium Plan
+  subtitle: Our Most Luxurious Plan
+  price: 799
+  type: night
   features:
-    - Express Service
-    - Customs Clearance
-    - Time-Critical Services
+    - 30 nights
+    - Pelvic Floor Physical Therapy
+    - Custom Meal Planning
+    - 6x Postnatal Massage Treatments
   button:
     label: Get started
     link: "/contact"
 
 call_to_action:
-  title: Need a larger plan?
-  content: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat tristique eget amet, tempus eu at consecttur.
+  title: Need a custom plan?
+  content: We are happy to discuss your needs and help you throughout your postpartum journey.
   image: '/images/cta.svg'
   button:
     enable: true

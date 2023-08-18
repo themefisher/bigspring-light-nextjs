@@ -18,13 +18,13 @@ const Home = ({ frontmatter }) => {
       {/* Banner */}
       <section className="section pb-[50px]">
         <div className="container">
-          <div className="row text-center">
+          <div className="text-center row">
             <div className="mx-auto lg:col-10">
-              <h1 className="font-primary font-bold">{banner.title}</h1>
-              <p className="mt-4">{markdownify(banner.content)}</p>
+              <h1 className="text-2xl font-bold font-primary md:text-4xl">{banner.title}</h1>
+              <p className="mt-4 text-md md:text-2xl">{markdownify(banner.content)}</p>
               {banner.button.enable && (
                 <Link
-                  className="btn btn-primary mt-4"
+                  className="mt-4 btn btn-primary"
                   href={banner.button.link}
                   rel={banner.button.rel}
                 >
@@ -50,10 +50,10 @@ const Home = ({ frontmatter }) => {
           <div className="text-center">
             <h2>{markdownify(feature.title)}</h2>
           </div>
-          <div className="mt-8 grid gap-x-8 gap-y-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid mt-8 gap-x-8 gap-y-6 sm:grid-cols-2 lg:grid-cols-3">
             {feature.features.map((item, i) => (
               <div
-                className="feature-card rounded-xl bg-white p-5 pb-8 text-center"
+                className="p-5 pb-8 text-center bg-white feature-card rounded-xl"
                 key={`feature-${i}`}
               >
                 {item.icon && (
@@ -118,7 +118,7 @@ const Home = ({ frontmatter }) => {
                   {service.button.enable && (
                     <Link
                       href={service?.button.link}
-                      className="cta-link inline-flex items-center text-primary"
+                      className="inline-flex items-center cta-link text-primary"
                     >
                       {service?.button.label}
                       <Image
@@ -138,14 +138,14 @@ const Home = ({ frontmatter }) => {
       })}
 
       {/* workflow */}
-      <section className="section pb-0">
+      <section className="pb-0 section">
         <div className="mb-8 text-center">
           {markdownify(
             workflow.title,
             "h2",
-            "mx-auto max-w-[400px] font-bold leading-[44px]"
+            "mx-auto font-bold leading-[44px]"
           )}
-          {markdownify(workflow.description, "p", "mt-3")}
+          {markdownify(workflow.description, "p", "mt-3 text-md md:text-2xl")}
         </div>
         <Image
           src={workflow.image}
