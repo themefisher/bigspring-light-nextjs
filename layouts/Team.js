@@ -1,6 +1,6 @@
 import TeamCard from "./components/TeamCard";
 const Team = ({ data }) => {
-  const { frontmatter, mdxContent } = data;
+  const { frontmatter } = data;
   const { title, people } = frontmatter;
   return (
     <section className="section">
