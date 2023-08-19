@@ -17,12 +17,12 @@
       "url": "/blogs"
     },
     {
-      "name": "Pricing",
-      "url": "/pricing"
-    },
-    {
       "name": "FAQ",
       "url": "/faq"
+    },
+    {
+      "name": "Pricing",
+      "url": "/pricing"
     },
     {
       "name": "Contact",
@@ -34,26 +34,18 @@
       "name": "Company",
       "menu": [
         {
-          "text": "Pricing",
-          "url": "/pricing"
+          "text": "Our Story",
+          "url": "/about"
         },
         {
-          "text": "Quick Start",
-          "url": "#"
+          "text": "Our Team",
+          "url": "/team"
         }
       ]
     },
     {
       "name": "Product",
       "menu": [
-        {
-          "text": "Features",
-          "url": "#"
-        },
-        {
-          "text": "Platform",
-          "url": "#"
-        },
         {
           "text": "Pricing",
           "url": "/pricing"
@@ -66,14 +58,6 @@
         {
           "text": "FAQ",
           "url": "/faq"
-        },
-        {
-          "text": "Privacy Policy",
-          "url": "#"
-        },
-        {
-          "text": "Terms & Conditions",
-          "url": "#"
         }
       ]
     }

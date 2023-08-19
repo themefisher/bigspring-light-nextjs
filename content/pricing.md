@@ -45,9 +45,9 @@ plans:
     link: "/contact"
 
 call_to_action:
-  title: Need a custom plan?
+  title: Have a question?
   content: We are happy to discuss your needs and help you throughout your postpartum journey.
-  image: '/images/cta.svg'
+  image: '/images/question-cta.svg'
   button:
     enable: true
     label: "Contact Us"

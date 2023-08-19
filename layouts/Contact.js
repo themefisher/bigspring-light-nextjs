@@ -45,6 +45,15 @@ const Contact = ({ data }) => {
               <div className="mb-3">
                 <input
                   className="w-full rounded form-input"
+                  name="phone"
+                  type="tel"
+                  placeholder="(360) 538-7802"
+                  pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
+                />
+              </div>
+              <div className="mb-3">
+                <input
+                  className="w-full rounded form-input"
                   name="subject"
                   type="text"
                   placeholder="Subject"

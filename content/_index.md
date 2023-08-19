@@ -32,59 +32,39 @@ feature:
 
 # services
 services:
-  - title: "It is the most advanced digital marketing and it company."
-    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat tristique eget amet, tempus eu at consecttur. Leo facilisi nunc viverra tellus. Ac laoreet sit vel consquat. consectetur adipiscing elit. Consequat tristique eget amet, tempus eu at consecttur. Leo facilisi nunc viverra tellus. Ac laoreet sit vel consquat."
+  - title: "A haven designed specifically for new moms."
+    content: " Our retreat offers a nurturing and supportive environment where mothers can find solace, rejuvenation, and connection as they navigate the joys and demands of early motherhood."
     images:
-      - "/images/service-slide-1.png"
-      - "/images/service-slide-2.png"
-      - "/images/service-slide-3.png"
+      - "/images/haven2.png"
+      - "/images/haven1.png"
+      - "/images/haven3.png"
     button:
       enable: true
       label: Check it out
       link: /contact
 
-  - title: "It is a privately owned Information and cyber security company"
-    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat tristique eget amet, tempus eu at consecttur. Leo facilisi nunc viverra tellus. Ac laoreet sit vel consquat. consectetur adipiscing elit. Consequat tristique eget amet, tempus eu at consecttur. Leo facilisi nunc viverra tellus. Ac laoreet sit vel consquat."
+  - title: "We are all mothers, so we understand your needs."
+    content: "We believe that every mom deserves dedicated care and attention during this transformative phase, which is why our retreat is meticulously crafted to provide a sanctuary of healing, restoration, and empowerment."
     images: 
-      - "/images/service-slide-1.png"
+      - "/images/all-moms.png"
     button:
       enable: true
       label: Check it out
       link: /contact
-  
-  - title: "It’s a team of experienced and skilled people with distributions"
-    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat tristique eget amet, tempus eu at consecttur. Leo facilisi nunc viverra tellus. Ac laoreet sit vel consquat. consectetur adipiscing elit. Consequat tristique eget amet, tempus eu at consecttur. Leo facilisi nunc viverra tellus. Ac laoreet sit vel consquat."
-    images:
-      - "/images/service-slide-1.png"
-      - "/images/service-slide-2.png"
-      - "/images/service-slide-3.png"
-    button:
-      enable: true
-      label: Check it out
-      link: /contact
-
-  - title: "A company standing different from others"
-    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat tristique eget amet, tempus eu at consecttur. Leo facilisi nunc viverra tellus. Ac laoreet sit vel consquat. consectetur adipiscing elit. Consequat tristique eget amet, tempus eu at consecttur. Leo facilisi nunc viverra tellus. Ac laoreet sit vel consquat."
-    images:
-      - "/images/service-slide-1.png"
-      - "/images/service-slide-2.png"
-      - "/images/service-slide-3.png"
-    button:
-      enable: true
-      label: Check it out
-      link: /contact
-
 # workflow
 workflow: 
   title: "Join us at Yuzi!"
-  image: "/images/banner.svg"
+  image: "/images/moms-workflow-banner.svg"
   description: "Your sanctuary for healing, bonding, and empowerment awaits."
-
+  button:
+    enable: true
+    label: "Contact Us"
+    link: "/contact"
 # call_to_action
 call_to_action:
   title: Ready to get started?
   content: Whether you seek moments of peaceful solitude or wish to connect with other like-minded mothers, our community is here to support you every step of the way..
-  image: '/images/cta.svg'
+  image: '/images/mom-baby-cta.svg'
   button:
     enable: true
     label: "Contact Us"
