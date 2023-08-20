@@ -69,7 +69,13 @@ const Contact = ({ data }) => {
                 <textarea
                   className="w-full rounded-md form-textarea"
                   rows="7"
+                  name="message"
                   placeholder="Your message..."
+                  required
+                  spellCheck
+                  autoComplete="on"
+                  autoCorrect="on"
+                  maxLength={1024}
                 />
               </div>
               <button type="submit" className="btn btn-primary">
