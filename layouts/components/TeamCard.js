@@ -6,7 +6,7 @@ function TeamCard({ person }) {
     <div className="flex flex-col flex-[1_0_0%] bg-[#edf6f5] sm:rounded-3xl">
       <div className="mb-2 sm:mb-3">
         <Image
-          class="object-cover overflow-hidden h-full rounded-t-xl mx-auto sm:rounded-tr-none"
+          className="object-cover h-full mx-auto overflow-hidden rounded-t-xl sm:rounded-tr-none"
           src={image}
           alt={name}
           width={500}
