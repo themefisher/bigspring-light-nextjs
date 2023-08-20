@@ -6,7 +6,7 @@ date: 2023-08-04T05:00:00Z
 draft: false
 meta_title: "Yuzi: The First Postpartum Retreat in the Pacific Northwest"
 noindex: false
-canonical: "https://www.yuzicare.com/blog/what-is-yuzi"
+canonical: "https://yuzicare.com/blogs/what-is-yuzi"
 ---
 #### Introducing Yuzi: Nurturing Motherhood, Empowering Journeys
 
