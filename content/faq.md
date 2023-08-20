@@ -6,7 +6,7 @@ meta_title: FAQs
 description: Have a question? Explore our FAQs to learn more about the postnatal care and services we provide at Yuzi. Didn't see your question listed? Contact our team of experts and get an answer today!
 image: "/images/question-cta.svg"
 noindex: false
-canonical: "https://www.yuzicare.com/faq"
+canonical: "https://yuzicare.com/faq"
 faqs:
 - title: What exactly is Yuzi's postnatal retreat?
   answer: Our retreat is a comprehensive haven designed to provide mothers with expert postpartum care, healing, and empowerment. It combines modern luxury with the ancient wisdom of "Yuezi," offering a supportive environment for both physical recovery and emotional well-being.

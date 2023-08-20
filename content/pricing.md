@@ -6,7 +6,7 @@ meta_title: Pricing
 description: We offer multiple plans ranging from a basic 7 night stay all the way up to 30 nights. Want to stay longer? No problem! There is no maximum stay time. Just call ahead to inform our booking agents and we will arrange for your stay.
 image: "/images/pricing.svg"
 noindex: false
-canonical: "https://www.yuzicare.com/pricing"
+canonical: "https://yuzicare.com/pricing"
 plans:
 - title: Basic Plan
   subtitle: Our Budget Conscious Plan

@@ -6,7 +6,7 @@ meta_title: Contact Us
 description: Your journey begins here. Allow us to walk beside you as you create lasting memories and forge connections that will carry you through a lifetime of joyous motherhood.
 image: "/images/intro-blog-logo.svg"
 noindex: false
-canonical: "https://www.yuzicare.com/contact"
+canonical: https://yuzicare.com/contact
 info: 
   title: Join Our Waitlist Today!
   description: Your journey begins here. Allow us to walk beside you as you create lasting memories and forge connections that will carry you through a lifetime of joyous motherhood.
