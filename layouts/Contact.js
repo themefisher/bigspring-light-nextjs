@@ -21,6 +21,11 @@ const Contact = ({ data }) => {
             >
               <input
                 type="hidden"
+                name="form-name"
+                value="Yuzi Contact"
+              />
+              <input
+                type="hidden"
                 name="subject"
                 value="Contact: %{formName} (%{submissionId})"
               />
