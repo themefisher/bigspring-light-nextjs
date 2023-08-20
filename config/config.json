@@ -1,7 +1,7 @@
 {
   "site": {
     "title": "Yuzi Care",
-    "base_url": "/",
+    "base_url": "https://yuzicare.com",
     "favicon": "/images/favicon.png",
     "logo": "/images/logo.png",
     "logo_width": "200",

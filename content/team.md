@@ -2,6 +2,11 @@
 title: Our Team
 layout: team
 draft: false
+meta_title: Our Team
+description: Our team, consisting of experienced moms and experts in postnatal care, is passionately committed to supporting you on your path to recovery and self-discovery. We offer a range of carefully curated services and programs tailored to meet the diverse needs of moms at different stages of their postnatal journey.
+image: "/images/steph_no_bg_profile.png"
+noindex: false
+canonical: "https://www.yuzicare.com/team"
 people:
 - name: Stephiney Foley
   title: Founder & CEO
