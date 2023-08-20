@@ -7,7 +7,8 @@ const Team = ({ data }) => {
       <div className="container">
         <h1 className="mb-8 text-center">{title}</h1>
         <div className="content">
-        <div class="grid border rounded-xl shadow-sm divide-y overflow-hidden sm:flex sm:divide-y-0 sm:divide-x">
+        <div className="grid overflow-hidden border divide-y shadow-sm divide-slate-800 rounded-xl sm:divide-none sm:border-none sm:rounded-none sm:grid-cols-2 sm:divide-y-0 sm:gap-1 sm:divide-x">
+        {/* <div className="grid overflow-hidden border divide-y shadow-sm rounded-xl sm:grid-cols-2"> */}
             {people.map((person, i) => (
               <TeamCard key={i} person={person}/>
             ))}
