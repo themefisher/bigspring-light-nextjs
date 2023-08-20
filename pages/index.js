@@ -36,7 +36,7 @@ const Home = ({ frontmatter }) => {
                 src={banner.image}
                 width={750}
                 height={390}
-                alt="banner image"
+                alt="A mother and her new infant bonding at Yuzi Care's postpartum retreat for new mothers."
                 priority
               />
             </div>
@@ -101,7 +101,7 @@ const Home = ({ frontmatter }) => {
                     {/* Slides */}
                     {service?.images.map((slide, index) => (
                       <SwiperSlide key={index}>
-                        <Image src={slide} alt="" width={600} height={500} />
+                        <Image src={slide} alt="We offer a variety of services: spa; pelvic floor PT; yoga; custom meal planning." width={600} height={500} />
                       </SwiperSlide>
                     ))}
                   </Swiper>
@@ -149,7 +149,7 @@ const Home = ({ frontmatter }) => {
         </div>
         <Image
           src={workflow.image}
-          alt="workflow image"
+          alt="Ready to join an inclusive and supportive community for new mothers?"
           width={1920}
           height={296}
         />
