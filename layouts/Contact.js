@@ -1,10 +1,27 @@
 import config from "@config/config.json";
 import { markdownify } from "@lib/utils/textConverter";
+import { useRef } from "react";
+import emailjs from '@emailjs/browser'
+import { emailConfig } from "@config/emailConfig";
 
 const Contact = ({ data }) => {
   const { frontmatter } = data;
   const { title, info } = frontmatter;
   const { contact_form_action } = config.params;
+  const form = useRef();
+  const { emailServiceId, emailTemplateId,  emailPublicKey } = emailConfig;
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm(emailServiceId, emailTemplateId, form.current, emailPublicKey)
+      .then((result) => {
+          console.log(result.text);
+          form.current.reset();
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
 
   return (
     <section className="section">
@@ -16,23 +33,14 @@ const Contact = ({ data }) => {
               className="contact-form"
               method="POST"
               action={contact_form_action}
-              data-netlify="true"
               name="Yuzi Contact"
+              ref={form}
+              onSubmit={sendEmail}
             >
-              <input
-                type="hidden"
-                name="form-name"
-                value="Yuzi Contact"
-              />
-              <input
-                type="hidden"
-                name="subject"
-                value="Contact: %{formName} (%{submissionId})"
-              />
               <div className="mb-3">
                 <input
                   className="w-full rounded form-input"
-                  name="name"
+                  name="from_name"
                   type="text"
                   placeholder="Jane Doe"
                   required
@@ -41,7 +49,7 @@ const Contact = ({ data }) => {
               <div className="mb-3">
                 <input
                   className="w-full rounded form-input"
-                  name="email"
+                  name="from_email"
                   type="email"
                   placeholder="healing@yuzi.com"
                   required
@@ -50,7 +58,7 @@ const Contact = ({ data }) => {
               <div className="mb-3">
                 <input
                   className="w-full rounded form-input"
-                  name="phone"
+                  name="from_phone"
                   type="tel"
                   placeholder="(360) 538-7802"
                   pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
