@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Disallow: /api/*
+Sitemap: https://yuzicare.com/sitemap.xml
