@@ -60,8 +60,8 @@ const Home = ({ frontmatter }) => {
                   <Image
                     className="mx-auto"
                     src={item.icon}
-                    width={30}
-                    height={30}
+                    width={60}
+                    height={60}
                     alt=""
                   />
                 )}
@@ -109,9 +109,8 @@ const Home = ({ frontmatter }) => {
 
                 {/* Content */}
                 <div
-                  className={`service-content mt-5 md:mt-0 ${
-                    !isOdd && "md:order-1"
-                  }`}
+                  className={`service-content mt-5 md:mt-0 ${!isOdd && "md:order-1"
+                    }`}
                 >
                   <h2 className="font-bold leading-[40px]">{service?.title}</h2>
                   <p className="mt-4 mb-2">{service?.content}</p>
