@@ -18,7 +18,7 @@ faqs:
   answer: Absolutely! Yuzi is designed to cater to the needs of all mothers, whether it's your first or subsequent pregnancy. Our expert guidance and supportive community ensure a fulfilling and empowering experience for every new mother.
 
 - title: What is included in the retreat?
-  answer: Our retreat includes a range of services such as expert guidance on newborn care, Pelvic Floor PT, postnatal yoga, and lactation consultations, all tailored to meet the unique needs of new mothers during their postpartum journey.
+  answer: Our retreat includes a range of services such as expert guidance on newborn care, postnatal yoga, and lactation consultations, all tailored to meet the unique needs of new mothers during their postpartum journey.
 
 - title: How do I join Yuzi's community?
   answer: Joining our community is easy! You can start by subscribing to our updates and joining our waitlist. This will provide you with early access to our transformative retreats and a supportive network of mothers just like you.
@@ -30,5 +30,5 @@ faqs:
   answer: Yes! Our staff consists of trained medical professionals who staff our facility 24/7 and are available to answer any concerns that you may have.
 
 - title: Is there a maximum stay?
-  answer: No, there is no maximum stay. However, stays longer than 30 days will need to be discussed in advance with our reservation agents. 
+  answer: No, there is no maximum stay. However, stays longer than 30 days will need to be discussed in advance with our care team. 
 ---
