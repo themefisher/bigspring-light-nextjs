@@ -30,5 +30,5 @@ faqs:
   answer: Yes! Our staff consists of trained medical professionals who staff our facility 24/7 and are available to answer any concerns that you may have.
 
 - title: Is there a maximum stay?
-  answer: No, there is no maximum stay. However, stays longer than 30 days will need to be discussed in advance with our reservation agents. 
+  answer: No, there is no maximum stay. However, stays longer than 30 days will need to be discussed in advance with our care team. 
 ---
