@@ -1,30 +1,51 @@
 import config from "@config/config.json";
 import { markdownify } from "@lib/utils/textConverter";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import emailjs from '@emailjs/browser'
 import { emailConfig } from "@config/emailConfig";
+import Toast from "./components/Toast";
 
 const Contact = ({ data }) => {
   const { frontmatter } = data;
   const { title, info } = frontmatter;
   const { contact_form_action } = config.params;
   const form = useRef();
-  const { emailServiceId, emailTemplateId,  emailPublicKey } = emailConfig;
+  const { emailServiceId, emailTemplateId, emailPublicKey } = emailConfig;
+  const [showToast, setShowToast] = useState(false);
+  const [fromName, setFromName] = useState('');
 
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm(emailServiceId, emailTemplateId, form.current, emailPublicKey)
-      .then((result) => {
+    const enteredFromName = form.current.elements.from_name.value;
+    const honeyPotEntry = form.current.elements.url.value;
+
+    if (honeyPotEntry) {
+      setFromName('for your submission');
+      setShowToast(true);
+    } else {
+      emailjs.sendForm(emailServiceId, emailTemplateId, form.current, emailPublicKey)
+        .then((result) => {
           console.log(result.text);
           form.current.reset();
-      }, (error) => {
+          setFromName(enteredFromName);
+          setShowToast(true);
+        })
+        .catch((error) => {
           console.log(error.text);
-      });
+          setShowToast(true);
+        });
+    }
+
+    setTimeout(() => {
+      setShowToast(false);
+      setFromName('');
+    }, 3000);
   };
 
   return (
     <section className="section">
+      {showToast && <Toast fromName={fromName} />}
       <div className="container">
         {markdownify(title, "h1", "text-center font-normal")}
         <div className="pb-0 section row">
@@ -38,6 +59,10 @@ const Contact = ({ data }) => {
               onSubmit={sendEmail}
             >
               <div className="mb-3">
+                <div className="absolute ml-[-9999px]">
+                  <label htmlFor="website-url">Your Website Url</label>
+                  <input type="text" id="website-url" name="url" tabIndex={-1} autoComplete="false" />
+                </div>
                 <input
                   className="w-full rounded form-input"
                   name="from_name"
