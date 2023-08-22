@@ -11,7 +11,7 @@ banner:
 feature: 
   title: What We Offer
   features:
-  - name: "24/7 Baby Monitoring"
+  - name: "24/7 Baby Care & Monitoring"
     icon: "/images/24_7.svg"
     content: "Your baby is always under the watchful eye of our trained staff so that you can relax."
   - name: "Postnatal Yoga"
