@@ -146,12 +146,15 @@ const Home = ({ frontmatter }) => {
           )}
           {markdownify(workflow.description, "p", "mt-3 text-md md:text-2xl")}
         </div>
-        <Image
-          src={workflow.image}
-          alt="Ready to join an inclusive and supportive community for new mothers?"
-          width={1920}
-          height={296}
-        />
+        <div>
+          <Image
+            src={workflow.image}
+            alt="Ready to join an inclusive and supportive community for new mothers?"
+            width={1920}
+            height={400}
+            className="mx-auto w-[100%] object-cover max-h-[500px]"
+          />
+        </div>
       </section>
 
       {/* Cta */}
