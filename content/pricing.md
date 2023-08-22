@@ -31,7 +31,6 @@ plans:
     - 24/7 Baby Monitoring
     - Postnatal Yoga
     - 2x Lactation Consultations
-    - Pelvic Floor Physical Therapy
   button:
     label: Get started
     link: "/contact"
@@ -42,7 +41,6 @@ plans:
   type: night
   features:
     - 30 nights
-    - Pelvic Floor Physical Therapy
     - Custom Meal Planning
     - 6x Postnatal Massage Treatments
   button:
