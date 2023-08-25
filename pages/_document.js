@@ -27,6 +27,10 @@ const Document = () => {
           media="(prefers-color-scheme: dark)"
           content="#000"
         />
+        <meta property="og:image" content="https://www.example.com/images/preview-image.jpg" />
+        <meta property="og:image:secure_url" content="https://www.example.com/images/preview-image.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
       </Head>
       <body>
         <Main />
