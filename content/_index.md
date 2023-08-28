@@ -11,16 +11,16 @@ banner:
 feature: 
   title: What We Offer
   features:
-  - name: "24/7 Baby Care & Monitoring"
+  - name: "24/7 Mom & Baby Care"
     icon: "/images/24_7.svg"
     content: "Your baby is always under the watchful eye of our trained staff so that you can relax."
-  - name: "Postnatal Yoga"
+  - name: "Post-Delivery Recovery Program"
     icon: "/images/yoga.svg"
-    content: "Rejuvenate and restore with our postnatal yoga for new mothers"
-  - name: "Lactation Consultation"
+    content: "Rejuvenate and restore yourself with our healing program."
+  - name: "Onsite Lactation Consultant"
     icon: "/images/lactation.svg"
     content: "Expert lactation support for confident mother-baby bonding."
-  - name: "Infant Care Education"
+  - name: "New Parent Education"
     icon: "/images/baby-education.svg"
     content: "Our infant care experts are here to guide and support you on diapering, bathing, burping, and everything in between."
   - name: "Postnatal Nourishment"
