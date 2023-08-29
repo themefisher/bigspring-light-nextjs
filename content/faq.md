@@ -26,9 +26,6 @@ faqs:
 - title: Can my family stay with me?
   answer: While we truly value the importance of family support our Yuzi retreat is primarily designed as a dedicated space for new mothers and their babies to bond and focus on postpartum recovery. Visiting hours are between 5:00pm and 8:00pm, allowing families to share in this special time while also respecting the need for mothers to have uninterrupted rest, healing, and quality time with their infants during the day. This approach ensures an environment that prioritizes the well-being of both mothers and babies, fostering a nurturing and transformative experience for everyone involved.
 
-- title: Is there a physician on call 24/7?
-  answer: Yes! Our staff consists of trained medical professionals who staff our facility 24/7 and are available to answer any concerns that you may have.
-
 - title: Is there a maximum stay?
   answer: No, there is no maximum stay. However, stays longer than 30 days will need to be discussed in advance with our care team. 
 ---
