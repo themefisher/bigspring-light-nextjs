@@ -8,41 +8,51 @@ image: "/images/pricing.svg"
 noindex: false
 canonical: "https://yuzicare.com/pricing"
 plans:
-- title: Basic Plan
-  subtitle: Our Budget Conscious Plan
-  price: 999
+- title: 5 Nights
+  subtitle: "Your stay includes:"
+  price: 1,199
   type: night
   features:
-    - 7 nights
-    - 24/7 Baby Monitoring
-    - Postnatal Yoga
-    - 1x Lactation Consultation
+    - Luxury hotel accommodation
+    - 24/7 care for baby and mom
+    - 3 meals per day for mom
+    - Snack Lounge
+    - Lactation support 
+    - Infant care education 
+    - Mommy & Me Social programming
   button:
     label: Get Started
     link: "/contact"
 
-- title: Standard Plan
-  subtitle: Our Most Popular Plan
-  price: 1,199
+- title: 7 Nights (Most Popular)
+  subtitle: "You stay includes:"
+  price: 1,050
   type: night
   recommended: true
   features:
-    - 14 nights
-    - 24/7 Baby Monitoring
-    - Postnatal Yoga
-    - 2x Lactation Consultations
+    - Luxury hotel accommodation
+    - 24/7 care for baby and mom
+    - 3 meals per day for mom
+    - Snack Lounge
+    - Lactation support 
+    - Infant care education
+    - Mommy & Me Social programming
   button:
     label: Get started
     link: "/contact"
 
-- title: Premium Plan
-  subtitle: Our Most Luxurious Plan
-  price: 1,499
+- title: 7+ Nights
+  subtitle: "You stay includes:"
+  price: 899
   type: night
   features:
-    - 30 nights
-    - Custom Meal Planning
-    - 6x Postnatal Massage Treatments
+    - Luxury hotel accommodation
+    - 24/7 care for baby and mom
+    - 3 meals per day for mom
+    - Snack Lounge
+    - Lactation support 
+    - Infant care education
+    - Mommy & Me Social programming
   button:
     label: Get started
     link: "/contact"
