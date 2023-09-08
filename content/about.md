@@ -2,8 +2,8 @@
 title: Our Story
 layout: about
 draft: false
-meta_title: Our Story
-description: Yuzi is a haven designed specifically for moms during one of the most challenging periods of their lives—the postnatal journey. Our retreat offers a nurturing and supportive environment where mothers can find solace, rejuvenation, and connection as they navigate the joys and demands of early motherhood.
+meta_title: "For Moms, By Moms - Yuzi Mom Community | Our Story"
+description: Our team of experienced parents and experts in postnatal care is passionately committed to supporting your recovery and baby bonding. Learn more about our story.
 image: "/images/intro-blog-logo.svg"
 noindex: false
 canonical: "https://yuzicare.com/about"

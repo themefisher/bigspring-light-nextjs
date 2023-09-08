@@ -1,4 +1,6 @@
 ---
+meta_title: Seattle Postpartum Hotel - Postpartum Retreat | Yuzi
+
 banner:
   title: The First Postpartum Retreat in the Pacific Northwest
   content: Coming Spring 2024 to Seattle, WA
