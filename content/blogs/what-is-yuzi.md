@@ -1,10 +1,10 @@
 ---
 title: "Yuzi: The First Postpartum Retreat in the Pacific Northwest"
-description: "Introducing the first postpartum retreat in the Pacific Northwest focused on helping mothers recover after childbirth."
+description: "Seattle's postpartum retreat empowering mothers to rest, heal, and connect with their babies after childbirth. Explore modern luxury and ancient wisdom with us."
 image: "/images/intro-blog-logo.svg"
 date: 2023-08-04T05:00:00Z
 draft: false
-meta_title: "Yuzi: The First Postpartum Retreat in the Pacific Northwest"
+meta_title: "Seattle's Premier Postpartum Retreat - Rest, Heal, Connect | Yuzi"
 noindex: false
 canonical: "https://yuzicare.com/blogs/what-is-yuzi"
 ---

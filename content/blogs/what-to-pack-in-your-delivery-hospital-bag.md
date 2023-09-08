@@ -1,10 +1,10 @@
 ---
 title: "The Ultimate Guide: What to Pack in Your Delivery Hospital Bag"
-description: Preparing for your upcoming trip to the hospital for the arrival of your baby is an exciting yet nerve-wracking experience, especially if it's your first time. We've tapped the Yuzi Mom network to put together a list of the essentials!"
+description: "Pack your delivery hospital bag stress-free with our ultimate guide. Get tips from the Yuzi Mom network for an essential and comfortable hospital stay."
 image: "/images/what-to-pack-hero.png"
 date: 2023-09-06T05:00:00Z
 draft: false
-meta_title: "The Ultimate Guide: What to Pack in Your Delivery Hospital Bag"
+meta_title: "What to Pack in Your Delivery Hospital Bag - Essentials | Yuzi"
 noindex: false
 canonical: "https://yuzicare.com/blogs/what-to-pack-in-your-delivery-hospital-bag"
 ---

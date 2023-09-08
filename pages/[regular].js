@@ -16,7 +16,7 @@ const RegularPages = ({ data }) => {
 
   return (
     <Base
-      title={title}
+      title={meta_title ?? title}
       description={description ? description : content.slice(0, 120)}
       meta_title={meta_title}
       image={image}
@@ -36,9 +36,9 @@ const RegularPages = ({ data }) => {
       ) : layout === "about" ? (
         <About data={data} />
       ) :
-      (
-        <Default data={data} />
-      )}
+        (
+          <Default data={data} />
+        )}
     </Base>
   );
 };

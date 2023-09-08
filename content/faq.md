@@ -2,8 +2,8 @@
 title: Frequently Asked Questions
 layout: faq
 draft: false
-meta_title: FAQs
-description: Have a question? Explore our FAQs to learn more about the postnatal care and services we provide at Yuzi. Didn't see your question listed? Contact our team of experts and get an answer today!
+meta_title: I Have Questions - What is ... | FAQs
+description: Explore our FAQs to learn more about our retreat and postnatal care services. Didn't see your question listed? Contact our team of experts and get an answer today!
 image: "/images/question-cta.svg"
 noindex: false
 canonical: "https://yuzicare.com/faq"

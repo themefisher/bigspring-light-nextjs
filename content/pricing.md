@@ -2,8 +2,8 @@
 title: Pricing
 layout: pricing
 draft: false
-meta_title: Pricing
-description: We offer multiple plans ranging from a basic 7 night stay all the way up to 30 nights. Want to stay longer? No problem! There is no maximum stay time. Just call ahead to inform our booking agents and we will arrange for your stay.
+meta_title: How Much is Postpartum Care - Baby Hotel | Pricing
+description: We offer multiple plans ranging from a basic 7 night stay all the way up to 30 nights. Contact our booking agents today!
 image: "/images/pricing.svg"
 noindex: false
 canonical: "https://yuzicare.com/pricing"

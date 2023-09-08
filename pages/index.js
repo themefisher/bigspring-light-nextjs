@@ -10,11 +10,11 @@ import "swiper/swiper.min.css";
 import { getListPage } from "../lib/contentParser";
 
 const Home = ({ frontmatter }) => {
-  const { banner, feature, services, workflow, call_to_action } = frontmatter;
+  const { meta_title, banner, feature, services, workflow, call_to_action } = frontmatter;
   const { title } = config.site;
 
   return (
-    <Base title={title}>
+    <Base title={meta_title ?? title}>
       {/* Banner */}
       <section className="section pb-[50px]">
         <div className="container">

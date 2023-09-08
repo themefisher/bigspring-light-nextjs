@@ -24,7 +24,7 @@ const Base = ({
         {/* title */}
         <title>
           {plainify(
-            meta_title ? meta_title : title ? title : config.site.title
+            meta_title ?? title ?? config.site.title
           )}
         </title>
 
@@ -47,7 +47,7 @@ const Base = ({
         <meta
           property="og:title"
           content={plainify(
-            meta_title ? meta_title : title ? title : config.site.title
+            meta_title ?? title ?? config.site.title
           )}
         />
 
@@ -66,7 +66,7 @@ const Base = ({
         <meta
           name="twitter:title"
           content={plainify(
-            meta_title ? meta_title : title ? title : config.site.title
+            meta_title ?? title ?? config.site.title
           )}
         />
 
@@ -79,13 +79,13 @@ const Base = ({
         {/* og-image */}
         <meta
           property="og:image"
-          content={`${base_url}${image ? image : meta_image}`}
+          content={`${base_url}${image ?? meta_image}`}
         />
 
         {/* twitter-image */}
         <meta
           name="twitter:image"
-          content={`${base_url}${image ? image : meta_image}`}
+          content={`${base_url}${image ?? meta_image}`}
         />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
