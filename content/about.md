@@ -2,8 +2,8 @@
 title: Our Story
 layout: about
 draft: false
-meta_title: "For Moms, By Moms - Yuzi Mom Community | Our Story"
-description: Our team of experienced parents and experts in postnatal care is passionately committed to supporting your recovery and baby bonding. Learn more about our story.
+meta_title: "For Moms, By Moms - Yuzi's Healing Sanctuary | Our Story"
+description: Yuzi Care offers a nurturing and supportive environment where mothers can recover, rejuvenate, and connect with their babies and each other. Read Our Story.
 image: "/images/intro-blog-logo.svg"
 noindex: false
 canonical: "https://yuzicare.com/about"
