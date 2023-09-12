@@ -3,7 +3,7 @@ title: Pricing
 layout: pricing
 draft: false
 meta_title: How Much is Postpartum Care - Baby Hotel | Pricing
-description: We offer multiple plans ranging from a basic 7 night stay all the way up to 30 nights. Contact our booking agents today!
+description: The Yuzi Retreat offers incredible value and convenience by packaging several premium services together. Contact our booking agents today!
 image: "/images/pricing.svg"
 noindex: false
 canonical: "https://yuzicare.com/pricing"
@@ -67,3 +67,19 @@ call_to_action:
     link: "/contact"
     
 ---
+
+### How much would it cost to book all of the services included in your Yuzi Retreat? 
+
+The Yuzi Retreat offers incredible value and convenience by packaging several premium services together. While service prices differ regionally, **the average Yuzi Family saves $1,400-$1,900 *per night* (a 50% savings!)**, not to mention the time and mental load of finding, vetting, and coordinating services.
+
+| Service                           | Cost Range [^1]                       |
+|-----------------------------------|---------------------------------------|
+| Luxury Hotel Accommodation        | $350 - $500 per night                 |
+| Three Room-Service Meals          | $150 - $250 per day                   |
+| Newborn Night Nurse               | $600 per night ($75 per hour)         |
+| 24-hour Postpartum Support        | $1,000 - $1,200 per day ($40-$50/hour)|
+| Infant Care Education Classes     | $100 per class                        |
+| Lactation Specialist Home Visit   | $250 - $300 per visit                 |
+| **Total Cost**                    | **$2,450 - $2,950 *per day***         |
+
+[^1]: Cost ranges are based on 2023 average prices in Seattle, WA.

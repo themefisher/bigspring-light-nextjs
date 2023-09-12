@@ -1,6 +1,6 @@
 ---
 title: "The Ultimate Guide: What to Pack in Your Delivery Hospital Bag"
-description: "Pack your delivery hospital bag stress-free with our ultimate guide. Get tips from the Yuzi Mom network for an essential and comfortable hospital stay."
+description: "Wondering what to pack in your delivery hospital bag? Look no further - we’ve tapped into the Yuzi Mom network to put together the ultimate packing list."
 image: "/images/what-to-pack-hero.png"
 date: 2023-09-06T05:00:00Z
 draft: false
