@@ -2,8 +2,8 @@
 title: Our Story
 layout: about
 draft: false
-meta_title: "For Moms, By Moms - Yuzi's Healing Sanctuary | Our Story"
-description: Yuzi Care offers a nurturing and supportive environment where mothers can recover, rejuvenate, and connect with their babies and each other. Read Our Story.
+meta_title: " For Moms, By Moms - The Yuzi Retreat | Our Story"
+description: The Yuzi Retreat offers a nurturing and supportive environment where mothers can recover, rejuvenate, and connect with their babies and each other. Read Our Story.
 image: "/images/intro-blog-logo.svg"
 noindex: false
 canonical: "https://yuzicare.com/about"

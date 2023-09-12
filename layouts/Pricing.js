@@ -1,24 +1,26 @@
 import Link from "next/link";
 import Cta from "./components/Cta";
+import shortcodes from "@shortcodes/all";
+import { MDXRemote } from "next-mdx-remote";
 
 function Pricing({ data }) {
-  const {
-    frontmatter: { title, plans, call_to_action },
-  } = data;
+
+  const { frontmatter, mdxContent } = data;
+  const { title, plans, call_to_action } = frontmatter;
+
   return (
     <>
-      <section className="section pb-0">
+      <section className="pb-0 section">
         <div className="container">
-          <h1 className="text-center font-normal">{title}</h1>
-          <div className="section row -mt-10 justify-center md:mt-0">
+          <h1 className="font-normal text-center">{title}</h1>
+          <div className="justify-center -mt-10 section row md:mt-0">
             {plans.map((plan, index) => (
               <div
-                className={`col-12 md:col-4 ${
-                  !plan.recommended ? "lg:px-0" : "col-recommended"
-                }`}
+                className={`col-12 md:col-4 ${!plan.recommended ? "lg:px-0" : "col-recommended"
+                  }`}
                 key={plan.title + index}
               >
-                <div className="card text-center">
+                <div className="text-center card">
                   <h4>{plan.title}</h4>
                   <div className="mt-5">
                     <span className="text-5xl text-dark">${plan.price}</span>
@@ -35,9 +37,8 @@ function Pricing({ data }) {
                     ))}
                   </ul>
                   <Link
-                    className={`btn mt-5 ${
-                      plan.recommended ? "btn-primary" : "btn-outline-primary"
-                    }`}
+                    className={`btn mt-5 ${plan.recommended ? "btn-primary" : "btn-outline-primary"
+                      }`}
                     href={plan.button.link}
                     rel={plan.button.rel}
                   >
@@ -46,6 +47,17 @@ function Pricing({ data }) {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+      <section className="section">
+        <div className="container">
+          <div className="row">
+            <article className="mx-auto text-center col-12 md:col-8">
+              <div className="mb-16 text-left content">
+                <MDXRemote {...mdxContent} components={shortcodes} />
+              </div>
+            </article>
           </div>
         </div>
       </section>
