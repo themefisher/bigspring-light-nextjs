@@ -1,9 +1,11 @@
+import React, { useState } from "react";
 import Logo from "@components/Logo";
 import config from "@config/config.json";
 import menu from "@config/menu.json";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import React, { useState } from "react";
+import Social from "@layouts/components/Social";
+import social from "@config/social.json"
 
 const Header = () => {
   //router
@@ -21,16 +23,22 @@ const Header = () => {
 
   return (
     <header className="header">
-      <nav className="navbar container">
+
+      <nav className="container navbar">
+
         {/* logo */}
         <div className="order-0">
           <Logo src={logo} />
         </div>
 
+        {/* social icons */}
+        <Social source={social} className="hidden md:block md:absolute header-social-icons top-16 left-16 " />
+
+
         {/* navbar toggler */}
         <button
           id="show-button"
-          className="order-2 flex cursor-pointer items-center md:hidden md:order-1"
+          className="flex items-center order-2 cursor-pointer md:hidden md:order-1"
           onClick={() => setNavOpen(!navOpen)}
         >
           {navOpen ? (
@@ -52,27 +60,26 @@ const Header = () => {
         {/* Menu */}
         <div
           id="nav-menu"
-          className={`order-3 md:order-1 ${
-            navOpen ? "max-h-[1000px]" : "max-h-0"
-          }`}
+          className={`order-3 md:order-1 ${navOpen ? "max-h-[1000px]" : "max-h-0"
+            }`}
         >
-          <ul className="navbar-nav block w-full md:flex md:w-auto lg:space-x-2">
+          <ul className="block w-full navbar-nav md:flex md:w-auto lg:space-x-2">
             {main.map((menu, i) => (
               <React.Fragment key={`menu-${i}`}>
                 {menu.hasChildren ? (
-                  <li className="nav-item nav-dropdown group relative">
-                    <span className="nav-link inline-flex items-center">
+                  <li className="relative nav-item nav-dropdown group">
+                    <span className="inline-flex items-center nav-link">
                       {menu.name}
-                      <svg className="h-4 w-4 fill-current" viewBox="0 0 20 20">
+                      <svg className="w-4 h-4 fill-current" viewBox="0 0 20 20">
                         <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
                       </svg>
                     </span>
-                    <ul className="nav-dropdown-list hidden group-hover:block md:invisible md:absolute md:block md:opacity-0 md:group-hover:visible md:group-hover:opacity-100">
+                    <ul className="hidden nav-dropdown-list group-hover:block md:invisible md:absolute md:block md:opacity-0 md:group-hover:visible md:group-hover:opacity-100">
                       {menu.children.map((child, i) => (
                         <li className="nav-dropdown-item" key={`children-${i}`}>
                           <Link
                             href={child.url}
-                            className="nav-dropdown-link block"
+                            className="block nav-dropdown-link"
                           >
                             {child.name}
                           </Link>
@@ -85,9 +92,8 @@ const Header = () => {
                     <Link
                       href={menu.url}
                       onClick={() => setNavOpen(false)}
-                      className={`nav-link block ${
-                        router.asPath === menu.url ? "nav-link-active" : ""
-                      }`}
+                      className={`nav-link block ${router.asPath === menu.url ? "nav-link-active" : ""
+                        }`}
                     >
                       {menu.name}
                     </Link>
@@ -95,6 +101,7 @@ const Header = () => {
                 )}
               </React.Fragment>
             ))}
+            <Social source={social} className="md:hidden header-social-icons py-[14px]" />
             {enable && (
               <li className="md:hidden">
                 <Link
