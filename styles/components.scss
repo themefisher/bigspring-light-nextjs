@@ -32,6 +32,23 @@
   }
 }
 
+.header-social-icons {
+  @apply space-x-2;
+  li {
+    a {
+      @apply block h-6 w-6 rounded-full border border-primary text-center text-white transition hover:bg-primary;
+
+      svg {
+        @apply m-auto h-6 fill-primary;
+      }
+
+      &:hover svg {
+        @apply fill-white;
+      }
+    }
+  }
+}
+
 // form style
 .form-input,
 .form-textarea {
