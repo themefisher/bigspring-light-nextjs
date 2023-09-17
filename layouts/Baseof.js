@@ -37,7 +37,7 @@ const Base = ({
         {/* meta-description */}
         <meta
           name="description"
-          content={plainify(description ? description : meta_description)}
+          content={plainify(description ?? meta_description)}
         />
 
         {/* author from config.json */}
@@ -73,7 +73,7 @@ const Base = ({
         {/* twitter-description */}
         <meta
           name="twitter:description"
-          content={plainify(description ? description : meta_description)}
+          content={plainify(description ?? meta_description)}
         />
 
         {/* og-image */}
