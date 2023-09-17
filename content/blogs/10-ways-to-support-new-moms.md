@@ -1,5 +1,5 @@
 ---
-title: "10 Ways to Support New Moms: Be the Hero They Didn't Know They Needed!"
+title: "10 Ways to Support New Moms: Be the (S)Hero They Didn't Know They Needed!"
 description: "When a new mom in your life is navigating motherhood, offering support is crucial. Here are 10 specific and helpful things you can do to help. Read more here."
 image: "/images/tired-mom.png"
 date: 2023-09-17T05:00:00Z
