@@ -1,6 +1,6 @@
 ---
 title: "Why Everyone Needs a Postpartum Plan"
-meta_title: "Why Everyone Needs a Postpartum Plan - Why Mom's Need Postpartum | Yuzi"
+meta_title: "Why Everyone Needs a Postpartum Plan - What Moms Need Postpartum | Yuzi"
 description: Everyone needs a well-thought-out postpartum plan. Have you thought of parental leave, rest, physical recovery, mental health, feeding, and family support? Learn what else to consider from Yuzi Moms.
 image: "/images/postpartum-plan-featured.png"
 date: 2023-09-29T05:00:00Z
