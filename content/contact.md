@@ -11,7 +11,7 @@ info:
   title: Join Our Waitlist Today!
   description: Your journey begins here. Allow us to walk beside you as you create lasting memories and forge connections that will carry you through a lifetime of joyous motherhood.
   contacts: 
-    - "Phone: [+1 (718) 873 7881](tel:+17188737881)"
+    - "Phone: [+1 (206) 222-6295](tel:+12062226295)"
     - "Mail: [contact@yuzicare.com](mailto:contact@yuzicare.com)"
     - "Address: Seattle, WA"
 ---
