@@ -21,8 +21,8 @@ plans:
     - Infant care education 
     - Mommy & Me Social programming
   button:
-    label: Get Started
-    link: "/contact"
+    label: Reserve Your Spot
+    link: "https://book.stripe.com/test_9AQcQ28MI3I84ak289"
 
 - title: 7 Nights (Most Popular)
   subtitle: "You stay includes:"
@@ -38,8 +38,8 @@ plans:
     - Infant care education
     - Mommy & Me Social programming
   button:
-    label: Get started
-    link: "/contact"
+    label: Reserve Your Spot
+    link: "https://book.stripe.com/test_bIYdU6aUQ92sdKUbIK"
 
 - title: 7+ Nights
   subtitle: "You stay includes:"
@@ -54,8 +54,8 @@ plans:
     - Infant care education
     - Mommy & Me Social programming
   button:
-    label: Get started
-    link: "/contact"
+    label: Reserve Your Spot
+    link: "https://book.stripe.com/test_fZebLY5AwfqQeOY4gj"
 
 call_to_action:
   title: Have a question?

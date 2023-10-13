@@ -49,6 +49,7 @@ const App = ({ Component, pageProps }) => {
             });
         `}
       </Script>
+
       <Head>
         {/* google font css */}
         <link
