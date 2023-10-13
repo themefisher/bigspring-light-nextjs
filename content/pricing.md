@@ -22,7 +22,7 @@ plans:
     - Mommy & Me Social programming
   button:
     label: Reserve Your Spot
-    link: "https://book.stripe.com/test_9AQcQ28MI3I84ak289"
+    link: "https://book.stripe.com/9AQ28L97ffYl8SY28a"
 
 - title: 7 Nights (Most Popular)
   subtitle: "You stay includes:"
@@ -39,7 +39,7 @@ plans:
     - Mommy & Me Social programming
   button:
     label: Reserve Your Spot
-    link: "https://book.stripe.com/test_bIYdU6aUQ92sdKUbIK"
+    link: "https://book.stripe.com/bIY9Bd97f9zXb16289"
 
 - title: 7+ Nights
   subtitle: "You stay includes:"
@@ -55,7 +55,7 @@ plans:
     - Mommy & Me Social programming
   button:
     label: Reserve Your Spot
-    link: "https://book.stripe.com/test_fZebLY5AwfqQeOY4gj"
+    link: "https://book.stripe.com/dR63cP1ENbI52uA7ss"
 
 call_to_action:
   title: Have a question?
@@ -68,7 +68,7 @@ call_to_action:
     
 ---
 
-### How much would it cost to book all of the services included in your Yuzi Retreat? 
+### How much would it cost to book all of the services included in your Yuzi Retreat?
 
 The Yuzi Retreat offers incredible value and convenience by packaging several premium services together. While service prices differ regionally, **the average Yuzi Family saves $1,400-$1,900 *per night* (a 50% savings!)**, not to mention the time and mental load of finding, vetting, and coordinating services.
 

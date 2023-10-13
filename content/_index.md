@@ -6,8 +6,8 @@ banner:
   content: Coming Spring 2024 to Seattle, WA
   image: /images/mom_baby_home_cartoon_hero.png
   button:
-    label: "Join the Waitlist"
-    link: "https://book.stripe.com/test_3csbLY8MI92sdKU7ss"
+    label: "Reserve Your Spot"
+    link: "https://book.stripe.com/00g4gTerzeUh5GM8wz"
     enable: true
 
 # feature
@@ -66,6 +66,6 @@ call_to_action:
   image: '/images/mom-baby-cta.svg'
   button:
     enable: true
-    label: "Join the Waitlist"
-    link: "https://book.stripe.com/test_3csbLY8MI92sdKU7ss"
+    label: "Reserve Your Spot"
+    link: "https://book.stripe.com/00g4gTerzeUh5GM8wz"
 ---
