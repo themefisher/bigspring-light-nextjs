@@ -5,8 +5,7 @@ import menu from "@config/menu.json";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import Social from "@layouts/components/Social";
-import social from "@config/social.json"
-import StripeBuyButton from "@layouts/components/StripeBuyButton"
+import social from "@config/social.json";
 
 const Header = () => {
   //router
