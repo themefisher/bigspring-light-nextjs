@@ -49,6 +49,13 @@ const App = ({ Component, pageProps }) => {
             });
         `}
       </Script>
+
+      <Script
+        async
+        id="stripe-buy-button"
+        src="https://js.stripe.com/v3/buy-button.js">
+      </Script>
+
       <Head>
         {/* google font css */}
         <link

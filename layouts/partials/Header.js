@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import Social from "@layouts/components/Social";
 import social from "@config/social.json"
+import StripeBuyButton from "@layouts/components/StripeBuyButton"
 
 const Header = () => {
   //router
@@ -117,6 +118,7 @@ const Header = () => {
         </div>
         {enable && (
           <div className="d-flex order-1 ml-auto hidden min-w-[200px] items-center justify-end md:ml-0 md:flex md:order-2">
+            {/* <StripeBuyButton className="btn btn-primary z-0 py-[14px]" rel="external" /> */}
             <Link className="btn btn-primary z-0 py-[14px]" href={link} rel="">
               {label}
             </Link>

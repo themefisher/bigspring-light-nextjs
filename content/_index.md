@@ -7,7 +7,8 @@ banner:
   image: /images/mom_baby_home_cartoon_hero.png
   button:
     label: "Join the Waitlist"
-    link: "/contact"
+    link: "https://book.stripe.com/test_3csbLY8MI92sdKU7ss"
+    enable: true
 
 # feature
 feature: 
@@ -58,10 +59,6 @@ workflow:
   title: "Join us at Yuzi!"
   image: "/images/moms-workflow-banner.svg"
   description: "Your sanctuary for healing, bonding, and empowerment awaits."
-  button:
-    enable: true
-    label: "Contact Us"
-    link: "/contact"
 # call_to_action
 call_to_action:
   title: Ready to get started?
@@ -69,6 +66,6 @@ call_to_action:
   image: '/images/mom-baby-cta.svg'
   button:
     enable: true
-    label: "Contact Us"
-    link: "/contact"
+    label: "Join the Waitlist"
+    link: "https://book.stripe.com/test_3csbLY8MI92sdKU7ss"
 ---

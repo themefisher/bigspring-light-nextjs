@@ -18,7 +18,7 @@
   "nav_button": {
     "enable": true,
     "label": "Join the Waitlist",
-    "link": "/contact"
+    "link": "https://book.stripe.com/test_3csbLY8MI92sdKU7ss"
   },
 
   "params": {
