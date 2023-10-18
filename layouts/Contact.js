@@ -13,6 +13,7 @@ const Contact = ({ data }) => {
   const { emailServiceId, emailTemplateId, emailPublicKey } = emailConfig;
   const [showToast, setShowToast] = useState(false);
   const [fromName, setFromName] = useState('');
+  const [isPregnant, setIsPregnant] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -63,15 +64,17 @@ const Contact = ({ data }) => {
                   <label htmlFor="website-url">Your Website Url</label>
                   <input type="text" id="website-url" name="url" tabIndex={-1} autoComplete="false" />
                 </div>
+                <label htmlFor="from_name" className="font-bold text-black">Name</label>
                 <input
                   className="w-full rounded form-input"
                   name="from_name"
                   type="text"
-                  placeholder="Jane Doe"
+                  placeholder="Your Name"
                   required
                 />
               </div>
               <div className="mb-3">
+                <label htmlFor="from_email" className="font-bold text-black">Email</label>
                 <input
                   className="w-full rounded form-input"
                   name="from_email"
@@ -81,21 +84,33 @@ const Contact = ({ data }) => {
                 />
               </div>
               <div className="mb-3">
+                <label htmlFor="is_pregnant" className="font-bold text-black">Are you pregnant?</label>
                 <input
-                  className="w-full rounded form-input"
-                  name="from_phone"
-                  type="tel"
-                  placeholder="(360) 538-7802"
-                  pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
+                  className="mx-2"
+                  name="is_pregnant"
+                  type="checkbox"
+                  onClick={() => setIsPregnant(!isPregnant)}
+                  required
                 />
               </div>
+              {isPregnant &&
+                <div className="mb-3">
+                  <label htmlFor="due_date" className="font-bold text-black">Due Date</label>
+                  <input
+                    className="w-full rounded form-input"
+                    name="due_date"
+                    type="date"
+                    placeholder="Due Date"
+                    required
+                  />
+                </div>
+              }
               <div className="mb-3">
-                <label htmlFor="attribution-source">How Did You Hear About Us?</label>
+                <label htmlFor="attribution-source" className="font-bold text-black">How Did You Hear About Us?</label>
                 <select
                   className="w-full rounded form-input"
                   name="attribution_source"
                   id="attribution-source"
-                  required
                 >
                   <option value="" disabled selected>==SELECT AN OPTION==</option>
                   <option value="Google Search">Google Search</option>

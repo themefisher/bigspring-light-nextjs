@@ -8,24 +8,27 @@ image: "/images/question-cta.svg"
 noindex: false
 canonical: "https://yuzicare.com/faq"
 faqs:
-- title: What exactly is Yuzi's postnatal retreat?
-  answer: Our retreat is a comprehensive haven designed to provide mothers with expert postpartum care, healing, and empowerment. It combines modern luxury with the ancient wisdom of "Yuezi," offering a supportive environment for both physical recovery and emotional well-being.
+- title: What exactly is Yuzi postnatal retreat?
+  answer: The Yuzi retreat provides holistic postpartum care to promote physical recovery and emotional wellbeing. Each stay booked with Yuzi includes luxury hotel accommodations, a 24-hour nursery, nutritious meals and snacks, onsite experts in postpartum care, infant care education, and social programming. Our experience combines modern luxury amenities with the ancient wisdom of "Yuezi" and is tailored to the needs of each guest.
   
-- title: How does Yuzi's approach differ from traditional postpartum care?
-  answer: Unlike traditional care that often focuses solely on the baby, we prioritize mothers' well-being by providing a holistic support system encompassing physical recovery, mental health, and a strong sense of community.
+- title: Who is Yuzi suitable for?
+  answer: Yuzi is designed to cater to the needs of first-time and experienced mothers alike within the first six weeks postpartum.
 
-- title: Is Yuzi suitable for first-time mothers?
-  answer: Absolutely! Yuzi is designed to cater to the needs of all mothers, whether it's your first or subsequent pregnancy. Our expert guidance and supportive community ensure a fulfilling and empowering experience for every new mother.
-
-- title: What is included in the retreat?
-  answer: Our retreat includes a range of services such as expert guidance on newborn care, postnatal yoga, and lactation consultations, all tailored to meet the unique needs of new mothers during their postpartum journey.
-
-- title: How do I join Yuzi's community?
-  answer: Joining our community is easy! You can start by subscribing to our updates and joining our waitlist. This will provide you with early access to our transformative retreats and a supportive network of mothers just like you.
+- title: How long should I stay?
+  answer: We require a minimum of three nights and recommend our guests to stay at least a week for recovery benefits.  Guests can stay up to a maximum of six weeks.
 
 - title: Can my family stay with me?
-  answer: While we truly value the importance of family support our Yuzi retreat is primarily designed as a dedicated space for new mothers and their babies to bond and focus on postpartum recovery. Visiting hours are between 5:00pm and 8:00pm, allowing families to share in this special time while also respecting the need for mothers to have uninterrupted rest, healing, and quality time with their infants during the day. This approach ensures an environment that prioritizes the well-being of both mothers and babies, fostering a nurturing and transformative experience for everyone involved.
+  answer: Partners are welcome to join you during your stay at the Yuzi retreat.  While we value the importance of broader family bonding the primary focus of the Yuzi Retreat is postpartum recovery and parent & baby bonding. We have daily visiting hours for families to share in this special time while also respecting the need for mothers to rest, heal, and bond with their babies.
 
-- title: Is there a maximum stay?
-  answer: No, there is no maximum stay. However, stays longer than 30 days will need to be discussed in advance with our care team. 
+- title: Where is the Yuzi Retreat and when will it open?
+  answer: Our first retreat center will be located in the Seattle, Washington area and is slated to open in 2024.  The specific location is being finalized - join our mailing list and follow us on social for updates! We plan to expand to additional locations later on.  Let us know where you’d like to see our next Yuzi location!
+
+- title: How much does it cost?
+  answer: We are finalizing our nightly rate with our luxury hotel partner. Package deals will be available to maximize the value of your stay. See our <a href='/pricing'>pricing page</a> for an illustrative example of our packages. *Final package design & pricing subject to change.*
+ 
+- title: How do I make a reservation?
+  answer: Please fill out our waitlist form to secure your place.  We are accepting reservations for June 1st 2024 or later. We require a $99 deposit to hold your reservation. Your reservation is fully refundable at any time.
+
+- title: I have more questions. How can I learn more?
+  answer: Please reach out to our care team at <a href='mailto:hi@yuzicare.com'>hi@yuzicare.com.</a> We would love to hear from you.
 ---

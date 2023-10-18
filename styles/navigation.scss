@@ -4,7 +4,7 @@
 
 // navbar items
 .navbar {
-  @apply relative flex flex-wrap items-center justify-between;
+  @apply relative flex flex-wrap md:flex-nowrap items-center justify-between;
 }
 
 .navbar-brand {
@@ -16,7 +16,7 @@
 }
 
 .navbar-nav {
-  @apply text-center md:text-left;
+  @apply text-center;
 }
 
 #nav-menu {
@@ -24,7 +24,7 @@
 }
 
 .nav-item {
-  @apply lg:mx-3;
+  @apply lg:mx-2;
 
   select:focus {
     box-shadow: none;
@@ -32,7 +32,7 @@
 }
 
 .nav-link {
-  @apply py-3 px-2 font-primary text-base font-bold text-dark transition hover:text-primary md:py-4 lg:px-3;
+  @apply py-3 px-2 font-primary text-sm lg:text-base font-bold text-dark transition hover:text-primary md:py-4 lg:px-3;
 
   &-active {
     @apply text-primary;

@@ -116,9 +116,8 @@ const Header = () => {
           </ul>
         </div>
         {enable && (
-          <div className="d-flex order-1 ml-auto hidden min-w-[200px] items-center justify-end md:ml-0 md:flex md:order-2">
-            {/* <StripeBuyButton className="btn btn-primary z-0 py-[14px]" rel="external" /> */}
-            <Link className="btn btn-primary z-0 py-[14px]" href={link} rel="">
+          <div className="items-center order-1 hidden ml-auto text-center md:ml-0 md:flex md:order-2">
+            <Link className="btn btn-primary z-0 py-[14px] px-4 lg:px-7" href={link} rel="">
               {label}
             </Link>
           </div>

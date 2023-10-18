@@ -3,7 +3,7 @@ meta_title: Seattle Postpartum Hotel - Postpartum Retreat | Yuzi
 
 banner:
   title: The First Postpartum Retreat in the Pacific Northwest
-  content: Coming Spring 2024 to Seattle, WA
+  content: Coming in 2024 to Seattle, WA
   image: /images/mom_baby_home_cartoon_hero.png
   button:
     label: "Reserve Your Spot"
@@ -16,22 +16,22 @@ feature:
   features:
   - name: "24/7 Mom & Baby Care"
     icon: "/images/24_7.svg"
-    content: "Your baby is always under the watchful eye of our trained staff so that you can relax."
+    content: "24-hour nursery so you can get the rest you need. On-site specialists and programming to attend to your physical and mental wellbeing."
   - name: "Post-Delivery Recovery Program"
     icon: "/images/yoga.svg"
-    content: "Rejuvenate and restore yourself with our healing program."
-  - name: "Onsite Lactation Consultant"
+    content: "Postnatal recovery care to heal from childbirth and restore your body."
+  - name: "Lactation Support"
     icon: "/images/lactation.svg"
-    content: "Expert lactation support for confident mother-baby bonding."
-  - name: "New Parent Education"
+    content: "On-site experts to guide and support you with breast/chestfeeding."
+  - name: "Infant Care Education"
     icon: "/images/baby-education.svg"
-    content: "Our infant care experts are here to guide and support you on diapering, bathing, burping, and everything in between."
+    content: "Infant specialists to coach you through diapering, bathing, burping, and everything in between."
   - name: "Postnatal Nourishment"
     icon: "/images/meal-planning.svg"
-    content: "Nutrient-rich meals to support postpartum recovery and lactation."
+    content: "Nutrient-rich meals that support recovery and lactation."
   - name: "Supportive Community"
     icon: "/images/community.svg"
-    content: "Join a nurturing community empowering mothers every step of the way."
+    content: "Daily social hour and parents lounge. Join a nurturing community that will empower you every step of the way."
 
 # services
 services:
