@@ -1,6 +1,6 @@
 {
   "site": {
-    "title": "Yuzi Care",
+    "title": "Yuzi Postpartum Healing Center",
     "base_url": "https://yuzicare.com",
     "favicon": "/images/favicon.png",
     "logo": "/images/logo.png",
@@ -24,7 +24,7 @@
   "params": {
     "contact_form_action": "",
     "tag_manager_id": "GTM-PHWN8GFD",
-    "footer_content": "Coming soon! Spring 2024.",
+    "footer_content": "Coming soon in 2024!",
     "copyright": "Copyright &copy; 2023 Yuzi Care, Inc. &middot; All Rights Reserved"
   },
 
