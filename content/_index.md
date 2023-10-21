@@ -7,7 +7,7 @@ banner:
   image: /images/mom_baby_home_cartoon_hero.png
   button:
     label: "Reserve Your Spot"
-    link: "https://book.stripe.com/00g4gTerzeUh5GM8wz"
+    link: https://book.stripe.com/00g4gTerzeUh5GM8wz
     enable: true
 
 # feature
