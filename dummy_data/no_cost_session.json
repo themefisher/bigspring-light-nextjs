@@ -1,0 +1,127 @@
+{
+  "id": "evt_1O4srKL677QhnBEOibEavchV",
+  "object": "event",
+  "api_version": "2023-08-16",
+  "created": 1698185638,
+  "data": {
+    "object": {
+      "id": "cs_live_a1jsWG7y1QFjdujN9F7BuOqNicHMjfBEePt9VEZDKZMPaYyqMV9WBXOXHR",
+      "object": "checkout.session",
+      "after_expiration": null,
+      "allow_promotion_codes": false,
+      "amount_subtotal": 0,
+      "amount_total": 0,
+      "automatic_tax": {
+        "enabled": false,
+        "status": null
+      },
+      "billing_address_collection": "auto",
+      "cancel_url": "https://stripe.com",
+      "client_reference_id": null,
+      "client_secret": null,
+      "consent": null,
+      "consent_collection": {
+        "promotions": "none",
+        "terms_of_service": "none"
+      },
+      "created": 1698185623,
+      "currency": "usd",
+      "currency_conversion": null,
+      "custom_fields": [
+        {
+          "key": "name",
+          "label": {
+            "custom": "Name",
+            "type": "custom"
+          },
+          "optional": false,
+          "text": {
+            "maximum_length": 50,
+            "minimum_length": null,
+            "value": "Harper Foley"
+          },
+          "type": "text"
+        }
+      ],
+      "custom_text": {
+        "shipping_address": null,
+        "submit": null,
+        "terms_of_service_acceptance": null
+      },
+      "customer": null,
+      "customer_creation": "if_required",
+      "customer_details": {
+        "address": null,
+        "email": "12716hef@gmail.com",
+        "name": null,
+        "phone": "+18302795914",
+        "tax_exempt": "none",
+        "tax_ids": [
+        ]
+      },
+      "customer_email": null,
+      "expires_at": 1698272023,
+      "invoice": null,
+      "invoice_creation": {
+        "enabled": false,
+        "invoice_data": {
+          "account_tax_ids": null,
+          "custom_fields": null,
+          "description": null,
+          "footer": null,
+          "metadata": {
+          },
+          "rendering_options": null
+        }
+      },
+      "livemode": true,
+      "locale": "auto",
+      "metadata": {
+      },
+      "mode": "payment",
+      "payment_intent": null,
+      "payment_link": "plink_1O4sqTL677QhnBEOOQNsSBS2",
+      "payment_method_collection": "if_required",
+      "payment_method_configuration_details": {
+        "id": "pmc_1O0bM5L677QhnBEOlOxsQFeh",
+        "parent": null
+      },
+      "payment_method_options": {
+      },
+      "payment_method_types": [
+        "card",
+        "link",
+        "cashapp"
+      ],
+      "payment_status": "paid",
+      "phone_number_collection": {
+        "enabled": true
+      },
+      "recovered_from": null,
+      "setup_intent": null,
+      "shipping_address_collection": null,
+      "shipping_cost": null,
+      "shipping_details": null,
+      "shipping_options": [
+      ],
+      "status": "complete",
+      "submit_type": "auto",
+      "subscription": null,
+      "success_url": "https://stripe.com",
+      "total_details": {
+        "amount_discount": 0,
+        "amount_shipping": 0,
+        "amount_tax": 0
+      },
+      "ui_mode": "hosted",
+      "url": null
+    }
+  },
+  "livemode": true,
+  "pending_webhooks": 2,
+  "request": {
+    "id": null,
+    "idempotency_key": null
+  },
+  "type": "checkout.session.completed"
+}
