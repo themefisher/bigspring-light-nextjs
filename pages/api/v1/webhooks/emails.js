@@ -33,17 +33,16 @@ export default async function handler(req, res) {
       return res.status(400).send(`Webhook error: ${err.message}`);
     }
 
-    res.json({ received: true });
-
     if (event.type === "checkout.session.completed") {
       const customerDetails = event.data.object.customer_details;
+      const customNameField = event.data.object.custom_fields[0].text.value;
       console.log("Checkout session completed!");
       const { email, name, phone } = customerDetails;
       const templateParams = {
-        from_name: name ?? 'No name provided',
+        from_name: name ?? customNameField ?? 'No name provided',
         from_email: email ?? 'No email provided',
         from_phone: phone ?? 'No phone provided',
-        message: `${name ?? 'Someone new'} has joined the waitlist!`,
+        message: `${name ?? customNameField ?? 'Someone new'} has joined the waitlist!`,
       };
 
       const result = await emailjs.send(emailServiceId, emailTemplateId, templateParams, emailPublicKey)

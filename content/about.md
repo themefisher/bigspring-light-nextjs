@@ -9,19 +9,32 @@ noindex: false
 canonical: "https://yuzicare.com/about"
 ---
 
-Yuzi is a haven designed specifically for moms during one of the most challenging periods of their lives—the postnatal journey. Our retreat offers a nurturing and supportive environment where mothers can recover,  rejuvenate, and connect with their babies and each other as they navigate the joys and demands of early motherhood.
+Hi, My name is Stephiney Foley. I am the founder and Chief Mom of Yuzi. Thank you for visiting us! A lot of people ask me why I started Yuzi and why I am so passionate about maternal wellness.
 
-#### The Essence of Zuo Yue Zi
+### Postpartum Depression: I Didn't Think it Would Happen to Me
 
-At Yuzi, we’ve drawn inspiration from the time-honored tradition of Zuo Yue Zi, or "Sitting the Month" and have woven in modern luxuries and technology for a seamless and comprehensive experience. Our retreat is the first of its kind in the Pacific Northwest, a pioneering endeavor to bring the wide-ranging benefits of this practice across the globe and into our contemporary culture.
+Before having my first child, I never thought I would have to deal with postpartum depression… And yet, as I cradled my baby, my heart was heavy with an indescribable ache. Postpartum depression had taken hold of me. The world had seemingly moved on, celebrating the miracle of life, and I was drowning. With the help of my friends and family, I eventually pushed through to the other side and the realization hit me like a freight train, I was not alone in this struggle!
 
-#### Embracing the Journey of Motherhood
+### Realizing I Wasn't Alone
 
-Our team, consisting of experienced parents and experts in postnatal care, is passionately committed to supporting both your recovery and baby bonding. We strive to empower you with knowledge, tools, and resources that will assist you on your journey of motherhood, helping you navigate challenges, celebrate milestones, and embrace the incredible role you play in your child's life. We offer a range of carefully curated services and programs tailored to meet the diverse needs of first-time and experienced moms alike.
+I was one of **millions** of mothers silently enduring the storm of postpartum depression, sleep deprivation, anxiety, and loneliness. In fact, recent studies estimate that up to **85% of women experience some type of mood disturbance** after giving birth and **two-thirds (66%!) parents with young children feel isolated**. I spoke with many other mothers about their postpartum journey. **They struggled, often alone, with breastfeeding, pelvic floor dysfunction, night sweats, nutrition, lower back pain, you name it.**  My pain was not unique; it was part of a **collective cry for help, for healing, for support, and for connection.** With that, the seed for Yuzi was planted.
 
-#### A Sanctuary for Healing and Empowerment
+I knew that I had to do something, not just for my own sake, but for every mother out there working through her own unique maternal journey. **I want to redefine the maternal care experience in America and create the lifeline that mothers so desperately need and <u>deserve</u>.**
 
-At Yuzi, we understand the unique physical, emotional, and mental needs that arise after childbirth. We believe that every mom deserves dedicated care and support during this transformative phase. Our luxurious accommodations provide a comfortable and tranquil setting to bond and recharge.
+### The Mission: Create the World's Largest Maternal Care Platform
 
+Yuzi's mission became clear: to build the world's largest maternal care platform; a revolution that would change how society cares for mothers and their families. We want to turn the tide on silent suffering by making it easy for moms to find support and connection.
 
-We invite you to embrace the transformative power of Zuo Yue Zi, while honoring your individual choices and preferences. Whether you seek peaceful respite, support and education from our team, connection with other moms or all of the above, our community is here to support you every step of the way.
+### The Yuzi Retreat: Holistic Healing for Mothers
+
+We are starting with the Yuzi Retreat— a holistic experience during which mothers can rest and heal after delivery, connect with other parents, and get support from postnatal experts all in one place.
+
+This is just the beginning. **Our ultimate goal is to serve every mother who feels the weight of the world on her shoulders**, every family that yearns for connection, and every care provider who longs to make a difference. For our team, Yuzi is more than just a company, it’s a calling.
+
+**Please, join us on our mission to revolutionize maternal wellness.**
+
+*Warmly,*
+
+<p className="my-0 text-xl">Steph Foley</p>
+<p className="my-0 italic text-lg">Founder &amp; CEO</p>
+<a href="/"><img src="/images/about_logo.png" alt="Yuzi Care, Inc. logo" className="mt-1 w-[150px]"/></a>
