@@ -1,6 +1,6 @@
 import emailjs from '@emailjs/browser';
 import Stripe from 'stripe';
-import { buffer } from 'micro';
+import { text } from 'micro';
 import { emailConfig } from "@config/emailConfig";
 
 export const config = {
@@ -21,13 +21,13 @@ export default async function handler(req, res) {
   const { emailServiceId, emailTemplateId, emailPublicKey } = emailConfig;
 
   if (req.method === "POST") {
-    const buf = await buffer(req);
+    const body = await text(req);
     const sig = req.headers["stripe-signature"];
 
     let event;
 
     try {
-      event = stripe.webhooks.constructEvent(buf, sig, webhookSecret);
+      event = stripe.webhooks.constructEvent(body, sig, webhookSecret);
     } catch (err) {
       console.log(err.message);
       return res.status(400).send(`Webhook error: ${err.message}`);
@@ -38,14 +38,15 @@ export default async function handler(req, res) {
       const customNameField = event.data.object.custom_fields[0].text.value;
       console.log("Checkout session completed!");
       const { email, name, phone } = customerDetails;
+      const fromName = name ?? customNameField ?? 'Someone New';
       const templateParams = {
-        from_name: name ?? customNameField ?? 'No name provided',
+        from_name: fromName,
         from_email: email ?? 'No email provided',
         from_phone: phone ?? 'No phone provided',
-        message: `${name ?? customNameField ?? 'Someone new'} has joined the waitlist!`,
+        message: `${fromName} has joined the waitlist!`,
       };
 
-      const result = await emailjs.send(emailServiceId, emailTemplateId, templateParams, emailPublicKey)
+      const emailStatus = await emailjs.send(emailServiceId, emailTemplateId, templateParams, emailPublicKey)
         .then(function (response) {
           console.log('SUCCESS!', response.status, response.text);
           return response.status;
@@ -55,18 +56,18 @@ export default async function handler(req, res) {
           return error;
         });
 
-      switch (result) {
+      switch (emailStatus) {
         case 200:
           console.log('Email successfully sent!');
-          res.status(200).json({ message: 'Webhook received' });
+          res.status(200).json({ received: true, message: 'Webhook received' });
           break;
         case 400:
           console.log('Email failed to send!');
-          res.status(400).json({ error: 'Invalid event type' });
+          res.status(400).json({ received: false, error: 'Invalid event type' });
           break;
         default:
           console.log('Unknown error!');
-          res.status(500).json({ error: 'Webhook processing error' });
+          res.status(500).json({ received: false, error: 'Webhook processing error' });
           break;
       }
 
