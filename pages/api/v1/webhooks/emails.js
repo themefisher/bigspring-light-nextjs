@@ -27,7 +27,7 @@ export default async function handler(req, res) {
 
     try {
       event = stripe.webhooks.constructEvent(
-        await (await req.blob()).text(),
+        await (await req.text()),
         req.headers["stripe-signature"],
         webhookSecret
       );
