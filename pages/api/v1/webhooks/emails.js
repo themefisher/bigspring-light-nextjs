@@ -10,7 +10,7 @@ export const config = {
 };
 
 const stripe = new Stripe(process.env.NEXT_PUBLIC_STRIPE_SECRET_KEY, {
-  apiVersion: '2022-11-15',
+  apiVersion: '2023-10-16',
 });
 
 
@@ -44,6 +44,7 @@ export default async function handler(req, res) {
       console.log("Checkout session completed!");
       const { email, name, phone } = customerDetails;
       const fromName = name ?? customNameField ?? 'Someone New';
+
       const templateParams = {
         from_name: fromName,
         from_email: email ?? 'No email provided',
@@ -64,16 +65,13 @@ export default async function handler(req, res) {
       switch (emailStatus) {
         case 200:
           console.log('Email successfully sent!');
-          res.status(200).json({ received: true, message: 'Webhook received' });
-          break;
+          return res.status(200).json({ received: true, message: 'Webhook received' });
         case 400:
           console.log('Email failed to send!');
-          res.status(400).json({ received: false, error: 'Invalid event type' });
-          break;
+          return res.status(400).json({ received: false, error: 'Invalid event type' });
         default:
           console.log('Unknown error!');
-          res.status(500).json({ received: false, error: 'Webhook processing error' });
-          break;
+          return res.status(500).json({ received: false, error: 'Webhook processing error' });
       }
 
     } else {
