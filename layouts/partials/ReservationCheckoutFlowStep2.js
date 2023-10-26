@@ -1,12 +1,14 @@
-import { useState } from 'react'
+import { useState } from 'react';
 import { useForm, Controller } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import DatePicker from 'react-multi-date-picker';
-import { DateObject } from 'react-multi-date-picker';
+import "react-multi-date-picker/styles/colors/teal.css"
+import transition from "react-element-popper/animations/transition"
+
 
 const today = new Date();
-const minDate = new Date("2024-05-01");
+const minDate = new Date("2024-05-02");
 const maxDate = new Date(today);
 maxDate.setFullYear(today.getFullYear() + 2);
 
@@ -20,7 +22,8 @@ const validationSchema = z
       .date({
         required_error: "Please enter your due date.",
         invalid_type_error: "Please select a valid date.",
-      }),
+      })
+      .optional(),
     desiredVisitDates: z
       .array(
         z
@@ -28,7 +31,8 @@ const validationSchema = z
           .date()
           .min(minDate, { message: "Please select a date after May 2024." })
           .max(maxDate, { message: "Please select a date before 2 years from now." })
-      ),
+      )
+      .optional(),
   });
 
 function ReservationCheckoutFlowStep2({ onSubmit, onClose, onPrev, formData }) {
@@ -40,11 +44,6 @@ function ReservationCheckoutFlowStep2({ onSubmit, onClose, onPrev, formData }) {
   } = useForm({
     resolver: zodResolver(validationSchema),
   });
-
-  const [selectedDates, setSelectedDates] = useState([
-    new DateObject().subtract(4, "days"),
-    new DateObject().add(4, "days"),
-  ]);
 
   const handleFormSubmit = (data) => {
     onSubmit(data); // Pass the form data to the parent component
@@ -59,51 +58,53 @@ function ReservationCheckoutFlowStep2({ onSubmit, onClose, onPrev, formData }) {
         X
       </button>
       <h2 className="mx-auto mb-2">Tell us a little more about yourself</h2>
-      <div className="mb-4 md:flex md:justify-between">
-        <div className="mb-4 md:mr-2 md:mb-0">
-          <label
-            className="block mb-2 text-sm font-bold text-gray-700"
-            htmlFor="isPregnant"
-          >
-            Are you currently pregnant?
-          </label>
-          <select
-            className={`w-full px-3 py-2 text-sm leading-tight text-gray-700 border ${errors.isPregnant && "border-red-500"
-              } rounded appearance-none focus:outline-none focus:shadow-outline`}
-            id="isPregnant"
-            type="text"
-            {...register("isPregnant")}
-          >
-            <option value="true">Yes</option>
-            <option value="false">No</option>
-          </select>
-          {errors.isPregnant && (
-            <p className="mt-2 text-xs italic text-red-500">
-              {errors.isPregnant?.message}
-            </p>
-          )}
-        </div>
-        <div className="md:ml-2">
-          <label
-            className="block mb-2 text-sm font-bold text-gray-700"
-            htmlFor="dueDate"
-          >
-            When is your due date?
-          </label>
-          <input
-            className={`w-full px-3 py-2 text-sm leading-tight text-gray-700 border ${errors.dueDate && "border-red-500"
-              } rounded appearance-none focus:outline-none focus:shadow-outline`}
-            id="dueDate"
-            type="date"
-            {...register("dueDate")}
-          />
-          {errors.dueDate && (
-            <p className="mt-2 text-xs italic text-red-500">
-              {errors.dueDate?.message}
-            </p>
-          )}
-        </div>
+
+      <div className="mb-4">
+        <label
+          className="block mb-2 text-sm font-bold text-gray-700"
+          htmlFor="isPregnant"
+        >
+          Are you currently pregnant?
+        </label>
+        <select
+          className={`w-full px-3 py-2 text-sm leading-tight text-gray-700 border ${errors.isPregnant && "border-red-500"
+            } rounded appearance-none focus:outline-none focus:shadow-outline`}
+          id="isPregnant"
+          type="text"
+          {...register("isPregnant")}
+        >
+          <option value="">Select an option</option>
+          <option value="true">Yes</option>
+          <option value="false">No</option>
+        </select>
+        {errors.isPregnant && (
+          <p className="mt-2 text-xs italic text-red-500">
+            {errors.isPregnant?.message}
+          </p>
+        )}
       </div>
+
+      <div className="mb-4">
+        <label
+          className="block mb-2 text-sm font-bold text-gray-700"
+          htmlFor="dueDate"
+        >
+          When is your due date?
+        </label>
+        <input
+          className={`w-full px-3 py-2 text-sm leading-tight text-gray-700 border ${errors.dueDate && "border-red-500"
+            } rounded appearance-none focus:outline-none focus:shadow-outline`}
+          id="dueDate"
+          type="date"
+          {...register("dueDate")}
+        />
+        {errors.dueDate && (
+          <p className="mt-2 text-xs italic text-red-500">
+            {errors.dueDate?.message}
+          </p>
+        )}
+      </div>
+
       <div className="mb-4">
         <label
           className="block mb-2 text-sm font-bold text-gray-700"
@@ -121,10 +122,32 @@ function ReservationCheckoutFlowStep2({ onSubmit, onClose, onPrev, formData }) {
                 minDate={minDate}
                 maxDate={maxDate}
                 range
+                value={minDate}
                 date={value}
                 onChange={(dates) => onChange(dates)}
                 format="MM/DD/YYYY"
-                inputClass={`w-full px-3 py-2 text-sm leading-tight text-gray-700 border ${error ? "border-red-500" : ""} rounded appearance-none focus:outline-none focus:shadow-outline`}
+                style={{
+                  width: "100%",
+                  borderRadius: "0.5rem",
+                }}
+                inputClass={{
+                  padding: '0.5rem 0.75rem',
+                  fontSize: '0.875rem',
+                  lineHeight: '1.25',
+                  color: '#4A5568',
+                  border: '1px solid #E2E8F0',
+                  borderRadius: '0.5rem',
+                  appearance: 'none',
+                  outline: 'none',
+                  boxShadow: '0 0 0 3px rgba(66, 153, 225, 0.5)',
+                }}
+                containerStyle={{
+                  width: "100%",
+                }}
+                calendarPosition="bottom-start"
+                animations={[
+                  transition({ duration: 800, from: 35 })
+                ]}
               />
               {error && (
                 <p className="mt-2 text-xs italic text-red-500">
@@ -134,9 +157,10 @@ function ReservationCheckoutFlowStep2({ onSubmit, onClose, onPrev, formData }) {
             </>
           )}
         />
-
+        <p className='mt-2 text-center'>Don’t worry, we know babies show up on their own schedule. We’ll do our best to accommodate an earlier / later start date.</p>
       </div>
-      <div className="flex justify-between mb-6 text-center">
+
+      <div className="flex justify-between text-center">
         <button
           className="w-[40%] px-4 py-2 font-bold text-white rounded-full bg-blue-500/20 hover:bg-blue-700 focus:outline-none focus:shadow-outline"
           onClick={onPrev}
@@ -150,10 +174,9 @@ function ReservationCheckoutFlowStep2({ onSubmit, onClose, onPrev, formData }) {
           Next
         </button>
       </div>
-      <hr className="mb-6 border-t" />
+      <hr className="mt-6 mb-2 border-t" />
     </form>
-
-  )
+  );
 }
 
 export default ReservationCheckoutFlowStep2;

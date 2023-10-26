@@ -1,28 +1,38 @@
-// This is your test secret API key.
-const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
+import Stripe from "stripe";
 
-const calculateOrderAmount = (items) => {
-  // Replace this constant with a calculation of the order's amount
-  // Calculate the order total on the server to prevent
-  // people from directly manipulating the amount on the client
-  return 1400;
-};
+const stripe = new Stripe(process.env.NEXT_PUBLIC_STRIPE_SECRET_KEY);
 
 export default async function handler(req, res) {
-  const { items } = req.body;
+  if (req.method === "POST") {
+    try {
+      const session = await stripe.checkout.sessions.create({
+        payment_method_types: ["card"],
+        line_items: [
+          {
+            price_data: {
+              currency: "usd",
+              product_data: {
+                name: "Yuzi Retreat Reservation",
+                description: "Reserve your spot with a 100% refundable deposit.",
+                images: ["https://yuzicare.com/images/favicon.png"],
+              },
+              unit_amount: 10000,
+            },
+            quantity: 1,
+          },
+        ],
+        mode: "payment",
+        success_url: `${req.headers.origin}/thank-you`,
+        cancel_url: `${req.headers.origin}/`,
+        billing_address_collection: "auto",
+      });
 
-  // Create a PaymentIntent with the order amount and currency
-  const paymentIntent = await stripe.paymentIntents.create({
-    amount: calculateOrderAmount(items),
-    currency: "usd",
-    // In the latest version of the API, specifying the `automatic_payment_methods` parameter is optional because Stripe enables its functionality by default.
-    automatic_payment_methods: {
-      enabled: true,
-    },
-  });
-
-  res.send({
-    clientSecret: paymentIntent.client_secret,
-  });
-
-};
+      res.status(200).json({ sessionId: session.id });
+    } catch (err) {
+      res.status(500).json({ error: "Error creating checkout session" });
+    }
+  } else {
+    res.setHeader("Allow", "POST");
+    res.status(405).end("Method Not Allowed");
+  }
+}
