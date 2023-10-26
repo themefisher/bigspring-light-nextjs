@@ -1,7 +1,7 @@
 import config from "@config/config.json";
 import { markdownify } from "@lib/utils/textConverter";
 import { useRef, useState } from "react";
-import emailjs from '@emailjs/browser'
+import emailjs from '@emailjs/browser';
 import { emailConfig } from "@config/emailConfig";
 import Toast from "./components/Toast";
 

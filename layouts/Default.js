@@ -1,10 +1,25 @@
 import { markdownify } from "@lib/utils/textConverter";
 import { MDXRemote } from "next-mdx-remote";
 import shortcodes from "./shortcodes/all";
+import { useEffect } from "react";
+import Router from "next/router";
 
 const Default = ({ data }) => {
   const { frontmatter, mdxContent } = data;
   const { title } = frontmatter;
+
+  useEffect(() => {
+    if (window.location.pathname.includes('thank-you')) {
+      const timeout = setTimeout(() => {
+        Router.push('/');
+      }, 3000);
+
+      return () => {
+        clearTimeout(timeout);
+      };
+    }
+  }, []);
+
   return (
     <section className="section">
       <div className="container">

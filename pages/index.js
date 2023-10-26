@@ -8,10 +8,36 @@ import { Autoplay, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.min.css";
 import { getListPage } from "../lib/contentParser";
+import { useState, useEffect } from "react";
+import ReservationCheckoutFlow from "@layouts/components/ReservationCheckoutFlow";
 
 const Home = ({ frontmatter }) => {
   const { meta_title, banner, feature, services, workflow, call_to_action } = frontmatter;
   const { title } = config.site;
+  const [isReservationCheckoutVisible, setIsReservationCheckoutVisible] = useState(false);
+
+  const startReservationCheckout = () => {
+    setIsReservationCheckoutVisible(true);
+  };
+
+  const closeReservationCheckout = () => {
+    setIsReservationCheckoutVisible(false);
+  };
+
+  useEffect(() => {
+    if (isReservationCheckoutVisible) {
+      // Prevent scrolling when the modal is visible
+      document.body.style.overflow = "hidden";
+    } else {
+      // Reset the body's overflow property
+      document.body.style.overflow = "auto";
+    }
+
+    // Clean up the effect when the component unmounts
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isReservationCheckoutVisible]);
 
   return (
     <Base title={meta_title ?? title}>
@@ -21,27 +47,34 @@ const Home = ({ frontmatter }) => {
           <div className="text-center row">
             <div className="mx-auto lg:col-10">
               <h1 className="text-2xl font-bold font-primary md:text-4xl">{banner.title}</h1>
-              <p className="mt-4 text-md md:text-2xl">{banner.content}</p>
+              <p className="mt-4 italic text-md md:text-2xl font-secondary">{banner.content}</p>
+              <p className="mt-4 text-md md:text-2xl">{banner.content_2}</p>
               {banner.button.enable && (
-                <Link
+                <button
                   className="mt-4 btn btn-primary"
-                  href={banner.button.link}
-                  rel={banner.button.rel}
+                  onClick={startReservationCheckout}
                 >
                   {banner.button.label}
-                </Link>
+                </button>
               )}
-              <Image
-                className="mx-auto mt-12"
-                src={banner.image}
-                width={750}
-                height={390}
-                alt="A mother and her new infant bonding at Yuzi Care's postpartum retreat for new mothers."
-                priority
-              />
+              <div className="">
+                <Image
+                  className="mx-auto mt-12 rounded-md shadow-lg"
+                  src={banner.image}
+                  width={750}
+                  height={390}
+                  alt="A mother and her new infant bonding at Yuzi Care's postpartum retreat for new mothers."
+                  priority
+                />
+              </div>
             </div>
           </div>
         </div>
+        {isReservationCheckoutVisible && (
+          <section className="absolute inset-0 z-10 flex items-center justify-center h-screen overflow-hidden">
+            <ReservationCheckoutFlow closeReservationCheckout={closeReservationCheckout} />
+          </section>
+        )}
       </section>
 
       {/* Features */}

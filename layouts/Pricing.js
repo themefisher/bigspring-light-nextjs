@@ -2,11 +2,38 @@ import Link from "next/link";
 import Cta from "./components/Cta";
 import shortcodes from "@shortcodes/all";
 import { MDXRemote } from "next-mdx-remote";
+import ReservationCheckoutFlow from "@layouts/components/ReservationCheckoutFlow";
+import { useState, useEffect } from "react";
+
 
 function Pricing({ data }) {
 
   const { frontmatter, mdxContent } = data;
   const { title, plans, call_to_action } = frontmatter;
+  const [isReservationCheckoutVisible, setIsReservationCheckoutVisible] = useState(false);
+
+  const startReservationCheckout = () => {
+    setIsReservationCheckoutVisible(true);
+  };
+
+  const closeReservationCheckout = () => {
+    setIsReservationCheckoutVisible(false);
+  };
+
+  useEffect(() => {
+    if (isReservationCheckoutVisible) {
+      // Prevent scrolling when the modal is visible
+      document.body.style.overflow = "hidden";
+    } else {
+      // Reset the body's overflow property
+      document.body.style.overflow = "auto";
+    }
+
+    // Clean up the effect when the component unmounts
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isReservationCheckoutVisible]);
 
   return (
     <>
@@ -36,18 +63,22 @@ function Pricing({ data }) {
                       </li>
                     ))}
                   </ul>
-                  <Link
+                  <button
                     className={`btn mt-5 ${plan.recommended ? "btn-primary" : "btn-outline-primary"
                       }`}
-                    href={plan.button.link}
-                    rel={plan.button.rel}
+                    onClick={startReservationCheckout}
                   >
                     {plan.button.label}
-                  </Link>
+                  </button>
                 </div>
               </div>
             ))}
           </div>
+          {isReservationCheckoutVisible && (
+            <section className="absolute inset-0 z-10 flex items-center justify-center h-screen overflow-hidden">
+              <ReservationCheckoutFlow closeReservationCheckout={closeReservationCheckout} />
+            </section>
+          )}
         </div>
       </section>
       <section className="section">

@@ -32,7 +32,7 @@ const Footer = () => {
           })}
           {/* social icons */}
           <div className="md-12 sm:col-6 lg:col-3">
-            <Link href="/" aria-label="Bigspring">
+            <Link href="/" aria-label="Yuzi Care Inc Logo">
               <Image
                 src={config.site.logo}
                 width={config.site.logo_width}
