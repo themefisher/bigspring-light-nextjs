@@ -42,6 +42,14 @@ const Form = ({ closeReservationCheckout }) => {
           formData={formData}
         />
       )}
+      {step === 3 && (
+        <ReservationCheckoutFlowStep2
+          onSubmit={handleNextStep}
+          onPrev={handlePrevStep}
+          onClose={onClose}
+          formData={formData}
+        />
+      )}
     </section>
   );
 };

@@ -3,7 +3,7 @@ import { useForm, Controller } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import DatePicker from 'react-multi-date-picker';
-import { set } from 'date-fns';
+import { DateObject } from 'react-multi-date-picker';
 
 const today = new Date();
 const minDate = new Date("2024-05-01");
@@ -13,8 +13,10 @@ maxDate.setFullYear(today.getFullYear() + 2);
 const validationSchema = z
   .object({
     isPregnant: z
+      .coerce
       .boolean({ message: "We need to know if you are pregnant." }),
     dueDate: z
+      .coerce
       .date({
         required_error: "Please enter your due date.",
         invalid_type_error: "Please select a valid date.",
@@ -22,19 +24,14 @@ const validationSchema = z
     desiredVisitDates: z
       .array(
         z
+          .coerce
           .date()
           .min(minDate, { message: "Please select a date after May 2024." })
           .max(maxDate, { message: "Please select a date before 2 years from now." })
       ),
-    city: z
-      .string()
-      .min(1, { message: "Please enter your current city" }),
-    state: z
-      .string()
-      .min(1, { message: "Please enter your current state" }),
   });
 
-function ReservationCheckoutFlowStep2({ onSubmit, onClose, onPrev }) {
+function ReservationCheckoutFlowStep2({ onSubmit, onClose, onPrev, formData }) {
   const {
     register,
     control,
@@ -44,7 +41,10 @@ function ReservationCheckoutFlowStep2({ onSubmit, onClose, onPrev }) {
     resolver: zodResolver(validationSchema),
   });
 
-  const [selectedDates, setSelectedDates] = useState([]);
+  const [selectedDates, setSelectedDates] = useState([
+    new DateObject().subtract(4, "days"),
+    new DateObject().add(4, "days"),
+  ]);
 
   const handleFormSubmit = (data) => {
     onSubmit(data); // Pass the form data to the parent component
@@ -115,104 +115,36 @@ function ReservationCheckoutFlowStep2({ onSubmit, onClose, onPrev }) {
         <Controller
           control={control}
           name="desiredVisitDates"
-          render={({
-            field: { onChange, name, value },
-            formState: { errors }, //optional, but necessary if you want to show an error message
-          }) => (
+          render={({ field: { onChange, value }, fieldState: { error } }) => (
             <>
               <DatePicker
                 minDate={minDate}
                 maxDate={maxDate}
                 range
-                value={value || ""}
-                onChange={setSelectedDates}
-                format={language === "en" ? "MM/DD/YYYY" : "YYYY/MM/DD"}
+                date={value}
+                onChange={(dates) => onChange(dates)}
+                format="MM/DD/YYYY"
+                inputClass={`w-full px-3 py-2 text-sm leading-tight text-gray-700 border ${error ? "border-red-500" : ""} rounded appearance-none focus:outline-none focus:shadow-outline`}
               />
-              {errors.desiredVisitDates && (
+              {error && (
                 <p className="mt-2 text-xs italic text-red-500">
-                  {errors.desiredVisitDates?.message}
+                  {error.message}
                 </p>
               )}
             </>
           )}
         />
+
       </div>
-      <div className="mb-4 md:flex md:justify-between">
-        <div className="mb-4 md:mr-2 md:mb-0">
-          <label
-            className="block mb-2 text-sm font-bold text-gray-700"
-            htmlFor="phone"
-            placeholder="425 555 5555"
-          >
-            Phone Number
-          </label>
-          <input
-            className={`w-full px-3 py-2 text-sm leading-tight text-gray-700 border ${errors.phone && "border-red-500"
-              } rounded appearance-none focus:outline-none focus:shadow-outline`}
-            id="phone"
-            type="tel"
-            {...register("phone")}
-          />
-          {errors.phone && (
-            <p className="mt-2 text-xs italic text-red-500">
-              {errors.phone?.message}
-            </p>
-          )}
-        </div>
-        <div className="md:ml-2">
-          <label
-            className="block mb-2 text-sm font-bold text-gray-700"
-            htmlFor="city"
-          >
-            City
-          </label>
-          <input
-            className={`w-full px-3 py-2 text-sm leading-tight text-gray-700 border ${errors.city && "border-red-500"
-              } rounded appearance-none focus:outline-none focus:shadow-outline`}
-            id="city"
-            type="text"
-            {...register("city")}
-          />
-          {errors.city && (
-            <p className="mt-2 text-xs italic text-red-500">
-              {errors.city?.message}
-            </p>
-          )}
-        </div>
-        <div className="md:ml-2">
-          <label
-            className="block mb-2 text-sm font-bold text-gray-700"
-            htmlFor="state"
-          >
-            State
-          </label>
-          <input
-            className={`w-full px-3 py-2 text-sm leading-tight text-gray-700 border ${errors.state && "border-red-500"
-              } rounded appearance-none focus:outline-none focus:shadow-outline`}
-            id="state"
-            type="text"
-            {...register("state")}
-          />
-          {errors.state && (
-            <p className="mt-2 text-xs italic text-red-500">
-              {errors.state?.message}
-            </p>
-          )}
-        </div>
-      </div>
-      <div className="mb-4">
-        <input type="checkbox" id="joinMailingList" checked {...register("joinMailingList")} />
-        <label
-          htmlFor="joinMailingList"
-          className={`ml-2 mb-2 text-sm font-bold ${errors.joinMailingList ? "text-red-500" : "text-gray-700"
-            }`}
-        >
-          Please send me updates and information about the program.
-        </label>
-      </div>
-      <div className="mb-6 text-center">
+      <div className="flex justify-between mb-6 text-center">
         <button
-          className="w-full px-4 py-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-700 focus:outline-none focus:shadow-outline"
+          className="w-[40%] px-4 py-2 font-bold text-white rounded-full bg-blue-500/20 hover:bg-blue-700 focus:outline-none focus:shadow-outline"
+          onClick={onPrev}
+        >
+          Previous
+        </button>
+        <button
+          className="w-[40%] px-4 py-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-700 focus:outline-none focus:shadow-outline"
           type="submit"
         >
           Next

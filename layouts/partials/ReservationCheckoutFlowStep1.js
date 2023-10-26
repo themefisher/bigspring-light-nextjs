@@ -1,4 +1,4 @@
-import React from 'react'
+import { useEffect } from 'react'
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -25,13 +25,26 @@ const validationSchema = z
       .optional()
   });
 
-function ReservationCheckoutFlowStep1({ onSubmit, onClose }) {
+function ReservationCheckoutFlowStep1({ onSubmit, onClose, formData }) {
   const {
     register,
     handleSubmit,
+    setValue,
     formState: { errors },
   } = useForm({
     resolver: zodResolver(validationSchema),
+  });
+
+  useEffect(() => {
+    if (formData) {
+      setValue("firstName", formData.firstName);
+      setValue("lastName", formData.lastName);
+      setValue("email", formData.email);
+      setValue("phone", formData.phone);
+      setValue("city", formData.city);
+      setValue("state", formData.state);
+      setValue("joinMailingList", formData.joinMailingList);
+    }
   });
 
   const handleFormSubmit = (data) => {
