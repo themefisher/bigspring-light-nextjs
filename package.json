@@ -27,6 +27,7 @@
     "react-hook-form": "^7.47.0",
     "react-icons": "^4.7.1",
     "react-lite-youtube-embed": "^2.3.52",
+    "react-multi-date-picker": "^4.4.0",
     "rehype-slug": "^5.1.0",
     "remark-gfm": "^3.0.1",
     "stripe": "^14.1.0",
