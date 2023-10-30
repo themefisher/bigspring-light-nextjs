@@ -12,7 +12,7 @@ const Default = ({ data }) => {
     if (window.location.pathname.includes('thank-you')) {
       const timeout = setTimeout(() => {
         Router.push('/');
-      }, 3000);
+      }, 5000);
 
       return () => {
         clearTimeout(timeout);
