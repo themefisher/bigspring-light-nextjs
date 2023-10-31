@@ -5,7 +5,7 @@ banner:
   title: Yuzi Postnatal Retreat
   content: Rest, rejuvenate, and connect. Easing your transition into motherhood.
   content_2: Coming to Seattle, WA in 2024
-  image: /images/landing_page/yuzi_hero.png
+  image: /images/landing_page/yuzi_hero_family.png
   button:
     label: "Reserve Your Spot"
     enable: true

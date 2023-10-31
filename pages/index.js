@@ -61,8 +61,8 @@ const Home = ({ frontmatter }) => {
                 <Image
                   className="mx-auto mt-12 rounded-md shadow-lg"
                   src={banner.image}
-                  width={750}
-                  height={390}
+                  width={1500}
+                  height={800}
                   alt="A mother and her new infant bonding at Yuzi Care's postpartum retreat for new mothers."
                   priority
                 />
