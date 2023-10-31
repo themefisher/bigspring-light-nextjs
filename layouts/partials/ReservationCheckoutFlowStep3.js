@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 function ReservationCheckoutFlowStep3({ onClose, formData }) {
   return (
-    <section className="fixed inset-0 z-50 flex items-center justify-center p-4 overflow-y-auto">
+    <section className="fixed inset-0 z-50 flex items-center justify-center p-4 mt-4 overflow-y-auto">
       <div className='flex flex-col md:flex-row'>
         <div className='flex-grow bg-[#1C3F60] rounded-md py-10 px-10'>
           <Image
