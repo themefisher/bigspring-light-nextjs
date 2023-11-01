@@ -40,6 +40,7 @@ const Header = ({ openModalFunction }) => {
           id="show-button"
           className="flex items-center order-2 cursor-pointer md:hidden md:order-1"
           onClick={() => setNavOpen(!navOpen)}
+          type="button"
         >
           {navOpen ? (
             <svg className="h-6 fill-current" viewBox="0 0 20 20">
@@ -106,6 +107,8 @@ const Header = ({ openModalFunction }) => {
               <li className="md:hidden">
                 <button
                   className="btn btn-primary z-0 py-[14px]"
+                  id="mailing-list-optin-button-mobile"
+                  type="button"
                   onClick={openModalFunction}
                 >
                   {label}
@@ -116,7 +119,12 @@ const Header = ({ openModalFunction }) => {
         </div>
         {enable && (
           <div className="items-center order-1 hidden ml-auto text-center md:ml-0 md:flex md:order-2">
-            <button className="btn btn-primary z-0 py-[14px] px-4 lg:px-7" onClick={openModalFunction} rel="">
+            <button
+              className="btn btn-primary z-0 py-[14px] px-4 lg:px-7"
+              id="mailing-list-optin-button-desktop"
+              type="button"
+              onClick={openModalFunction}
+            >
               {label}
             </button>
           </div>

@@ -72,6 +72,8 @@ function ReservationCheckoutFlowStep2({ onSubmit, onClose, onPrev, formData }) {
           <button
             onClick={onClose}
             className="absolute top-0 right-0 m-4 text-gray-600 hover:text-gray-800 focus:outline-none"
+            type="button"
+            id="about-checkout-step-2"
           >
             X
           </button>
@@ -181,6 +183,7 @@ function ReservationCheckoutFlowStep2({ onSubmit, onClose, onPrev, formData }) {
             <div className="flex justify-between text-center">
               <button
                 className="w-[40%] px-4 py-2 font-bold text-white rounded-full bg-blue-500/20 hover:bg-blue-700 focus:outline-none focus:shadow-outline"
+                type="button"
                 onClick={onPrev}
               >
                 Previous

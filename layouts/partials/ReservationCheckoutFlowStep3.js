@@ -23,7 +23,9 @@ function ReservationCheckoutFlowStep3({ onClose, formData }) {
         <div className="relative w-full max-w-screen-sm p-4 mx-auto bg-white rounded-lg shadow-lg">
           <button
             onClick={onClose}
+            id="about-checkout-step-3"
             className="absolute top-0 right-0 m-4 text-gray-600 hover:text-gray-800 focus:outline-none"
+            type="button"
           >
             X
           </button>

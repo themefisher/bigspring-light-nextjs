@@ -22,6 +22,8 @@ function Cta({ cta, modalOpeningFunction }) {
             {cta.button.enable && (
               <button
                 className="mt-4 btn btn-primary"
+                id="start-reservation-checkout-lower-cta-section"
+                type="button"
                 onClick={modalOpeningFunction}
                 rel={cta.button.rel}
               >

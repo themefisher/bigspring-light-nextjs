@@ -37,19 +37,19 @@ const Home = ({ frontmatter }) => {
   };
 
   useEffect(() => {
-
-    const hasModalBeenShown = localStorage.getItem("modalShown");
-    if (hasModalBeenShown === 'false') {
-      return;
+    async function delayModalOpening() {
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          resolve();
+        }, 3000);
+      });
     }
 
-    const timeoutId = setTimeout(() => {
+    delayModalOpening().then(() => {
       setIsMailingListOptinVisible(true);
-    }, 3000);
+    });
+  }, []);
 
-    localStorage.setItem("modalShown", "true");
-    return () => clearTimeout(timeoutId);
-  });
 
   useEffect(() => {
     if (isReservationCheckoutVisible || isMailingListOptinVisible) {
@@ -79,6 +79,8 @@ const Home = ({ frontmatter }) => {
               {banner.button.enable && (
                 <button
                   className="mt-4 btn btn-primary"
+                  id="start-reservation-checkout-hero-section"
+                  type="button"
                   onClick={startReservationCheckout}
                 >
                   {banner.button.label}
