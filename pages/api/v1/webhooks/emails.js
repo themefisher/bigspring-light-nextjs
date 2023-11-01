@@ -1,6 +1,6 @@
 import Stripe from 'stripe';
 import { text } from 'micro';
-import { emailConfig } from "@config/emailConfig";
+import { reservationCheckoutCompletedEmailConfig } from "@config/emailConfig";
 
 export const config = {
   api: {
@@ -13,7 +13,7 @@ const stripe = new Stripe(process.env.NEXT_PUBLIC_STRIPE_SECRET_KEY, {
 });
 
 export default async function handler(req, res) {
-  const { emailServiceId, emailTemplateId, emailPublicKey } = emailConfig;
+  const { emailServiceId, emailTemplateId, emailPublicKey } = reservationCheckoutCompletedEmailConfig;
 
   if (req.method === "POST") {
     const body = await text(req);
@@ -43,7 +43,7 @@ export default async function handler(req, res) {
         from_name: fromName,
         from_email: email ?? 'No email provided',
         from_phone: phone ?? 'No phone provided',
-        message: 'New waitlist registration!',
+        message: 'New reservation payment!',
       };
 
       const emailData = {

@@ -3,7 +3,7 @@ import ReservationCheckoutFlowStep1 from "@layouts/partials/ReservationCheckoutF
 import ReservationCheckoutFlowStep2 from "@layouts/partials/ReservationCheckoutFlowStep2";
 import ReservationCheckoutFlowStep3 from "@layouts/partials/ReservationCheckoutFlowStep3";
 import emailjs from '@emailjs/browser';
-import { reservationEmailConfig } from '@config/emailConfig';
+import { reservationCheckoutStepTwoEmailConfig } from '@config/emailConfig';
 
 const Form = ({ closeReservationCheckout }) => {
 
@@ -13,7 +13,7 @@ const Form = ({ closeReservationCheckout }) => {
   };
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({});
-  const { emailServiceId, emailTemplateId, emailPublicKey } = reservationEmailConfig;
+  const { emailServiceId, emailTemplateId, emailPublicKey } = reservationCheckoutStepTwoEmailConfig;
 
   useEffect(() => {
 
