@@ -89,7 +89,7 @@ const Home = ({ frontmatter }) => {
                 className="p-5 pb-8 text-center bg-white feature-card rounded-xl"
                 key={`feature-${i}`}
               >
-                {item.icon && (
+                {/* {item.icon && (
                   <Image
                     className="mx-auto"
                     src={item.icon}
@@ -97,7 +97,7 @@ const Home = ({ frontmatter }) => {
                     height={60}
                     alt=""
                   />
-                )}
+                )} */}
                 <div className="mt-4">
                   {markdownify(item.name, "h3", "h5")}
                   <p className="mt-3">{item.content}</p>
@@ -134,7 +134,7 @@ const Home = ({ frontmatter }) => {
                     {/* Slides */}
                     {service?.images.map((slide, index) => (
                       <SwiperSlide key={index}>
-                        <Image src={slide} alt="We offer a variety of services: spa; pelvic floor PT; yoga; custom meal planning." width={600} height={500} />
+                        <Image src={slide} className="pb-2" alt="We offer a variety of services: spa; pelvic floor PT; yoga; custom meal planning." width={600} height={500} />
                       </SwiperSlide>
                     ))}
                   </Swiper>
