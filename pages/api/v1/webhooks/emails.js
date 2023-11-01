@@ -37,13 +37,12 @@ export default async function handler(req, res) {
       const customerDetails = event.data.object.customer_details;
       console.log("Checkout session completed!");
       const { email, name, phone } = customerDetails;
-      const fromName = name ?? 'Someone New';
 
       const templateParams = {
-        from_name: fromName,
+        from_name: name ?? 'No name provided',
         from_email: email ?? 'No email provided',
         from_phone: phone ?? 'No phone provided',
-        message: 'New reservation payment!',
+        message: `A new reservation has been made by ${name}.\n Email: ${email}\n Phone: ${phone}`,
       };
 
       const emailData = {
