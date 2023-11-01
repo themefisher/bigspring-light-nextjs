@@ -27,7 +27,7 @@ faqs:
   answer: We are finalizing our nightly rate with our luxury hotel partner. Package deals will be available to maximize the value of your stay. See our <a href='/pricing'>pricing page</a> for an illustrative example of our packages. *Final package design & pricing subject to change.*
  
 - title: How do I make a reservation?
-  answer: Please fill out our waitlist form to secure your place.  We are accepting reservations for June 1st 2024 or later. We require a $100 deposit to hold your reservation. Your reservation is fully refundable at any time.
+  answer: Please fill out our waitlist form to secure your place.  We are accepting reservations for May 1st 2024 or later. We require a $100 deposit to hold your reservation. Your reservation is fully refundable at any time.
 
 - title: I have more questions. How can I learn more?
   answer: Please reach out to our care team at <a href='mailto:hi@yuzicare.com'>hi@yuzicare.com.</a> We would love to hear from you.
