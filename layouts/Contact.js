@@ -90,7 +90,6 @@ const Contact = ({ data }) => {
                   name="is_pregnant"
                   type="checkbox"
                   onClick={() => setIsPregnant(!isPregnant)}
-                  required
                 />
               </div>
               {isPregnant &&
