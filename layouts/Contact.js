@@ -141,7 +141,11 @@ const Contact = ({ data }) => {
                   maxLength={1024}
                 />
               </div>
-              <button type="submit" className="btn btn-primary">
+              <button
+                type="submit"
+                className="btn btn-primary"
+                id="submit-contact-form-button"
+              >
                 Send Now
               </button>
             </form>

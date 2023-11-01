@@ -34,7 +34,11 @@ const CheckoutButton = ({ formData }) => {
   };
 
   return (
-    <button className="btn btn-primary" onClick={handleCheckout}>
+    <button
+      className="btn btn-primary"
+      onClick={handleCheckout}
+      id="proceed-to-stripe-checkout-button"
+    >
       Proceed to Checkout
     </button>
   );
