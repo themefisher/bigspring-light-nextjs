@@ -5,7 +5,7 @@ banner:
   title: Yuzi Postnatal Retreat
   content: Rest, rejuvenate, and connect. Easing your transition into motherhood.
   content_2: Coming to Seattle, WA in 2024
-  image: /images/landing_page/yuzi_hero.png
+  image: /images/landing_page/yuzi_hero_family.png
   button:
     label: "Reserve Your Spot"
     enable: true
@@ -38,9 +38,11 @@ services:
   - title: "A haven designed specifically for new moms."
     content: " Our retreat offers a nurturing and supportive environment where mothers can find solace, rejuvenation, and connection as they navigate the joys and demands of early motherhood."
     images:
-      - "/images/haven2.png"
-      - "/images/haven1.png"
-      - "/images/haven3.png"
+      - "/images/landing_page/carousel/carousel_1.png"
+      - "/images/landing_page/carousel/carousel_2.png"
+      - "/images/landing_page/carousel/carousel_3.png"
+      - "/images/landing_page/carousel/carousel_4.png"
+      - "/images/landing_page/carousel/carousel_5.png"
     button:
       enable: true
       label: Check it out
@@ -67,5 +69,4 @@ call_to_action:
   button:
     enable: true
     label: "Reserve Your Spot"
-    link: "https://book.stripe.com/00g4gTerzeUh5GM8wz"
 ---

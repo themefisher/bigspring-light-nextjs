@@ -53,7 +53,7 @@ function ReservationCheckoutFlowStep1({ onSubmit, onClose, formData }) {
   };
 
   return (
-    <section className="fixed inset-0 z-50 flex items-center justify-center p-4 overflow-y-auto">
+    <section className="fixed inset-0 z-50 flex items-center justify-center p-4 mt-4 overflow-y-auto">
       <div className='flex flex-col md:flex-row'>
         <div className='flex-grow bg-[#1C3F60] rounded-md'>
           <Image
@@ -73,6 +73,8 @@ function ReservationCheckoutFlowStep1({ onSubmit, onClose, formData }) {
           <button
             onClick={onClose}
             className="absolute top-0 right-0 m-4 text-gray-600 hover:text-gray-800 focus:outline-none"
+            type="button"
+            id="about-checkout-step-1"
           >
             X
           </button>

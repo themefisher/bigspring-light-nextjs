@@ -7,7 +7,7 @@ import { useRouter } from "next/router";
 import Social from "@layouts/components/Social";
 import social from "@config/social.json";
 
-const Header = () => {
+const Header = ({ openModalFunction }) => {
   //router
   const router = useRouter();
 
@@ -40,6 +40,7 @@ const Header = () => {
           id="show-button"
           className="flex items-center order-2 cursor-pointer md:hidden md:order-1"
           onClick={() => setNavOpen(!navOpen)}
+          type="button"
         >
           {navOpen ? (
             <svg className="h-6 fill-current" viewBox="0 0 20 20">
@@ -104,22 +105,28 @@ const Header = () => {
             <Social source={social} className="md:hidden header-social-icons py-[14px]" />
             {enable && (
               <li className="md:hidden">
-                <Link
+                <button
                   className="btn btn-primary z-0 py-[14px]"
-                  href={link}
-                  rel=""
+                  id="mailing-list-optin-button-mobile"
+                  type="button"
+                  onClick={openModalFunction}
                 >
                   {label}
-                </Link>
+                </button>
               </li>
             )}
           </ul>
         </div>
         {enable && (
           <div className="items-center order-1 hidden ml-auto text-center md:ml-0 md:flex md:order-2">
-            <Link className="btn btn-primary z-0 py-[14px] px-4 lg:px-7" href={link} rel="">
+            <button
+              className="btn btn-primary z-0 py-[14px] px-4 lg:px-7"
+              id="mailing-list-optin-button-desktop"
+              type="button"
+              onClick={openModalFunction}
+            >
               {label}
-            </Link>
+            </button>
           </div>
         )}
       </nav>

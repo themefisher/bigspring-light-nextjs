@@ -68,6 +68,9 @@ module.exports = {
         primary: [fontPrimary, fontPrimaryType],
         secondary: [fontSecondary, fontSecondaryType],
       },
+      backgroundImage: {
+        'hero-pattern': "url('/images/landing_page/yuzi_hero_family.png')",
+      },
     },
   },
   plugins: [

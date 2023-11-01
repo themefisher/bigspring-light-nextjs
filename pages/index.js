@@ -9,12 +9,16 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.min.css";
 import { getListPage } from "../lib/contentParser";
 import { useState, useEffect } from "react";
+import MailingListOptin from "@layouts/partials/MailingListOptin";
 import ReservationCheckoutFlow from "@layouts/components/ReservationCheckoutFlow";
+
+
 
 const Home = ({ frontmatter }) => {
   const { meta_title, banner, feature, services, workflow, call_to_action } = frontmatter;
   const { title } = config.site;
   const [isReservationCheckoutVisible, setIsReservationCheckoutVisible] = useState(false);
+  const [isMailingListOptinVisible, setIsMailingListOptinVisible] = useState(false);
 
   const startReservationCheckout = () => {
     setIsReservationCheckoutVisible(true);
@@ -24,8 +28,31 @@ const Home = ({ frontmatter }) => {
     setIsReservationCheckoutVisible(false);
   };
 
+  const openMailingListModal = () => {
+    setIsMailingListOptinVisible(true);
+  };
+
+  const closeMailingListModal = () => {
+    setIsMailingListOptinVisible(false);
+  };
+
   useEffect(() => {
-    if (isReservationCheckoutVisible) {
+    async function delayModalOpening() {
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          resolve();
+        }, 3000);
+      });
+    }
+
+    delayModalOpening().then(() => {
+      setIsMailingListOptinVisible(true);
+    });
+  }, []);
+
+
+  useEffect(() => {
+    if (isReservationCheckoutVisible || isMailingListOptinVisible) {
       // Prevent scrolling when the modal is visible
       document.body.style.overflow = "hidden";
     } else {
@@ -37,10 +64,10 @@ const Home = ({ frontmatter }) => {
     return () => {
       document.body.style.overflow = "auto";
     };
-  }, [isReservationCheckoutVisible]);
+  }, [isReservationCheckoutVisible, isMailingListOptinVisible]);
 
   return (
-    <Base title={meta_title ?? title}>
+    <Base title={meta_title ?? title} openModalFunction={openMailingListModal}>
       {/* Banner */}
       <section className="section pb-[50px]">
         <div className="container">
@@ -52,6 +79,8 @@ const Home = ({ frontmatter }) => {
               {banner.button.enable && (
                 <button
                   className="mt-4 btn btn-primary"
+                  id="start-reservation-checkout-hero-section"
+                  type="button"
                   onClick={startReservationCheckout}
                 >
                   {banner.button.label}
@@ -61,8 +90,8 @@ const Home = ({ frontmatter }) => {
                 <Image
                   className="mx-auto mt-12 rounded-md shadow-lg"
                   src={banner.image}
-                  width={750}
-                  height={390}
+                  width={1500}
+                  height={800}
                   alt="A mother and her new infant bonding at Yuzi Care's postpartum retreat for new mothers."
                   priority
                 />
@@ -71,8 +100,15 @@ const Home = ({ frontmatter }) => {
           </div>
         </div>
         {isReservationCheckoutVisible && (
-          <section className="absolute inset-0 z-10 flex items-center justify-center h-screen overflow-hidden">
+          <section className="z-10 flex items-center justify-center w-full h-screen">
             <ReservationCheckoutFlow closeReservationCheckout={closeReservationCheckout} />
+          </section>
+        )}
+        {isMailingListOptinVisible && (
+          <section className="z-10 flex items-center justify-center w-full h-screen">
+            <MailingListOptin
+              onClose={closeMailingListModal}
+            />
           </section>
         )}
       </section>
@@ -89,7 +125,7 @@ const Home = ({ frontmatter }) => {
                 className="p-5 pb-8 text-center bg-white feature-card rounded-xl"
                 key={`feature-${i}`}
               >
-                {item.icon && (
+                {/* {item.icon && (
                   <Image
                     className="mx-auto"
                     src={item.icon}
@@ -97,7 +133,7 @@ const Home = ({ frontmatter }) => {
                     height={60}
                     alt=""
                   />
-                )}
+                )} */}
                 <div className="mt-4">
                   {markdownify(item.name, "h3", "h5")}
                   <p className="mt-3">{item.content}</p>
@@ -134,7 +170,7 @@ const Home = ({ frontmatter }) => {
                     {/* Slides */}
                     {service?.images.map((slide, index) => (
                       <SwiperSlide key={index}>
-                        <Image src={slide} alt="We offer a variety of services: spa; pelvic floor PT; yoga; custom meal planning." width={600} height={500} />
+                        <Image src={slide} className="pb-2" alt="We offer a variety of services: spa; pelvic floor PT; yoga; custom meal planning." width={600} height={500} />
                       </SwiperSlide>
                     ))}
                   </Swiper>
@@ -191,7 +227,7 @@ const Home = ({ frontmatter }) => {
       </section>
 
       {/* Cta */}
-      <Cta cta={call_to_action} />
+      <Cta cta={call_to_action} modalOpeningFunction={startReservationCheckout} />
     </Base>
   );
 };
