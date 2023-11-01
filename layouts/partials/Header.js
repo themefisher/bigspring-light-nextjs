@@ -104,13 +104,12 @@ const Header = ({ openModalFunction }) => {
             <Social source={social} className="md:hidden header-social-icons py-[14px]" />
             {enable && (
               <li className="md:hidden">
-                <Link
+                <button
                   className="btn btn-primary z-0 py-[14px]"
-                  href={link}
-                  rel=""
+                  onClick={openModalFunction}
                 >
                   {label}
-                </Link>
+                </button>
               </li>
             )}
           </ul>

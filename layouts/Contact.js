@@ -2,7 +2,7 @@ import config from "@config/config.json";
 import { markdownify } from "@lib/utils/textConverter";
 import { useRef, useState } from "react";
 import emailjs from '@emailjs/browser';
-import { emailConfig } from "@config/emailConfig";
+import { contactFromEmailConfig } from "@config/emailConfig";
 import Toast from "./components/Toast";
 
 const Contact = ({ data }) => {
@@ -10,7 +10,7 @@ const Contact = ({ data }) => {
   const { title, info } = frontmatter;
   const { contact_form_action } = config.params;
   const form = useRef();
-  const { emailServiceId, emailTemplateId, emailPublicKey } = emailConfig;
+  const { emailServiceId, emailTemplateId, emailPublicKey } = contactFromEmailConfig;
   const [showToast, setShowToast] = useState(false);
   const [fromName, setFromName] = useState('');
   const [isPregnant, setIsPregnant] = useState(false);

@@ -13,10 +13,6 @@ const validationSchema = z
     email: z.string().min(1, { message: "Email is required" }).email({
       message: "Must be a valid email",
     }),
-    joinMailingList: z
-      .boolean()
-      .default(true)
-      .optional()
   });
 
 const { emailServiceId, emailTemplateId, emailPublicKey } = mailingListEmailConfig;
@@ -31,7 +27,7 @@ function MailingListOptin({ onClose }) {
       const templateParams = {
         from_name: formData.firstName + ' ' + formData.lastName,
         from_email: formData.email,
-        message: `${formData.firstName} ${formData.lastName} has joined the mailinglist! They ${formData.joinMailingList ? 'would' : 'would not'} like to join the mailing list.`,
+        message: `${formData.firstName} ${formData.lastName} has joined the mailinglist!`,
       };
 
       await emailjs.send(emailServiceId, emailTemplateId, templateParams, emailPublicKey);
@@ -55,15 +51,13 @@ function MailingListOptin({ onClose }) {
             className='hidden object-contain mt-5 md:block'
           />
           <div className='mt-14 md:mt-5'>
-            <h3 className="text-center text-white">Join the Mailing List</h3>
-            <hr className='w-[80%] mx-auto'></hr>
-            <h4 className="text-center text-white">Basic Information</h4>
+            <h3 className="pb-4 text-center text-white">Join the Mailing List</h3>
           </div>
         </div>
         <div className="relative w-full max-w-screen-sm p-4 mx-auto bg-white rounded-lg shadow-lg">
           <button
             onClick={onClose}
-            className="absolute top-0 right-0 m-4text-gray-600 hover:text-gray-800 focus:outline-none"
+            className="absolute top-0 right-0 mr-4 text-gray-600 hover:text-gray-800 focus:outline-none"
           >
             X
           </button>
@@ -136,13 +130,11 @@ function MailingListOptin({ onClose }) {
             </div>
 
             <div className="mb-4">
-              <input type="checkbox" id="joinMailingList" checked {...register("joinMailingList")} />
-              <label
-                htmlFor="joinMailingList"
-                className={`ml-2 text-sm font-bold text-gray-700`}
+              <p
+                className={`ml-2 text-sm text-center text-gray-700`}
               >
-                Please send me updates and information about the program.
-              </label>
+                By signing up you agree to receive emails from Yuzi.
+              </p>
             </div>
 
             <div className="w-full text-center">
