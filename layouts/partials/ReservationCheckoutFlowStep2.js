@@ -191,6 +191,7 @@ function ReservationCheckoutFlowStep2({ onSubmit, onClose, onPrev, formData }) {
               <button
                 className="w-[40%] px-4 py-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-700 focus:outline-none focus:shadow-outline"
                 type="submit"
+                id="complete-checkout-step-2-button"
               >
                 Next
               </button>
