@@ -22,6 +22,10 @@ const Form = ({ closeReservationCheckout }) => {
         from_name: formData.firstName + ' ' + formData.lastName,
         from_email: formData.email,
         from_phone: formData.phone,
+        is_pregnant: formData.isPregnant ? 'Yes' : 'No',
+        due_date: formData.dueDate,
+        desired_visit_dates: `${formData.desiredVisitDates[0]} to ${formData.desiredVisitDates[1]}`,
+        joined_mailing_list: formData.joinMailingList ? 'Yes' : 'No',
         message: `${formData.firstName} ${formData.lastName} has reserved a spot! They are ${formData.isPregnant ? 'currently pregnant' : 'not currently pregnant'}. Their due date is ${formData.dueDate}. They would like to visit from ${formData.desiredVisitDates[0]} to ${formData.desiredVisitDates[1]}. They ${formData.joinMailingList ? 'would' : 'would not'} like to join the mailing list.`,
       };
 

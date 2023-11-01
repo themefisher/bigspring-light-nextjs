@@ -12,7 +12,7 @@ canonical: "https://yuzicare.com/about"
 <div>
   <div className="md:grid md:grid-cols-12 md:items-start md:gap-4">
     <div className="md:col-span-5">
-      <img className="rounded-xl" src="/images/about/steph-about-family-cropped.png" alt="Image Description"/>
+      <img className="rounded-xl" src="/images/about/steph-about-family-cropped.webp" alt="Image Description"/>
     </div>
 <div className="mt-5 sm:mt-10 md:mt-2 md:col-span-7 justify-items-stretch">
 I'm Stephiney Foley, the Founder and Chief Mom at Yuzi. Thank you for stopping by! Many wonder why I started Yuzi and why I'm so dedicated to maternal wellness.
