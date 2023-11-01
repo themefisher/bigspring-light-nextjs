@@ -141,6 +141,7 @@ function MailingListOptin({ onClose }) {
               <button
                 className="w-full px-4 py-2 text-white bg-blue-500 rounded-full hover:bg-blue-700 focus:outline-none focus:shadow-outline"
                 type="submit"
+                id="join-mailing-list-button"
               >
                 Send Me Updates!
               </button>
