@@ -73,7 +73,7 @@ function ReservationCheckoutFlowStep2({ onSubmit, onClose, onPrev, formData }) {
             onClick={onClose}
             className="absolute top-0 right-0 m-4 text-gray-600 hover:text-gray-800 focus:outline-none"
             type="button"
-            id="about-checkout-step-2"
+            id="abort-checkout-step-2"
           >
             X
           </button>
