@@ -7,7 +7,7 @@ import { useRouter } from "next/router";
 import Social from "@layouts/components/Social";
 import social from "@config/social.json";
 
-const Header = () => {
+const Header = ({ openModalFunction }) => {
   //router
   const router = useRouter();
 
@@ -117,9 +117,9 @@ const Header = () => {
         </div>
         {enable && (
           <div className="items-center order-1 hidden ml-auto text-center md:ml-0 md:flex md:order-2">
-            <Link className="btn btn-primary z-0 py-[14px] px-4 lg:px-7" href={link} rel="">
+            <button className="btn btn-primary z-0 py-[14px] px-4 lg:px-7" onClick={openModalFunction} rel="">
               {label}
-            </Link>
+            </button>
           </div>
         )}
       </nav>

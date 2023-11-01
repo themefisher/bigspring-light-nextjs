@@ -69,5 +69,4 @@ call_to_action:
   button:
     enable: true
     label: "Reserve Your Spot"
-    link: "https://book.stripe.com/00g4gTerzeUh5GM8wz"
 ---

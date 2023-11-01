@@ -9,12 +9,16 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.min.css";
 import { getListPage } from "../lib/contentParser";
 import { useState, useEffect } from "react";
+import MailingListOptin from "@layouts/partials/MailingListOptin";
 import ReservationCheckoutFlow from "@layouts/components/ReservationCheckoutFlow";
+
+
 
 const Home = ({ frontmatter }) => {
   const { meta_title, banner, feature, services, workflow, call_to_action } = frontmatter;
   const { title } = config.site;
   const [isReservationCheckoutVisible, setIsReservationCheckoutVisible] = useState(false);
+  const [isMailingListOptinVisible, setIsMailingListOptinVisible] = useState(false);
 
   const startReservationCheckout = () => {
     setIsReservationCheckoutVisible(true);
@@ -24,8 +28,31 @@ const Home = ({ frontmatter }) => {
     setIsReservationCheckoutVisible(false);
   };
 
+  const openMailingListModal = () => {
+    setIsMailingListOptinVisible(true);
+  };
+
+  const closeMailingListModal = () => {
+    setIsMailingListOptinVisible(false);
+  };
+
   useEffect(() => {
-    if (isReservationCheckoutVisible) {
+
+    const hasModalBeenShown = localStorage.getItem("modalShown");
+    if (hasModalBeenShown === 'false') {
+      return;
+    }
+
+    const timeoutId = setTimeout(() => {
+      setIsMailingListOptinVisible(true);
+    }, 3000);
+
+    localStorage.setItem("modalShown", "true");
+    return () => clearTimeout(timeoutId);
+  });
+
+  useEffect(() => {
+    if (isReservationCheckoutVisible || isMailingListOptinVisible) {
       // Prevent scrolling when the modal is visible
       document.body.style.overflow = "hidden";
     } else {
@@ -37,10 +64,10 @@ const Home = ({ frontmatter }) => {
     return () => {
       document.body.style.overflow = "auto";
     };
-  }, [isReservationCheckoutVisible]);
+  }, [isReservationCheckoutVisible, isMailingListOptinVisible]);
 
   return (
-    <Base title={meta_title ?? title}>
+    <Base title={meta_title ?? title} openModalFunction={openMailingListModal}>
       {/* Banner */}
       <section className="section pb-[50px]">
         <div className="container">
@@ -71,8 +98,15 @@ const Home = ({ frontmatter }) => {
           </div>
         </div>
         {isReservationCheckoutVisible && (
-          <section className="absolute inset-0 z-10 flex items-center justify-center h-screen overflow-hidden">
+          <section className="z-10 flex items-center justify-center w-full h-screen">
             <ReservationCheckoutFlow closeReservationCheckout={closeReservationCheckout} />
+          </section>
+        )}
+        {isMailingListOptinVisible && (
+          <section className="z-10 flex items-center justify-center w-full h-screen">
+            <MailingListOptin
+              onClose={closeMailingListModal}
+            />
           </section>
         )}
       </section>
@@ -191,7 +225,7 @@ const Home = ({ frontmatter }) => {
       </section>
 
       {/* Cta */}
-      <Cta cta={call_to_action} />
+      <Cta cta={call_to_action} modalOpeningFunction={startReservationCheckout} />
     </Base>
   );
 };

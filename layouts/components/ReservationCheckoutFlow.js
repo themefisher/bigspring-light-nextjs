@@ -3,7 +3,7 @@ import ReservationCheckoutFlowStep1 from "@layouts/partials/ReservationCheckoutF
 import ReservationCheckoutFlowStep2 from "@layouts/partials/ReservationCheckoutFlowStep2";
 import ReservationCheckoutFlowStep3 from "@layouts/partials/ReservationCheckoutFlowStep3";
 import emailjs from '@emailjs/browser';
-import { emailConfig } from '@config/emailConfig';
+import { reservationEmailConfig } from '@config/emailConfig';
 
 const Form = ({ closeReservationCheckout }) => {
 
@@ -13,7 +13,7 @@ const Form = ({ closeReservationCheckout }) => {
   };
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({});
-  const { emailServiceId, emailTemplateId, emailPublicKey } = emailConfig;
+  const { emailServiceId, emailTemplateId, emailPublicKey } = reservationEmailConfig;
 
   useEffect(() => {
 
@@ -22,7 +22,7 @@ const Form = ({ closeReservationCheckout }) => {
         from_name: formData.firstName + ' ' + formData.lastName,
         from_email: formData.email,
         from_phone: formData.phone,
-        message: `${formData.firstName} ${formData.lastName} has joined the waitlist! They are ${formData.isPregnant ? 'currently pregnant' : 'not currently pregnant'}. Their due date is ${formData.dueDate}. They would like to visit from ${formData.desiredVisitDates[0]} to ${formData.desiredVisitDates[1]}. They ${formData.joinMailingList ? 'would' : 'would not'} like to join the mailing list.`,
+        message: `${formData.firstName} ${formData.lastName} has reserved a spot! They are ${formData.isPregnant ? 'currently pregnant' : 'not currently pregnant'}. Their due date is ${formData.dueDate}. They would like to visit from ${formData.desiredVisitDates[0]} to ${formData.desiredVisitDates[1]}. They ${formData.joinMailingList ? 'would' : 'would not'} like to join the mailing list.`,
       };
 
       emailjs.send(emailServiceId, emailTemplateId, templateParams, emailPublicKey)
