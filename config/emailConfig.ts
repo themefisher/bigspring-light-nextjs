@@ -14,7 +14,7 @@ export const mailingListEmailConfig: Record<string, string> = {
 
 export const contactFromEmailConfig: Record<string, string> = {
   emailServiceId: process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID,
-  emailTemplateId: process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_YUZI_CONTACT_FROM_ID,
+  emailTemplateId: process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_YUZI_CONTACT_FORM_ID,
   emailPublicKey: process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY,
   emailPrivateKey: process.env.NEXT_PUBLIC_EMAIL_PRIVATE_KEY,
 };
