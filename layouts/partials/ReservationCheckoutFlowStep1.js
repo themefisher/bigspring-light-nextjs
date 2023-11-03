@@ -53,20 +53,20 @@ function ReservationCheckoutFlowStep1({ onSubmit, onClose, formData }) {
   };
 
   return (
-    <section className="fixed inset-0 z-50 items-center justify-center p-4 mt-4 overflow-y-auto">
+    <section className="fixed inset-0 z-50 items-center justify-center p-4 mt-4 overflow-y-auto md:flex">
       <div className='flex flex-col md:flex-row'>
-        <div className='flex-grow bg-[#1C3F60] rounded-md'>
+        <div className='flex-grow rounded-md bg-secondary'>
           <Image
-            src="/images/yuzi_checkout_logo.png"
+            src="/images/yuzi_ring_logo.svg"
             alt="Logo"
             width={500}
             height={500}
             className='hidden object-contain mt-5 md:block'
           />
-          <div className='mt-14 md:mt-5'>
-            <h3 className="text-center text-white">Step 1</h3>
-            <hr className='w-[80%] mx-auto'></hr>
-            <h4 className="text-center text-white">Basic Information</h4>
+          <div className='py-5'>
+            <h3 className="text-center text-dark">Step 1</h3>
+            <hr className='w-[80%] mx-auto border-dark'></hr>
+            <h4 className="text-center text-dark">Basic Information</h4>
           </div>
         </div>
         <div className="relative w-full max-w-screen-sm p-4 mx-auto bg-white rounded-lg shadow-lg">
@@ -217,7 +217,7 @@ function ReservationCheckoutFlowStep1({ onSubmit, onClose, formData }) {
 
             <div className="w-full text-center">
               <button
-                className="w-full px-4 py-2 text-white bg-blue-500 rounded-full hover:bg-blue-700 focus:outline-none focus:shadow-outline"
+                className="w-full px-4 py-2 text-white bg-blue-700 rounded-full hover:bg-blue-500 focus:outline-none focus:shadow-outline"
                 type="submit"
                 id="complete-checkout-step-1-button"
               >
