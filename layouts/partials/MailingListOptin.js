@@ -40,18 +40,18 @@ function MailingListOptin({ onClose }) {
     }
   };
   return (
-    <section className="fixed inset-0 z-50 flex items-center justify-center p-4 mt-4 overflow-y-auto">
+    <section className="fixed inset-0 z-50 items-center justify-center p-4 mt-4 overflow-y-auto md:flex">
       <div className='flex flex-col md:flex-row'>
-        <div className='flex-grow bg-[#1C3F60] rounded-md'>
+        <div className='flex-grow rounded-md bg-secondary'>
           <Image
-            src="/images/yuzi_checkout_logo.png"
+            src="/images/yuzi_ring_logo.svg"
             alt="Logo"
             width={500}
             height={500}
             className='hidden object-contain mt-5 md:block'
           />
-          <div className='mt-14 md:mt-5'>
-            <h3 className="pb-4 text-center text-white">Join the Mailing List</h3>
+          <div className='py-5 my-auto'>
+            <h3 className="text-center text-dark">Join the Mailing List</h3>
           </div>
         </div>
         <div className="relative w-full max-w-screen-sm p-4 mx-auto bg-white rounded-lg shadow-lg">

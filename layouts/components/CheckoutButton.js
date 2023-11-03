@@ -35,7 +35,7 @@ const CheckoutButton = ({ formData }) => {
 
   return (
     <button
-      className="btn btn-primary"
+      className="w-full max-w-[300px] px-4 py-2 text-lg font-bold text-white bg-blue-700 rounded-full hover:bg-blue-500 focus:outline-none focus:shadow-outline"
       onClick={handleCheckout}
       id="proceed-to-stripe-checkout-button"
     >
