@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 function ReservationCheckoutFlowStep3({ onClose, formData }) {
   return (
-    <section className="fixed inset-0 z-50 flex items-center justify-center p-4 mt-4 overflow-y-auto">
+    <section className="fixed inset-0 z-50 items-center justify-center p-4 mt-4 overflow-y-auto">
       <div className='flex flex-col md:flex-row'>
         <div className='flex-grow bg-[#1C3F60] rounded-md py-10 px-10'>
           <Image
@@ -30,8 +30,8 @@ function ReservationCheckoutFlowStep3({ onClose, formData }) {
             X
           </button>
           <div className='mt-2 md:mt-5'>
-            <h2 className="mb-4 text-2xl font-bold text-center">We require a $100 deposit to hold your reservation.</h2>
-            <h3 className="mx-auto mb-4 text-base text-center sm:text-2xl">Your deposit is <u className='italic underline decoration-primary'>fully refundable</u> at any time.</h3>
+            <h2 className="mb-4 text-2xl font-bold text-center">We kindly request a $100 deposit to secure your reservation.</h2>
+            <h3 className="mx-auto mb-4 text-base text-center sm:text-2xl">Rest assured, this deposit is <u className='italic underline decoration-primary'>fully refundable.</u></h3>
             <div className='text-center'>
               <CheckoutButton formData={formData} />
             </div>
