@@ -61,7 +61,7 @@ function MailingListOptin({ onClose }) {
           >
             X
           </button>
-          <h2 className="mb-4 text-2xl font-bold text-center">Access to Exclusive Offers and community Insights</h2>
+          <h2 className="mb-4 text-2xl font-bold text-center">Access to Exclusive Offers and Community Insights</h2>
           <form className="space-y-4" onSubmit={handleSubmit((formData) => {
             handleMailingListSubmit(formData)
               .then(() => {
