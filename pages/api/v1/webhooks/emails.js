@@ -1,6 +1,5 @@
 import Stripe from 'stripe';
 import { text } from 'micro';
-import { reservationCheckoutCompletedEmailConfig } from "@config/emailConfig";
 import sendEmail from '@lib/utils/sendEmail';
 
 export const config = {
