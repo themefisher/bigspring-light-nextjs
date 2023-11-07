@@ -69,7 +69,7 @@ export default async function handler(req, res) {
       const toClientEmailTemplate = `
       <div class="wrapper" style="background-color: #edf6f5;">
 <div class="header" style="text-align: center; margin: 10px; padding:10px;"><img src="${process.env.NEXT_PUBLIC_BASE_URL}/images/logos/yuzi_lower_logo_600x200.png" alt="Yuzi Care" width="246" height="82"></div>
-<div class="content" style="margin: 0 auto; max-width: 600px; padding: 20px; background-color: #ffffff; border-radius: 25px;">
+<div class="content" style="margin: 0 auto; max-width: 600px; max-height: 200px; padding: 20px; background-color: #ffffff; border-radius: 25px;">
 <p>Dear ${emailTemplateParams.from_name},</p>
 <p>Congratulations! You’ve taken the first step towards preparing for your postpartum wellness. Whether this is your first or fifth child, motherhood is an extraordinary journey filled with joys and challenges.</p>
 <p>We are honored to have the opportunity to care for you and your baby during this important time. A member of our care team will reach out shortly to discuss your postpartum goals and begin planning for your visit.</p>

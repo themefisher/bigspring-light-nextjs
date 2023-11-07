@@ -58,7 +58,7 @@ const Contact = ({ data }) => {
     const toClientEmailTemplate = `
     <div class="wrapper" style="background-color: #edf6f5;">
 <div class="header" style="text-align: center; margin: 10px; padding:10px"><img src="${process.env.NEXT_PUBLIC_BASE_URL}/images/logos/yuzi_lower_logo_600x200.png" alt="Yuzi Care" width="300" height="100"></div>
-<div class="content" style="margin: 0 auto; max-width: 600px; padding: 20px; background-color: #ffffff; border-radius: 25px;">
+<div class="content" style="margin: 0 auto; max-width: 600px; max-height: 200px; padding: 20px; background-color: #ffffff; border-radius: 25px;">
 <p>Dear ${emailTemplateParams.from_name},</p>
 <p>Thank you for contacting Yuzi Care.</p>
 <p>We received your message and a staff member will be contacting your shortly.</p>

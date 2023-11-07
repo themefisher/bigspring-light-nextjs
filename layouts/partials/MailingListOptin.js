@@ -51,7 +51,7 @@ function MailingListOptin({ onClose }) {
       const toClientEmailTemplate = `
       <section class="wrapper" style="background-color: #edf6f5;">
 <header class="header" style="text-align: center; margin: 10px; padding:10px"><img src="${process.env.NEXT_PUBLIC_BASE_URL}/images/logos/yuzi_lower_logo_600x200.png" alt="Yuzi Care" width="300" height="100"></header>
-<article class="content" style="margin: 0 auto; max-width: 600px; padding: 20px; background-color: #ffffff; border-radius: 25px;">
+<article class="content" style="margin: 0 auto; max-width: 600px; max-height: 200px; padding: 20px; background-color: #ffffff; border-radius: 25px;">
 <p>Dear ${emailTemplateParams.from_name},</p>
 <p>Thank you for joining the Yuzi mailing list!  At Yuzi, our mission is to prioritize moms by providing the nurturing care and support they deserve.</p>
 <p>By subscribing to our mailing list you’ll be the first to hear about updates on the Yuzi Retreat, special offers, and new resources for pregnancy, postpartum, and beyond.</p>
