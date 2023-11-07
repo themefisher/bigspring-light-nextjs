@@ -57,7 +57,7 @@ const Contact = ({ data }) => {
 
     const toClientEmailTemplate = `
     <div class="wrapper" style="background-color: #edf6f5;">
-<div class="header" style="text-align: center; margin: 10px; padding:10px"><img src="${process.env.NEXT_PUBLIC_BASE_URL}/images/logos/yuzi_lower_logo_600x200.svg" alt="Yuzi Care" width="300" height="100"></div>
+<div class="header" style="text-align: center; margin: 10px; padding:10px"><img src="${process.env.NEXT_PUBLIC_BASE_URL}/images/logos/yuzi_lower_logo_600x200.png" alt="Yuzi Care" width="300" height="100"></div>
 <div class="content" style="margin: 0 auto; max-width: 600px; padding: 20px; background-color: #ffffff; border-radius: 25px;">
 <p>Dear ${emailTemplateParams.from_name},</p>
 <p>Thank you for contacting Yuzi Care.</p>
@@ -74,7 +74,7 @@ const Contact = ({ data }) => {
 <table style="vertical-align: -webkit-baseline-middle; font-size: medium; font-family: Arial; width: 100.707%; height: 65px;" cellspacing="0" cellpadding="0">
 <tbody>
 <tr>
-<td style="vertical-align: middle; width: 13.2454%;"><a href="https://yuzicare.com" target="_blank" rel="noopener"><img style="width: 150px; height: 50px;" src="${process.env.NEXT_PUBLIC_BASE_URL}/images/logos/email_signature_logo.svg" alt="Yuzi Care Logo"> </a>
+<td style="vertical-align: middle; width: 13.2454%;"><a href="https://yuzicare.com" target="_blank" rel="noopener"><img style="width: 150px; height: 50px;" src="${process.env.NEXT_PUBLIC_BASE_URL}/images/logos/yuzi_lower_logo_600x200.png" alt="Yuzi Care Logo"> </a>
 <div style="width: 20px;">&nbsp;</div>
 </td>
 <td style="width: 0.86571%; border-bottom: none; border-left: 1px solid rgb(138, 136, 134);" width="1" height="auto">&nbsp;</td>
