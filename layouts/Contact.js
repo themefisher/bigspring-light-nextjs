@@ -31,7 +31,7 @@ const Contact = ({ data }) => {
     const toClientMessageConfig = {
       sendingEmailAddress: "contact@yuzicare.com",
       receivingEmailAddress: emailTemplateParams.from_email,
-      subject: emailTemplateParams.subject,
+      subject: "Thank You from Yuzi",
       bcc: ["harper@yuzicare.com", "steph@yuzicare.com", "michelle@yuzicare.com"],
     };
 
