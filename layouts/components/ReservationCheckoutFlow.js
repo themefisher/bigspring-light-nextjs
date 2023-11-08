@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 import ReservationCheckoutFlowStep1 from "@layouts/partials/ReservationCheckoutFlowStep1";
 import ReservationCheckoutFlowStep2 from "@layouts/partials/ReservationCheckoutFlowStep2";
 import ReservationCheckoutFlowStep3 from "@layouts/partials/ReservationCheckoutFlowStep3";
-import emailjs from '@emailjs/browser';
 import { reservationCheckoutStepTwoEmailConfig } from '@config/emailConfig';
+import sendEmail from "@lib/utils/sendEmail.js";
 
 const Form = ({ closeReservationCheckout }) => {
 
@@ -13,29 +13,56 @@ const Form = ({ closeReservationCheckout }) => {
   };
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({});
-  const { emailServiceId, emailTemplateId, emailPublicKey } = reservationCheckoutStepTwoEmailConfig;
+
+  async function sendEmailOnStep2Completion() {
+    const emailTemplateParams = {
+      from_name: formData.firstName + ' ' + formData.lastName,
+      from_email: formData.email,
+      from_phone: formData.phone,
+      is_pregnant: formData.isPregnant ? 'Yes' : 'No',
+      due_date: formData.dueDate,
+      desired_visit_dates: `${formData.desiredVisitDates[0]} to ${formData.desiredVisitDates[1]}`,
+      joined_mailing_list: formData.joinMailingList ? 'Yes' : 'No',
+      message: `${formData.firstName} ${formData.lastName} has reserved a spot! They are ${formData.isPregnant ? 'currently pregnant' : 'not currently pregnant'}. Their due date is ${formData.dueDate}. They would like to visit from ${formData.desiredVisitDates[0]} to ${formData.desiredVisitDates[1]}. They ${formData.joinMailingList ? 'would' : 'would not'} like to join the mailing list.`,
+    };
+
+    const emailTemplate = `
+        <!DOCTYPE html>
+          <html>
+            <head>
+            </head>
+            <body>
+              <p>Name: ${emailTemplateParams.from_name}</p>
+              <p>Email: ${emailTemplateParams.from_email}</p>
+              <p>Phone: ${emailTemplateParams.from_phone}</p>
+              <p>Are they pregnant? ${emailTemplateParams.is_pregnant ? 'Yes' : 'No'}</p>
+              <p>Due Date: ${emailTemplateParams.due_date}</p>
+              <p>Desired Visit Dates: ${emailTemplateParams.desired_visit_dates}</p>
+              <p>Joined Mailing List? ${emailTemplateParams.joined_mailing_list}</p>
+              <p>Message: ${emailTemplateParams.message}</p>
+            </body>
+          </html>
+          `;
+
+    const messageConfig = {
+      sendingEmailAddress: 'contact@yuzicare.com',
+      receivingEmailAddress: emailTemplateParams.from_email,
+      subject: `${emailTemplateParams.from_name} completed Step 2 of Reservation Checkout`,
+    };
+
+    try {
+      const result = await sendEmail(emailTemplateParams, emailTemplate, messageConfig);
+      console.log(result);
+      setFormData({}); // reset formData
+    } catch (error) {
+      console.log(error);
+    };
+  }
 
   useEffect(() => {
 
     if (step === 3) {
-      const templateParams = {
-        from_name: formData.firstName + ' ' + formData.lastName,
-        from_email: formData.email,
-        from_phone: formData.phone,
-        is_pregnant: formData.isPregnant ? 'Yes' : 'No',
-        due_date: formData.dueDate,
-        desired_visit_dates: `${formData.desiredVisitDates[0]} to ${formData.desiredVisitDates[1]}`,
-        joined_mailing_list: formData.joinMailingList ? 'Yes' : 'No',
-        message: `${formData.firstName} ${formData.lastName} has reserved a spot! They are ${formData.isPregnant ? 'currently pregnant' : 'not currently pregnant'}. Their due date is ${formData.dueDate}. They would like to visit from ${formData.desiredVisitDates[0]} to ${formData.desiredVisitDates[1]}. They ${formData.joinMailingList ? 'would' : 'would not'} like to join the mailing list.`,
-      };
-
-      emailjs.send(emailServiceId, emailTemplateId, templateParams, emailPublicKey)
-        .then((result) => {
-          console.log(result.text);
-        })
-        .catch((error) => {
-          console.log(error.text);
-        });
+      sendEmailOnStep2Completion();
     }
   });
 
