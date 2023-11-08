@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import ReservationCheckoutFlowStep1 from "@layouts/partials/ReservationCheckoutFlowStep1";
 import ReservationCheckoutFlowStep2 from "@layouts/partials/ReservationCheckoutFlowStep2";
 import ReservationCheckoutFlowStep3 from "@layouts/partials/ReservationCheckoutFlowStep3";
-import { reservationCheckoutStepTwoEmailConfig } from '@config/emailConfig';
 import sendEmail from "@lib/utils/sendEmail.js";
 
 const Form = ({ closeReservationCheckout }) => {
