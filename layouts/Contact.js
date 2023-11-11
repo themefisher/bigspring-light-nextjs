@@ -61,7 +61,7 @@ const Contact = ({ data }) => {
 <div class="content" style="margin: 0 auto; max-width: 600px; max-height: 200px; padding: 20px; background-color: #ffffff; border-radius: 25px;">
 <p>Dear ${emailTemplateParams.from_name},</p>
 <p>Thank you for contacting Yuzi Care.</p>
-<p>We received your message and a staff member will be contacting your shortly.</p>
+<p>We received your message and a staff member will be contacting you shortly.</p>
 <p>If you need anything else in the meantime, please feel free to contact us again at <a href="mailto:contact@yuzicare.com">contact@yuzicare.com</a> or call us directly at <a href="tel:2062226295">(206) 222-6295</a>.</p>
 <p>We look forward to speaking with you soon.</p>
 
