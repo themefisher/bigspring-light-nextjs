@@ -16,9 +16,9 @@
   },
   "fonts": {
     "font_family": {
-      "primary": "Belleza:wght@300;400;700",
+      "primary": "Montserrat:wght@300;400;700",
       "primary_type": "sans-serif",
-      "secondary": "Garamond:wght@300;400;700",
+      "secondary": "Lato:wght@300;400;700",
       "secondary_type": "serif"
     },
     "font_size": {
