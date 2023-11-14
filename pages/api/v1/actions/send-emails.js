@@ -1,6 +1,19 @@
 const nodemailer = require('nodemailer');
+import NextCors from 'nextjs-cors';
 
-export default function handler(req, res) {
+export default async function handler(req, res) {
+
+  if (req.method === 'OPTIONS') {
+    res.status(200).end();
+    return;
+  }
+
+  await NextCors(req, res, {
+    methods: ['POST'],
+    origin: '*',
+    optionsSuccessStatus: 200,
+  });
+
   const message = {
     from: req.body.messageConfig.sendingEmailAddress ?? '',
     to: req.body.messageConfig.receivingEmailAddress ?? '',

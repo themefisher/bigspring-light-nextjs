@@ -1,5 +1,6 @@
 import { markdownify } from "@lib/utils/textConverter";
 import Image from "next/image";
+import Link from "next/link";
 
 function Cta({ cta, modalOpeningFunction }) {
   return (
@@ -19,15 +20,15 @@ function Cta({ cta, modalOpeningFunction }) {
             <h2>{cta?.title}</h2>
             <p className="mt-6">{markdownify(cta?.content)}</p>
             {cta.button.enable && (
-              <button
+              <Link
                 className="mt-4 btn btn-primary"
                 id="start-reservation-checkout-lower-cta-section"
                 type="button"
-                onClick={modalOpeningFunction}
+                href={cta.button.link}
                 rel={cta.button.rel}
               >
                 {cta.button.label}
-              </button>
+              </Link>
             )}
           </div>
         </div>

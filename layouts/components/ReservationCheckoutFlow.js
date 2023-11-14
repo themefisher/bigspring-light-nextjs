@@ -20,7 +20,7 @@ const Form = ({ closeReservationCheckout }) => {
       from_phone: formData.phone,
       is_pregnant: formData.isPregnant ? 'Yes' : 'No',
       due_date: formData.dueDate,
-      desired_visit_dates: `${formData.desiredVisitDates[0]} to ${formData.desiredVisitDates[1]}`,
+      desired_visit_dates: formData.desiredVisitDates ? `${formData.desiredVisitDates[0]} to ${formData.desiredVisitDates[1]}` : 'No dates provided.',
       joined_mailing_list: formData.joinMailingList ? 'Yes' : 'No',
       message: `${formData.firstName} ${formData.lastName} has reserved a spot! They are ${formData.isPregnant ? 'currently pregnant' : 'not currently pregnant'}. Their due date is ${formData.dueDate}. They would like to visit from ${formData.desiredVisitDates[0]} to ${formData.desiredVisitDates[1]}. They ${formData.joinMailingList ? 'would' : 'would not'} like to join the mailing list.`,
     };
@@ -45,14 +45,13 @@ const Form = ({ closeReservationCheckout }) => {
 
     const messageConfig = {
       sendingEmailAddress: 'contact@yuzicare.com',
-      receivingEmailAddress: emailTemplateParams.from_email,
+      receivingEmailAddress: ['harper@yuzicare.com', 'steph@yuzicare.com', 'michelle@yuzicare.com'],
       subject: `${emailTemplateParams.from_name} completed Step 2 of Reservation Checkout`,
     };
 
     try {
       const result = await sendEmail(emailTemplateParams, emailTemplate, messageConfig);
       console.log(result);
-      setFormData({}); // reset formData
     } catch (error) {
       console.log(error);
     };
@@ -85,8 +84,8 @@ const Form = ({ closeReservationCheckout }) => {
       {step === 1 && (
         <ReservationCheckoutFlowStep1
           onSubmit={handleNextStep}
-          formData={formData}
           onClose={onClose}
+          formData={formData}
         />
       )}
       {step === 2 && (

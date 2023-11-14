@@ -22,7 +22,6 @@ plans:
     - Mommy & Me Social programming
   button:
     label: Reserve Your Spot
-    link: "/contact"
 
 - title: 7 Nights (Most Popular)
   subtitle: "You stay includes:"
@@ -39,7 +38,6 @@ plans:
     - Mommy & Me Social programming
   button:
     label: Reserve Your Spot
-    link: "/contact"
 
 - title: 7+ Nights
   subtitle: "You stay includes:"
@@ -55,7 +53,6 @@ plans:
     - Mommy & Me Social programming
   button:
     label: Reserve Your Spot
-    link: "/contact"
 
 call_to_action:
   title: Have a question?
