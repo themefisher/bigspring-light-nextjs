@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Cta from "./components/Cta";
+import PricingCta from "./components/PricingCta";
 import shortcodes from "@shortcodes/all";
 import { MDXRemote } from "next-mdx-remote";
 import ReservationCheckoutFlow from "@layouts/components/ReservationCheckoutFlow";
@@ -64,6 +64,7 @@ function Pricing({ data }) {
                     ))}
                   </ul>
                   <button
+                    id="proceed-to-stripe-checkout-button"
                     className={`btn mt-5 ${plan.recommended ? "btn-primary" : "btn-outline-primary"
                       }`}
                     onClick={startReservationCheckout}
@@ -92,7 +93,7 @@ function Pricing({ data }) {
           </div>
         </div>
       </section>
-      <Cta cta={call_to_action} />
+      <PricingCta cta={call_to_action} />
     </>
   );
 }
