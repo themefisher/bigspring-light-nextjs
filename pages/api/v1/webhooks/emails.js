@@ -1,6 +1,7 @@
 import Stripe from 'stripe';
 import { text } from 'micro';
 import sendEmail from '@lib/utils/sendEmail';
+import NextCors from 'nextjs-cors';
 
 export const config = {
   api: {
@@ -13,6 +14,17 @@ const stripe = new Stripe(process.env.NEXT_PUBLIC_STRIPE_SECRET_KEY, {
 });
 
 export default async function handler(req, res) {
+
+  if (req.method === 'OPTIONS') {
+    res.status(200).end();
+    return;
+  }
+
+  await NextCors(req, res, {
+    methods: ['POST', 'HEAD'],
+    origin: '*',
+    optionsSuccessStatus: 200,
+  });
 
   if (req.method === "POST") {
     const body = await text(req);
