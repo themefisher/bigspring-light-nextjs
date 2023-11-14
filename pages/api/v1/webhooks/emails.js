@@ -39,6 +39,7 @@ export default async function handler(req, res) {
         sig,
         webhookSecret,
       );
+      res.status(200).json({ received: true });
     } catch (err) {
       console.log(err.message);
       return res.status(400).send(`Webhook error: ${err.message}`);
