@@ -47,6 +47,7 @@ function ReservationCheckoutFlowStep2({ onSubmit, onClose, onPrev, formData }) {
 
   const handleFormSubmit = (data) => {
     onSubmit(data); // Pass the form data to the parent component
+    document.getElementById("reservation-checkout-form").reset(); // Reset the form
   };
 
   return (
@@ -77,7 +78,7 @@ function ReservationCheckoutFlowStep2({ onSubmit, onClose, onPrev, formData }) {
             X
           </button>
           <h2 className="mb-4 text-2xl font-bold text-center">Tell us a little more about yourself</h2>
-          <form className="" onSubmit={handleSubmit(handleFormSubmit)}>
+          <form id="reservation-checkout-form" onSubmit={handleSubmit(handleFormSubmit)}>
             <div className="mb-4">
               <label
                 className="block mb-2 text-sm font-bold text-gray-700"

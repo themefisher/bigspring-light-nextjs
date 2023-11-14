@@ -14,7 +14,7 @@ export default async function handler(req, res) {
               product_data: {
                 name: "Yuzi Retreat Reservation",
                 description: "Reserve your spot with a 100% refundable deposit.",
-                images: ["https://yuzicare.com/images/favicon.png"],
+                images: [`${process.env.NEXT_PUBLIC_BASE_URL}/images/logos/yuzi_ring_logo_500x500.png`],
               },
               unit_amount: 10000,
             },

@@ -1,4 +1,3 @@
-import Link from "next/link";
 import PricingCta from "./components/PricingCta";
 import shortcodes from "@shortcodes/all";
 import { MDXRemote } from "next-mdx-remote";
