@@ -10,6 +10,10 @@ const nextConfig = {
         source: '/api/v1/actions/:path*',
         destination: `${process.env.NEXT_PUBLIC_BASE_URL}/api/v1/actions/:path*`,
       },
+      {
+        source: '/api/v1/stripe/webhooks/:path*',
+        destination: `${process.env.NEXT_PUBLIC_BASE_URL}/api/v1/stripe/webhooks/:path*`,
+      }
     ]
   },
 };
