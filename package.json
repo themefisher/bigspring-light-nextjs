@@ -1,5 +1,5 @@
 {
-  "name": "bigspring-light-nextjs",
+  "name": "us-home-pro",
   "description": "a nextjs and tailwindcss SAAS starter template",
   "version": "1.0.0",
   "private": true,
@@ -12,6 +12,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@vercel/analytics": "^1.1.2",
     "github-slugger": "^2.0.0",
     "gray-matter": "^4.0.3",
     "marked": "^4.2.4",

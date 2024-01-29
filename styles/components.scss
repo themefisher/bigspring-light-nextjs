@@ -13,6 +13,14 @@
   @apply mb-5 leading-10;
 }
 
+.align-row{
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 // social icon style
 .social-icons {
   @apply space-x-4;

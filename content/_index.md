@@ -1,33 +1,29 @@
 ---
 banner:
   title: Let us solve your critical website development challenges
-  content: Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nihil enim maxime corporis cumque <br/> totam aliquid nam sint inventore optio modi neque laborum officiis necessitatibus
-  image: /images/banner-art.svg
+  content: Is your Home in Need of Upgrades?
+  content1: We guarantee professional and meticulous craftsmanship, ensuring the job is done right
+  image: /images/Subtract.png
   button:
     label: "Contact Us"
     link: "/contact"
 
 # feature
 feature: 
-  title: Something You Need To Know
+  title: Experience The Expertise Of US Home Pros And <space>
+  title1: Give Your Beloved Space The Touch It Deserves
+  button:
+    label: "BOOK YOUR FREE CONSULTATION ->"
+    link: "/contact"
   features:
   - name: "Clean Code"
-    icon: "/images/code.svg"
+    icon: "/images/yep.png"
     content: "Lorem ipsum dolor sit amet consectetur adipisicing elit quam nihil"
   - name: "Object Oriented"
-    icon: "/images/oop.svg"
+    icon: "/images/google.png"
     content: "Lorem ipsum dolor sit amet consectetur adipisicing elit quam nihil"
   - name: "24h Service"
-    icon: "/images/user-clock.svg"
-    content: "Lorem ipsum dolor sit amet consectetur adipisicing elit quam nihil"
-  - name: "Value for Money"
-    icon: "/images/love.svg"
-    content: "Lorem ipsum dolor sit amet consectetur adipisicing elit quam nihil"
-  - name: "Faster Response"
-    icon: "/images/speedometer.svg"
-    content: "Lorem ipsum dolor sit amet consectetur adipisicing elit quam nihil"
-  - name: "Cloud Support"
-    icon: "/images/cloud.svg"
+    icon: "/images/parch.png"
     content: "Lorem ipsum dolor sit amet consectetur adipisicing elit quam nihil"
 
 # services
@@ -77,7 +73,7 @@ services:
 # workflow
 workflow: 
   title: "Experience the best workflow with us"
-  image: "/images/banner.svg"
+  image: "/images/banner-art.svg"
   description: ""
 
 # call_to_action

@@ -1,11 +1,11 @@
 {
   "site": {
-    "title": "Bigspring Light Nextjs",
+    "title": "Us-Home-Pro",
     "base_url": "/",
     "favicon": "/images/favicon.png",
-    "logo": "/images/logo.png",
-    "logo_width": "200",
-    "logo_height": "48",
+    "logo": "/images/logonew.png",
+    "logo_width": "91",
+    "logo_height": "57",
     "logo_text": "Bigspring Light"
   },
 
@@ -17,7 +17,7 @@
 
   "nav_button": {
     "enable": true,
-    "label": "Get Started",
+    "label": "BOOK A FREE ESTIMATE",
     "link": "/contact"
   },
 
@@ -25,11 +25,11 @@
     "contact_form_action": "",
     "tag_manager_id": "",
     "footer_content": "Lorem ipsum dolor sit amet, consectetur elit. Consjat tristique eget amet, tempus eu at cttur.",
-    "copyright": "Designed and Developed By [Themefisher](https://themefisher.com/)"
+    "copyright": "Designed and Developed By [SystemTec T.I](https://systemtecinformatica.vercel.app/)"
   },
 
   "metadata": {
-    "meta_author": "Themefisher",
+    "meta_author": "SystemTec T.I",
     "meta_image": "",
     "meta_description": "A SAAS template for nextjs"
   }

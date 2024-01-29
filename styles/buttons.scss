@@ -3,10 +3,10 @@
 }
 
 .btn-primary {
-  @apply  bg-primary text-white border-transparent z-[1]  rounded-[30px] relative hover:shadow-[0_12px_24px_-6px_rgba(45,67,121,.1)] transition-all;
+  @apply  bg-white text-[#104B93] border-transparent z-[1]  rounded-[30px] relative hover:shadow-[0_12px_24px_-6px_rgba(45,67,121,.1)] transition-all;
 
   &:after {
-    @apply w-full h-full rounded-[30px] absolute left-1/2 top-1/2 translate-x-[-50%]  translate-y-[-50%] content-[''] bg-primary transition-all duration-300 ease-in-out -z-[1];
+    @apply w-full h-full rounded-[30px] absolute left-1/2 top-1/2 translate-x-[-50%]  translate-y-[-50%] content-[''] bg-white transition-all duration-300 ease-in-out -z-[1];
   }
   &:hover::after {
     @apply  w-[110%] h-[110%] 
@@ -14,7 +14,7 @@
 }
 
 .btn-outline-primary {
-  @apply relative text-text border-0 bg-transparent rounded-[30px] hover:border-transparent hover:text-primary;
+  @apply relative text-text border-0 bg-transparent rounded-[30px] hover:border-transparent hover:text-[#104B93];
 
   &:after {
     @apply w-full h-full rounded-[30px] absolute left-1/2 top-1/2 translate-x-[-50%]  translate-y-[-50%] content-[''] bg-transparent border border-primary transition-all duration-300 ease-in-out z-[0];

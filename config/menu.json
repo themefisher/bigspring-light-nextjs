@@ -1,23 +1,23 @@
 {
   "main": [
     {
-      "name": "Home",
+      "name": "WHAT WE DO",
       "url": "/"
     },
     {
-      "name": "Blog",
+      "name": "AREAS WE SERVICE",
       "url": "/blogs"
     },
     {
-      "name": "Pricing",
+      "name": "ABOUT US",
       "url": "/pricing"
     },
     {
-      "name": "Contact",
+      "name": "CONTACT US",
       "url": "/contact"
     },
     {
-      "name": "FAQ",
+      "name": "617 958 7723",
       "url": "/faq"
     }
   ],
