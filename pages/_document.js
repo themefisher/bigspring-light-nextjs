@@ -30,7 +30,6 @@ const Document = () => {
       </Head>
       <body>
         <Main />
-        {/* <TwSizeIndicator /> */}
         <NextScript />
       </body>
     </Html>
