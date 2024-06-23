@@ -4,15 +4,9 @@
     "base_url": "/",
     "favicon": "/images/favicon.png",
     "logo": "/images/logo.png",
-    "logo_width": "200",
-    "logo_height": "48",
-    "logo_text": "Bigspring Light"
-  },
-
-  "settings": {
-    "pagination": 4,
-    "summary_length": 200,
-    "blog_folder": "blogs"
+    "logo_width": "120",
+    "logo_height": "26",
+    "logo_text": "NetAware Solutions"
   },
 
   "nav_button": {
