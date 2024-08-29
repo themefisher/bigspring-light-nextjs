@@ -1,15 +1,15 @@
 import { markdownify } from "@lib/utils/textConverter";
-import shortcodes from "@shortcodes/all";
-import { MDXRemote } from "next-mdx-remote";
+import MDXContent from "app/helper/MDXContent";
 import Image from "next/image";
-import Base from "./Baseof";
+import SeoMeta from "./SeoMeta";
 
-const PostSingle = ({ frontmatter, content, mdxContent }) => {
+const PostSingle = ({ frontmatter, content }) => {
   let { description, title, image } = frontmatter;
   description = description ? description : content.slice(0, 120);
 
   return (
-    <Base title={title} description={description}>
+    <>
+      <SeoMeta title={title} description={description} />
       <section className="section">
         <div className="container">
           <div className="row">
@@ -28,13 +28,13 @@ const PostSingle = ({ frontmatter, content, mdxContent }) => {
               {markdownify(title, "h1", "h2 mb-6 mt-6 text-left")}
 
               <div className="content mb-16 text-left">
-                <MDXRemote {...mdxContent} components={shortcodes} />
+                <MDXContent content={content} />
               </div>
             </article>
           </div>
         </div>
       </section>
-    </Base>
+    </>
   );
 };
 

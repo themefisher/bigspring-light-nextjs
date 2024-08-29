@@ -1,16 +1,15 @@
 import { markdownify } from "@lib/utils/textConverter";
-import { MDXRemote } from "next-mdx-remote";
-import shortcodes from "./shortcodes/all";
+import MDXContent from "app/helper/MDXContent";
 
 const Default = ({ data }) => {
-  const { frontmatter, mdxContent } = data;
+  const { frontmatter, content } = data;
   const { title } = frontmatter;
   return (
     <section className="section">
       <div className="container">
         {markdownify(title, "h1", "h2 mb-8 text-center")}
         <div className="content">
-          <MDXRemote {...mdxContent} components={shortcodes} />
+          <MDXContent content={content} />
         </div>
       </div>
     </section>
