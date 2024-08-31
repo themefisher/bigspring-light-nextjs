@@ -3,6 +3,7 @@ import theme from "@config/theme.json";
 import TwSizeIndicator from "@layouts/components/TwSizeIndicator";
 import Footer from "@layouts/partials/Footer";
 import Header from "@layouts/partials/Header";
+import Providers from "@layouts/partials/Providers";
 import "../styles/style.scss";
 
 export const metadata = {
@@ -57,7 +58,7 @@ export default function RootLayout({ children }) {
       <body suppressHydrationWarning={true}>
         <TwSizeIndicator />
         <Header />
-        {children}
+        <Providers>{children}</Providers>
         <Footer />
       </body>
     </html>
