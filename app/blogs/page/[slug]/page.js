@@ -9,7 +9,6 @@ const { blog_folder } = config.settings;
 // blog pagination
 const BlogPagination = async ({ params }) => {
   //
-  console.log("🪲 :", params);
   const currentPage = parseInt((params && params.slug) || 1);
   const { pagination } = config.settings;
   const posts = await getSinglePage(`content/${blog_folder}`).sort(
@@ -17,7 +16,6 @@ const BlogPagination = async ({ params }) => {
       new Date(post2.frontmatter.date) - new Date(post1.frontmatter.date)
   );
   const postIndex = await getListPage(`content/${blog_folder}/_index.md`);
-
   //
   const indexOfLastPost = currentPage * pagination;
   const indexOfFirstPost = indexOfLastPost - pagination;
@@ -58,8 +56,6 @@ export async function generateStaticParams() {
       slug: (i + 1).toString(),
     });
   }
-
-  console.log("🪲 :", paths);
 
   return paths;
 }
