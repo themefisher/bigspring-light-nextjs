@@ -3,9 +3,12 @@
 # dependencies
 /node_modules
 /.pnp
-.pnp.js
-yarn.lock
-package-lock.json
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
 
 # testing
 /coverage
@@ -16,7 +19,6 @@ package-lock.json
 
 # production
 /build
-/.json
 
 # misc
 .DS_Store
@@ -28,14 +30,15 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# local env files
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+# env files (can opt-in for committing if needed)
+.env*
 
 # vercel
 .vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
 
 # Local Netlify folder
 .netlify
