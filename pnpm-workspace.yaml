@@ -1,0 +1,5 @@
+allowBuilds:
+  '@parcel/watcher': true
+  sharp: true
+  swiper: false
+  unrs-resolver: true
