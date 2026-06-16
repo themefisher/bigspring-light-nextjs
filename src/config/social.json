@@ -1,7 +1,7 @@
 {
   "facebook": "https://facebook.com/",
-  "twitter": "https://twitter.com/",
-  "instagram": "",
+  "twitter": "https://x.com/",
+  "instagram": "https://instagram.com/",
   "youtube": "",
   "linkedin": "https://linkedin.com/",
   "github": "",
@@ -27,6 +27,6 @@
   "email": "",
   "phone": "",
   "address": "",
-  "skype": "https://skype.com/",
+  "skype": "",
   "website": ""
 }

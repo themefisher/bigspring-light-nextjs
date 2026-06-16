@@ -22,10 +22,14 @@
   },
 
   "params": {
-    "contact_form_action": "",
-    "tag_manager_id": "",
+    "contact_form_action": "#",
     "footer_content": "Lorem ipsum dolor sit amet, consectetur elit. Consjat tristique eget amet, tempus eu at cttur.",
     "copyright": "Designed and Developed By [Themefisher](https://themefisher.com/)"
+  },
+
+  "google_tag_manager": {
+    "enable": false,
+    "gtm_id": "GTM-XXXXXX"
   },
 
   "metadata": {

@@ -15,7 +15,11 @@ export default function RootLayout({ children }) {
   const pf = theme.fonts.font_family.primary;
   const sf = theme.fonts.font_family.secondary;
   return (
-    <html suppressHydrationWarning={true} lang="en">
+    <html suppressHydrationWarning lang="en">
+      {/* google tag manager */}
+      {config.google_tag_manager.enable && (
+        <GoogleTagManager gtmId={config.google_tag_manager.gtm_id} />
+      )}
       <head>
         {/* responsive meta */}
         <meta
@@ -55,7 +59,7 @@ export default function RootLayout({ children }) {
           content="#000"
         />
       </head>
-      <body suppressHydrationWarning={true}>
+      <body suppressHydrationWarning>
         <TwSizeIndicator />
         <Header />
         <Providers>{children}</Providers>
