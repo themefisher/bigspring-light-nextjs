@@ -2,14 +2,15 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@layouts/*": ["layouts/*"],
-      "@components/*": ["layouts/components/*"],
-      "@partials/*": ["layouts/partials/*"],
-      "@shortcodes/*": ["layouts/shortcodes/*"],
-      "@config/*": ["config/*"],
-      "@json/*": ["json/*"],
-      "@hooks/*": ["hooks/*"],
-      "@lib/*": ["lib/*"]
+      "@layouts/*": ["src/layouts/*"],
+      "@components/*": ["src/layouts/components/*"],
+      "@partials/*": ["src/layouts/partials/*"],
+      "@shortcodes/*": ["src/layouts/shortcodes/*"],
+      "@config/*": ["src/config/*"],
+      "@json/*": ["src/json/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@lib/*": ["src/lib/*"],
+      "@/*": ["src/*"]
     }
   }
 }

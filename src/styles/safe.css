@@ -1,0 +1,8 @@
+.form-inputs * {
+  @apply mb-5 leading-10;
+}
+
+.form-input,
+.form-textarea {
+  @apply border-border py-1.5 focus:border-primary focus:ring-transparent;
+}

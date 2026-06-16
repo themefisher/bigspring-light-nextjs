@@ -1,0 +1,26 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/forms";
+@plugin "@tailwindcss/typography";
+@plugin "tailwind-bootstrap-grid" {
+  generate_container: false;
+}
+
+@import "./generated-theme.css";
+
+@import "./base.css" layer(base);
+
+@import "./components.css" layer(components);
+@import "./navigation.css" layer(components);
+@import "./buttons.css" layer(components);
+
+@import "./utilities.css";
+@import "./safe.css";
+
+@theme {
+  --shadow: 0 12px 24px -6px rgba(45, 67, 121, 0.1);
+  --breakpoint-sm: 540px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+}
