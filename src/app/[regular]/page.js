@@ -8,7 +8,7 @@ import { getRegularPage, getSinglePage } from "@lib/contentParser";
 
 // for all regular pages
 const RegularPages = async ({ params }) => {
-  const { regular } = params;
+  const { regular } = await params;
   const regularPageData = await getRegularPage(regular);
   const { title, meta_title, description, image, noindex, canonical, layout } =
     regularPageData.frontmatter;

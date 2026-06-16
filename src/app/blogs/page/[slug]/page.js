@@ -8,8 +8,8 @@ const { blog_folder } = config.settings;
 
 // blog pagination
 const BlogPagination = async ({ params }) => {
-  //
-  const currentPage = parseInt((params && params.slug) || 1);
+  const { slug } = await params;
+  const currentPage = parseInt(slug || 1);
   const { pagination } = config.settings;
   const posts = getSinglePage(`src/content/${blog_folder}`).sort(
     (post1, post2) =>

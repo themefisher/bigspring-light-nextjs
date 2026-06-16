@@ -5,7 +5,7 @@ const { blog_folder } = config.settings;
 
 // post single layout
 const Article = async ({ params }) => {
-  const { single } = params;
+  const { single } = await params;
   const posts = getSinglePage(`src/content/${blog_folder}`);
   const post = posts.filter((p) => p.slug == single);
   const { frontmatter, content } = post[0];
