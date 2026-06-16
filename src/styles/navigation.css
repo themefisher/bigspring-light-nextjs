@@ -1,5 +1,5 @@
 .header {
-  @apply bg-white py-[14px] px-4 md:px-0 md:py-[9px];
+  @apply bg-white py-3.5 px-4 md:px-0 md:py-2.25;
 }
 
 .navbar {
