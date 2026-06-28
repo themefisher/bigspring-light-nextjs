@@ -6,3 +6,6 @@ allowBuilds:
   sharp: true
   swiper: false
   unrs-resolver: true
+
+minimumReleaseAgeExclude:
+  - prettier@3.9.1
